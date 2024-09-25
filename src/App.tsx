@@ -1,17 +1,12 @@
 import React from "react";
-import { Header } from "./components/Header";
-import { Hero } from "./components/HomeSections/Hero";
 import { Footer } from "./components/Footer";
-import { Programs } from "./components/HomeSections/Programs";
-import { Services } from "./components/HomeSections/Services";
+import { router } from "./components/Router";
+import { RouterProvider } from "react-router-dom";
 
 const App: React.FC = () => {
   return (
     <div>
-      <Header />
-      <Hero />
-      <Services />
-      <Programs />
+      <RouterProvider router={router} />
       <Footer />
     </div>
   );

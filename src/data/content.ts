@@ -2,7 +2,13 @@ export const content = {
   header: {
     logoAlt: "Behavior Frontiers Logo",
     phoneNumber: "888-922-2844",
-    navItems: ["Approach", "Services", "Contact Us"],
+    navItems: [
+      { name: "Approach", path: "/approach" },
+      { name: "Services", path: "/services" },
+      { name: "Contact Us", path: "/contact" },
+      { name: "FAQ", path: "/faq" },
+      { name: "Methods", path: "/methods" },
+    ],
   },
   hero: {
     title: "ABA - Our Approach",
