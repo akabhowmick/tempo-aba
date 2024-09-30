@@ -40,6 +40,12 @@ export const content = {
     focused: "Focused ABA Programs designed for specific behavioral issues...",
     parentTraining: "Parent-Control Programs for involving parents...",
   },
+  resourcesData: [
+    { name: "Organization 1", imageUrl: "https://via.placeholder.com/150" },
+    { name: "Organization 2", imageUrl: "https://via.placeholder.com/150" },
+    { name: "Organization 3", imageUrl: "https://via.placeholder.com/150" },
+    { name: "Organization 4", imageUrl: "https://via.placeholder.com/150" },
+  ],
   footer: {
     text: "If you want to learn more about ABA, contact our team today!",
   },

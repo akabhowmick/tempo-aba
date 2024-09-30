@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer } from "./components/Footer";
+import { Footer } from "./components/Shared/Footer";
 import { router } from "./components/Router";
 import { RouterProvider } from "react-router-dom";
 

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-
 const FaqPage: React.FC = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
 
-  const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+  const handleChange = (panel: string) => (isExpanded: boolean) => {
     setExpanded(isExpanded ? panel : false);
   };
 
@@ -19,7 +18,7 @@ const FaqPage: React.FC = () => {
               <Accordion
                 key={index}
                 expanded={expanded === `panel${index}`}
-                onChange={handleChange(`panel${index}`)}
+                onChange={() => handleChange(`panel${index}`)}
               >
                 <AccordionSummary
                   expandIcon={<ArrowDownwardIcon />}
