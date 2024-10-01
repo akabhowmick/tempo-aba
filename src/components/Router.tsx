@@ -1,7 +1,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { Header } from "./Shared/Header";
 import { HomePage } from "./HomeSections/HomePage";
-import MethodPage from "./HomeSections/MethodPage";
+import MethodPage from "./Pages/MethodPage";
 import FaqPage from "./Pages/FAQPage";
 import { ContactPage } from "./Pages/ContactPage";
 

@@ -1,3 +1,4 @@
+import { content } from "../../data/content";
 import { commonStyles } from "../Shared/CommonStyles";
 
 export const Hero = () => {
@@ -6,7 +7,7 @@ export const Hero = () => {
       <div className={commonStyles.contentContainer}>
         <div className={commonStyles.textContainer}>
           <div className={commonStyles.textContent}>
-            <div className="flex flex-col justify-between flex-1 h-full">
+            <div className="flex flex-col justify-between flex-1">
               <div>
                 <h1 className={commonStyles.heading}>Discover your Tempo</h1>
                 <p className={commonStyles.paragraph}>
@@ -28,8 +29,8 @@ export const Hero = () => {
         <div className={commonStyles.imageContainer}>
           <img
             className={commonStyles.image}
-            src="https://www.auraui.com/memeimage/phone-mockup.png"
-            alt="AuraUI Mockup"
+            src={content.hero.heroImage}
+            alt="Tempo hero image"
           />
         </div>
       </div>

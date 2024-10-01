@@ -1,13 +1,17 @@
+import { ContactSnippet } from "./ContactForm";
+import { FollowUp } from "./FollowUp";
 import { Hero } from "./Hero";
-import { Programs } from "./Programs";
 import { Services } from "./Services";
+import { WhyUs } from "./WhyUs";
 
 export const HomePage = () => {
   return (
     <>
       <Hero />
       <Services />
-      <Programs />
+      <FollowUp />
+      <WhyUs />
+      <ContactSnippet />
     </>
   );
 };

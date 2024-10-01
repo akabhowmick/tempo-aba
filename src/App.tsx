@@ -1,11 +1,12 @@
 import React from "react";
-import { Footer } from "./components/Shared/Footer";
 import { router } from "./components/Router";
 import { RouterProvider } from "react-router-dom";
+import { commonStyles } from "./components/Shared/CommonStyles";
+import { Footer } from "./components/Shared/Footer";
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className={commonStyles.container}>
       <RouterProvider router={router} />
       <Footer />
     </div>

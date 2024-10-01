@@ -1,15 +1,19 @@
-import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import { AppBar, Toolbar, Button } from "@mui/material";
 import { content } from "../../data/content";
 import { Link, Outlet } from "react-router-dom";
+import { commonStyles } from "./CommonStyles";
 // import { FaBars, FaTimes } from "react-icons/fa";
 
 export const Header = () => {
   return (
     <>
       <header>
-        <AppBar position="static" className="bg-blue-500">
-          <Toolbar className="flex justify-between">
-            <img src="/path-to-logo.png" alt={content.header.logoAlt} className="w-40" />
+        <AppBar position="static">
+          <Toolbar className="flex justify-between bg-green-500">
+            <Link to="/" className="flex gap-1 items-center">
+              <img src={content.header.siteLogo} alt={content.header.logoAlt} className="w-10" />
+              <span>Tempo ABA</span>
+            </Link>
             <div className="space-x-4">
               {content.header.navItems.map((item) => (
                 <Link to={item.path} key={item.name}>
@@ -17,9 +21,11 @@ export const Header = () => {
                 </Link>
               ))}
             </div>
-            <Typography variant="h6" className="text-white">
-              {content.header.phoneNumber}
-            </Typography>
+            <Link to="/contact">
+              <Button color="inherit" className={commonStyles.ctaButton}>
+                Contact Us
+              </Button>
+            </Link>
           </Toolbar>
         </AppBar>
       </header>
