@@ -3,7 +3,7 @@ import { Header } from "./Shared/Header";
 import { HomePage } from "./HomeSections/HomePage";
 import MethodPage from "./Pages/MethodPage";
 import FaqPage from "./Pages/FAQPage";
-import { ContactPage } from "./Pages/ContactPage";
+import { ContactPage } from "./Pages/ContactPage/ContactPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

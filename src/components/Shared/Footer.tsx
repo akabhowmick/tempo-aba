@@ -55,8 +55,8 @@ export const Footer = () => {
             <p className="text-base text-green-100">Resources</p>
             <ul className="mt-8 space-y-4">
               {[
-                { href: "/ebooks", text: "Free eBooks" },
-                { href: "/tutorial", text: "Development Tutorial" },
+                { href: "/insurance", text: "Insurance" },
+                { href: "/faq", text: "FAQ" },
                 { href: "/blog", text: "How to - Blog" },
                 { href: "/youtube", text: "YouTube Playlist" },
               ].map((item, index) => (
@@ -71,11 +71,9 @@ export const Footer = () => {
 
           {/* Extra as */}
           <div>
-            <p className="text-base text-green-100">Extra as</p>
+            <p className="text-base text-green-100">Extra assistance</p>
             <ul className="mt-8 space-y-4">
               {[
-                { href: "/support", text: "Customer Support" },
-                { href: "/delivery", text: "Delivery Details" },
                 { href: "/terms", text: "Terms & Conditions" },
                 { href: "/privacy", text: "Privacy Policy" },
               ].map((item, index) => (

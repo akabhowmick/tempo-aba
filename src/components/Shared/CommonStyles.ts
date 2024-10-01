@@ -1,3 +1,5 @@
+
+
 export const commonStyles = {
   container: "relative bg-gradient-to-b from-green-50 to-green-100",
   header: "absolute inset-x-0 top-0 z-10 w-full",
@@ -10,12 +12,12 @@ export const commonStyles = {
   navLink: "text-base text-black transition-all duration-200 hover:text-opacity-80",
   ctaButton:
     "bg-green-600 hidden lg:inline-flex items-center justify-center px-5 py-2.5 text-white font-semibold text-black border-2 border-black hover:bg-green-700 hover:text-white transition-all duration-200 focus:bg-green-700 focus:text-white",
-  section: "overflow-hidden",
+  section: "overflow-hidden h-screen",
   contentContainer: "flex flex-col lg:flex-row lg:items-center lg:max-h-[900px] p-2",
   textContainer: "flex items-center justify-center w-full lg:order-2 lg:w-7/12",
   textContent: "px-4 pb-16 sm:px-6 lg:px-24 2xl:px-32 lg:pt-40 lg:pb-14",
-  heading: "text-4xl font-bold text-black sm:text-6xl xl:text-7xl",
-  paragraph: "mt-4 text-base text-black sm:text-xl",
+  heading: "text-4xl font-bold sm:text-6xl xl:text-7xl",
+  paragraph: "mt-4 text-base  sm:text-xl",
   button:
     "inline-flex items-center px-6 py-5 text-base font-semibold text-black transition-all duration-200 bg-green-300 mt-4 hover:bg-green-400 focus:bg-green-400",
   appLinks: "mt-8 border-t-2 border-black lg:mt-auto sm:mt-14",
@@ -26,4 +28,5 @@ export const commonStyles = {
   appIcon: "w-auto rounded h-14 sm:h-16",
   imageContainer: "relative w-full overflow-hidden lg:w-5/12 lg:order-1",
   image: "w-full",
+  pageTitle: "text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl",
 };

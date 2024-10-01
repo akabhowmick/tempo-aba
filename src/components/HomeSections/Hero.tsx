@@ -3,37 +3,35 @@ import { commonStyles } from "../Shared/CommonStyles";
 
 export const Hero = () => {
   return (
-    <section className={commonStyles.section}>
-      <div className={commonStyles.contentContainer}>
-        <div className={commonStyles.textContainer}>
-          <div className={commonStyles.textContent}>
-            <div className="flex flex-col justify-between flex-1">
-              <div>
-                <h1 className={commonStyles.heading}>Discover your Tempo</h1>
-                <p className={commonStyles.paragraph}>
-                  Connect with us, at Tempo ABA, where we celebrate every child's unique rhythm.
-                </p>
-                <a
-                  href="#"
-                  title="Get started with Tempo"
-                  className={commonStyles.button}
-                  role="button"
-                >
-                  Learn More About Us!
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={commonStyles.imageContainer}>
-          <img
-            className={commonStyles.image}
-            src={content.hero.heroImage}
-            alt="Tempo hero image"
-          />
+    <section
+      className={`${commonStyles.section} relative`}
+      style={{ height: "calc(100vh - 64px)" }}
+    >
+      <div
+        className={`absolute inset-0 z-10 flex flex-col justify-end items-center bg-black bg-opacity-50 text-white p-4`}
+      >
+        <div className="text-center">
+          <h1 className={`${commonStyles.heading} text-4xl md:text-6xl`}>Discover your Tempo</h1>
+          <p className={`${commonStyles.paragraph} mt-4`}>
+            Connect with us, at Tempo ABA, where we celebrate every child's unique rhythm.
+          </p>
+          <a
+            href="#"
+            title="Get started with Tempo"
+            className={`${commonStyles.button} mt-6`}
+            role="button"
+          >
+            Learn More About Us!
+          </a>
         </div>
       </div>
+
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${content.hero.heroImage})` }}
+      />
+
+      <div className="relative h-full w-full" />
     </section>
   );
 };
