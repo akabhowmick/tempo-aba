@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { teamBios } from "../../data/content";
+import { teamBios } from "../../../data/content";
 
 // Helper function to truncate bio text
 const truncateText = (text: string, charLimit: number) => {

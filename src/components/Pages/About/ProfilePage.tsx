@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { teamBios } from "../../data/content";
+import { teamBios } from "../../../data/content";
 
 export const ProfilePage = () => {
   const { member } = useParams<{ member: string }>(); // Extract the name from the URL

@@ -1,6 +1,6 @@
 import { Card, CardMedia, CardContent, Typography, Grid2, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { content } from "../../data/content";
+import { content } from "../../../data/content";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -13,7 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
   }),
 }));
 
-export const ResourcesPage = () => {
+export const ABAResourcesPage = () => {
   return (
     <div className="container mx-auto py-10">
       <Typography variant="h4" component="h1" className="text-center mb-10">
