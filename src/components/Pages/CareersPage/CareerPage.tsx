@@ -1,7 +1,7 @@
-import { ContactForm } from "./ContactForm";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import { CareerForm } from "./CareerForm";
 
-export const ContactPage = () => {
+export const CareerPage = () => {
   const containerStyles = "py-10 bg-green-100 sm:py-16 lg:py-24";
   const innerContainerStyles = "px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl flex flex-col";
   const headerStyles = "max-w-2xl mx-auto text-center ";
@@ -15,7 +15,7 @@ export const ContactPage = () => {
     <section className={containerStyles}>
       <div className={innerContainerStyles}>
         <div className={headerStyles}>
-          <h2 className={titleStyles}>Contact Us</h2>
+          <h2 className={titleStyles}>Join us in helping others!</h2>
           <p className={descriptionStyles}>
             Get in touch with us for any inquiries or support. We&apos;re here to help you with any
             questions you may have.
@@ -49,7 +49,7 @@ export const ContactPage = () => {
             </div>
           </div>
 
-          <ContactForm />
+          <CareerForm />
         </div>
       </div>
     </section>

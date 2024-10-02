@@ -4,20 +4,44 @@ import serviceImage1 from "../assets/siteImages/19198612.jpg";
 import serviceImage2 from "../assets/siteImages/19198612.jpg";
 import serviceImage3 from "../assets/siteImages/19198612.jpg";
 import serviceImage4 from "../assets/siteImages/19198612.jpg";
+import inaeImage from "../assets/siteImages/full-shot-women-with-instruments-floor.jpg";
+import cynthiaImage from "../assets/siteImages/kid-doing-occupational-therapy-session.jpg";
+
 import resourceImage1 from "../assets/siteImages/4824.jpg";
 import resourceImage2 from "../assets/siteImages/5767946.jpg";
 
 export const content = {
   header: {
-    logoAlt: "Tempo ABA Logo",
-    phoneNumber: "888-922-2844",
     siteLogo: logo,
+    logoAlt: "Logo",
     navItems: [
-      { name: "Approach", path: "/approach" },
-      { name: "Services", path: "/services" },
-      { name: "Contact Us", path: "/contact" },
-      { name: "FAQ", path: "/faq" },
-      { name: "Methods", path: "/methods" },
+      {
+        name: "About Us",
+        submenu: [
+          { name: "Our Members", path: "/about/members" },
+          { name: "Our Mission", path: "/about/mission" },
+        ],
+      },
+      {
+        name: "Join Us",
+        path: "/careers",
+      },
+      {
+        name: "Services",
+        submenu: [
+          { name: "In-Home ABA", path: "/services/in-home" },
+          { name: "School-Based ABA", path: "/services/school" },
+          { name: "Community-Based ABA", path: "/services/community" },
+          { name: "Center-Based ABA", path: "/services/center" },
+        ],
+      },
+      {
+        name: "Resources",
+        submenu: [
+          { name: "Insurance", path: "/resources/insurance" },
+          { name: "ABA Resources", path: "/resources/aba" },
+        ],
+      },
     ],
   },
   hero: {
@@ -101,3 +125,47 @@ export const content = {
     text: "If you want to learn more about ABA, contact our team today!",
   },
 };
+
+export const teamBios = [
+  {
+    name: "Cynthia Martinez",
+    title: "Board Certified Behavior Analyst (BCBA)",
+    bio: `
+      Cynthia has a Bachelor's degree in Psychology from Hunter College, City University of New York, 
+      a Master's degree in Special Education from City College, City University of New York, 
+      a Master's degree in School Building Leadership from Touro College, 
+      and a Master's degree in Applied Behavior Analysis from St. Joseph's College. 
+
+      Cynthia holds professional certifications as a New York State Special Education Teacher and School Administrator. 
+      She is a Board Certified Behavior Analyst (BCBA) and a licensed behavior analyst in New York State (LBA). 
+
+      Cynthia started her journey in the field of Autism and Developmental Disabilities as a Medicaid Service Coordinator. 
+      She has held positions as a classroom Special Education Teacher, Special Education Teacher Support Services, Clinical Supervisor, 
+      Program Coordinator, Supervising BCBA, and Program Director for a school for children on the Autism Spectrum.
+    `,
+    imageUrl: cynthiaImage, // Add actual path to Cynthia's image
+    profileLink: "/about/Cynthia", // Replace with actual profile link
+  },
+  {
+    name: "Inae Kim",
+    title: "Program Coordinator",
+    bio: `
+      Inae holds a Master of Arts in Health and Behavior Studies, Intellectual Disability/Autism, from Teachers College, Columbia University. 
+      She has extensive experience in developing programs for families and students, gained as a research assistant in 
+      Dr. Hsu-Min Chiang's Parent Education Program for Parents of Chinese American Children with Autism Spectrum Disorders (ASDs): A Pilot Study at Teachers College. 
+
+      Inae has been working in both non-profit and public schools for over 20 years, serving students with a broad range of disabilities in New York City. 
+      She has had tremendous opportunities to refine her practices by teaching in diverse classroom settings for students with Autism Spectrum Disorder, 
+      Intellectual Disabilities, Emotional Disturbances, Speech Impairments, Other Health Impairments, and more. 
+
+      Throughout these years, she has served as a Special Education Inclusion Program Coordinator, classroom teacher, SEIT provider, and SETSS provider, 
+      facilitating communication between families and schools, and designing intellectually engaging and challenging instruction to help students 
+      meet and exceed their IEP and instructional goals. She is currently pursuing an ABA Advanced Certificate program to become a Board Certified Behavior Analyst (BCBA).
+
+      Inae has a strong passion for helping her clients and families to the best of her ability. As a program coordinator, 
+      she ensures that all parents and caregivers feel knowledgeable about ABA therapy, offering support and guidance throughout the process.
+    `,
+    imageUrl: inaeImage, // Add actual path to Inae's image
+    profileLink: "/about/inae", // Replace with actual profile link
+  },
+];
