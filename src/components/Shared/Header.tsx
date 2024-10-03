@@ -9,8 +9,7 @@ import { useMediaQuery } from "react-responsive";
 export const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState<string | null>(null);
-  const isMobile = useMediaQuery({ query: "(max-width: 800px)" }); // Query for mobile screens
-  // const isDesktop = useMediaQuery({ query: "(min-width: 769px)" }); // Query for desktop screens
+  const isMobile = useMediaQuery({ query: "(max-width: 800px)" }); 
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
@@ -21,7 +20,11 @@ export const Header = () => {
           <Toolbar className="flex justify-between bg-green-500">
             {/* Logo */}
             <Link to="/" className="flex gap-1 items-center">
-              <img src={content.header.siteLogo} alt={content.header.logoAlt} className="w-10" />
+              <img
+                src={content.header.siteLogo}
+                className="rounded-md w-10"
+                alt={content.header.logoAlt}
+              />
               <span>Tempo ABA</span>
             </Link>
 

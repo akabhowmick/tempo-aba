@@ -9,7 +9,7 @@ import { OurMembersPage } from "./Pages/About/OurMembersPage";
 import { ProfilePage } from "./Pages/About/ProfilePage";
 import { MissionPage } from "./Pages/About/MissionPage";
 import { InsurancePage } from "./Pages/Resources/InsuranceInfo";
-import { ABAResourcesPage } from "./Pages/Resources/ABAResourcePage";
+import { ABAResourcesPage } from "./Pages/Resources/ABAResourcesPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

@@ -29,6 +29,7 @@ export const content = {
       {
         name: "Services",
         submenu: [
+          { name: "Methods", path: "/services/methods" },
           { name: "In-Home ABA", path: "/services/in-home" },
           { name: "School-Based ABA", path: "/services/school" },
           { name: "Community-Based ABA", path: "/services/community" },
@@ -40,6 +41,7 @@ export const content = {
         submenu: [
           { name: "Insurance", path: "/resources/insurance" },
           { name: "ABA Resources", path: "/resources/aba" },
+          { name: "FAQ", path: "/resources/faq" },
         ],
       },
     ],
@@ -167,5 +169,52 @@ export const teamBios = [
     `,
     imageUrl: inaeImage, // Add actual path to Inae's image
     profileLink: "/about/inae", // Replace with actual profile link
+  },
+];
+
+interface ABAResource {
+  id: number;
+  title: string;
+  description: string;
+  imgSrc: string;
+  imgAlt: string;
+}
+
+export const abaResources: ABAResource[] = [
+  {
+    id: 1,
+    title: "Therapy provided at your preferred time and location",
+    description:
+      "We understand that each child is unique and requires a personalized approach. Our therapy sessions are designed to fit into your schedule and can be provided at home, in school, or at our centers.",
+    imgSrc:
+      "https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg",
+    imgAlt: "Therapist with child",
+  },
+  {
+    id: 2,
+    title: "Guiding your child along the path of success",
+    description:
+      "Our team of highly skilled therapists work closely with your child to develop a customized plan that addresses their unique needs and helps them achieve their full potential.",
+    imgSrc:
+      "https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg",
+    imgAlt: "Therapist with child",
+  },
+  {
+    id: 3,
+    title: "Is ABA therapy right for your child?",
+    description:
+      "Every child is unique, and our therapists work closely with you to determine if ABA therapy is the right fit for your child. We provide a thorough assessment and develop a tailored therapy plan.",
+    imgSrc:
+      "https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg",
+    imgAlt: "Therapist with child",
+  },
+  {
+    id: 4,
+    title: "Sample Behaviors We Help With",
+    description:
+      "Our ABA therapy programs are designed to help children develop a range of skills, including communication, social/emotional skills, adaptive daily living skills, and reducing problem behaviors.",
+    imgSrc:
+      "https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg",
+    imgAlt: "Therapist with child",
   },
 ];
