@@ -11,7 +11,7 @@ export const HomePage = () => {
       <Services />
       <FollowUp />
       <WhyUs />
-      <div className="bg-green-100 sm:py-6 lg:py-10">
+      <div className=" sm:py-6 lg:py-10">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <ContactForm />
         </div>

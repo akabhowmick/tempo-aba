@@ -2,7 +2,7 @@ import { content } from "../../data/content";
 
 export const FollowUp = () => {
   return (
-    <div className="bg-green-100 font-roboto">
+    <div className="font-roboto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
         {/* Image 1 */}
         <div className="relative">

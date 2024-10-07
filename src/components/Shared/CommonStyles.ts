@@ -1,7 +1,6 @@
 
-
 export const commonStyles = {
-  container: "relative bg-gradient-to-b from-green-50 to-green-100",
+  container: "relative",
   header: "absolute inset-x-0 top-0 z-10 w-full",
   headerInner: "px-4 mx-auto sm:px-6 lg:px-8",
   headerContent: "flex items-center justify-between h-16 lg:h-20",

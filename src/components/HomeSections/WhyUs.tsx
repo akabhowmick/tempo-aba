@@ -28,7 +28,7 @@ const contentData = [
 
 export const WhyUs = () => {
   return (
-    <div className="bg-green-100 flex items-center justify-center my-10">
+    <div className="flex items-center justify-center my-10">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-5xl">
         {/* Title Section */}
         <SectionTitle title="Focused on Family" />

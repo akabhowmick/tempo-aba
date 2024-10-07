@@ -9,8 +9,10 @@ import cynthiaImage from "../assets/siteImages/kid-doing-occupational-therapy-se
 
 import resourceImage1 from "../assets/siteImages/4824.jpg";
 import resourceImage2 from "../assets/siteImages/5767946.jpg";
+import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
 export const content = {
+  siteBG: backgroundImage,
   header: {
     siteLogo: logo,
     logoAlt: "Logo",
