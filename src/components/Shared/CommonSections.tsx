@@ -3,12 +3,31 @@ import { commonStyles } from "../Shared/CommonStyles";
 export const SectionTitle = ({ title }: { title: string }) => {
   return (
     <div className="text-center mb-8">
-      <div className="bg-green-200 inline-block px-4 py-2 rounded">
+      <div className=" inline-block px-4 py-2 rounded">
         <h1 className="text-4xl font-bold text-green-950">{title}</h1>
       </div>
     </div>
   );
 };
+export const SubPageTitle = ({
+  alt,
+  src,
+  title,
+  subtitle,
+}: {
+  alt: string;
+  src: string;
+  title: string;
+  subtitle: string;
+}) => (
+  <div className="relative">
+    <img alt={alt} className="w-full h-64 object-cover" src={src} />
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+      <h1 className="text-4xl font-bold">{title}</h1>
+      <p className="text-lg">{subtitle}</p>
+    </div>
+  </div>
+);
 
 export const PageTitle = ({
   title,

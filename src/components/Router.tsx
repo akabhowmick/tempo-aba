@@ -10,6 +10,7 @@ import { ProfilePage } from "./Pages/About/ProfilePage";
 import { MissionPage } from "./Pages/About/MissionPage";
 import { InsurancePage } from "./Pages/Resources/InsuranceInfo";
 import { ABAResourcesPage } from "./Pages/Resources/ABAResourcesPage";
+import { ServicePage } from "./Pages/Services/ServicePage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,8 @@ export const router = createBrowserRouter(
 
       {/* Services */}
       <Route path="/services/methods" element={<MethodPage />} />
+      <Route path="/services/:service" element={<ServicePage />} />
+
 
       {/* Resources */}
       <Route path="/resources/faq" element={<FaqPage />} />
