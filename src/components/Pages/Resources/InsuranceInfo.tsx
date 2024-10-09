@@ -8,10 +8,11 @@ export const InsurancePage: React.FC = () => {
             <i className="fas fa-crown" />
           </div>
           <p className="text-lg">
-            Tempo ABA accepts most major commercial health plans with both in- and out-of-network benefits.
-            In some states we are also able to accept Medicaid. Insurance plans can vary in benefits and coverage for the{" "}
-            <span className="text-orange-500 font-bold">Applied Behavior Analysis (ABA)</span> therapy services that
-            Tempo ABA provides.
+            Tempo ABA proudly accepts most major commercial health plans, offering both in-network
+            and out-of-network benefits, as well as Medicaid. Please note that insurance plans can
+            differ in their coverage and benefits for our{" "}
+            <span className="text-orange-500 font-bold">Applied Behavior Analysis (ABA)</span>{" "}
+            therapy services.
           </p>
         </div>
 
@@ -32,12 +33,13 @@ export const InsurancePage: React.FC = () => {
           <div className="w-full md:w-1/2 pl-6 mt-6 md:mt-0">
             <h2 className="text-2xl font-bold text-blue-900 mb-4">Here to Help</h2>
             <p className="text-lg">
-              At Tempo ABA, our teams are trained to help you understand key health insurance terms and plan details.
-              We’re happy to help check your benefits and coverage details, so you’ll know which services your plan will pay for and
-              how much a course of therapy or a session will cost.
+              Our team is dedicated to assisting you in understanding your benefits and coverage. We
+              can help you determine which services are covered by your plan and provide clarity on
+              the costs associated with therapy sessions or an entire course of treatment.
             </p>
             <p className="text-lg mt-4">
-              We can also work with you to create a payment plan for cost-sharing that works for your family.
+              Additionally, we’re committed to working with you to establish a payment plan that
+              fits your family’s budget.
             </p>
           </div>
         </div>
@@ -45,4 +47,3 @@ export const InsurancePage: React.FC = () => {
     </div>
   );
 };
-

@@ -25,7 +25,7 @@ export const router = createBrowserRouter(
 
       {/* Services */}
       <Route path="/services/methods" element={<MethodPage />} />
-      <Route path="/services/:service" element={<ServicePage />} />
+      <Route path="/services/:learnerType" element={<ServicePage />} />
 
 
       {/* Resources */}

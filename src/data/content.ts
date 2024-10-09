@@ -4,12 +4,15 @@ import serviceImage1 from "../assets/siteImages/19198612.jpg";
 import serviceImage2 from "../assets/siteImages/19198612.jpg";
 import serviceImage3 from "../assets/siteImages/19198612.jpg";
 import serviceImage4 from "../assets/siteImages/19198612.jpg";
-import inaeImage from "../assets/siteImages/full-shot-women-with-instruments-floor.jpg";
-import cynthiaImage from "../assets/siteImages/kid-doing-occupational-therapy-session.jpg";
+import inaeImage from "../assets/siteImages/members/inae.png";
+import cynthiaImage from "../assets/siteImages/members/cynthia.png";
 
 import resourceImage1 from "../assets/siteImages/4824.jpg";
 import resourceImage2 from "../assets/siteImages/5767946.jpg";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
+
+import missionImage from "../assets/siteImages/mission.png";
+export const savedMissionImage = missionImage;
 
 export const content = {
   siteBG: backgroundImage,
@@ -32,10 +35,12 @@ export const content = {
         name: "Services",
         submenu: [
           { name: "Methods", path: "/services/methods" },
-          { name: "In-Home ABA", path: "/services/in-home" },
-          { name: "School-Based ABA", path: "/services/school" },
-          { name: "Community-Based ABA", path: "/services/community" },
+          { name: "Home Based ABA", path: "/services/home" },
+          { name: "In-School Consultation", path: "/services/school" },
+          { name: "Community Based ABA", path: "/services/community" },
           { name: "Center-Based ABA", path: "/services/center" },
+          { name: "Parent Training Workshop", path: "/services/transition" },
+          { name: "Transition to Adulthood", path: "/services/adult" },
         ],
       },
       {
@@ -133,44 +138,28 @@ export const content = {
 export const teamBios = [
   {
     name: "Cynthia Martinez",
-    title: "Board Certified Behavior Analyst (BCBA)",
-    bio: `
-      Cynthia has a Bachelor's degree in Psychology from Hunter College, City University of New York, 
-      a Master's degree in Special Education from City College, City University of New York, 
-      a Master's degree in School Building Leadership from Touro College, 
-      and a Master's degree in Applied Behavior Analysis from St. Joseph's College. 
-
-      Cynthia holds professional certifications as a New York State Special Education Teacher and School Administrator. 
-      She is a Board Certified Behavior Analyst (BCBA) and a licensed behavior analyst in New York State (LBA). 
-
-      Cynthia started her journey in the field of Autism and Developmental Disabilities as a Medicaid Service Coordinator. 
-      She has held positions as a classroom Special Education Teacher, Special Education Teacher Support Services, Clinical Supervisor, 
-      Program Coordinator, Supervising BCBA, and Program Director for a school for children on the Autism Spectrum.
-    `,
-    imageUrl: cynthiaImage, // Add actual path to Cynthia's image
-    profileLink: "/about/Cynthia", // Replace with actual profile link
+    credentials: "M.S. Ed, MS, BCBA, LBA, SBL",
+    title: "Co-Founder & Director",
+    bio: [
+      "Cynthia has a Bachelor's degree in Psychology from Hunter College, City University of New York, a Master's degree in Special Education from City College, City University of New York, a Master's degree in School Building Leadership from Touro College, and a Master's degree in Applied Behavior Analysis from St. Joseph's College. Cynthia holds professional certifications as a New York State Special Education Teacher and School Administrator. Cynthia is a Board Certified Behavior Analyst (BCBA), and is a licensed behavior analyst in New York State (LBA).",
+      "Cynthia's journey in the field of Autism and Developmental Disabilities began as a Medicaid Service Coordinator, where her passion for helping others first took root. Since then, she has embraced a variety of roles, including Special Education Teacher, Clinical Supervisor, Program Coordinator, Supervising BCBA, and Program Director at a dedicated school for children on the Autism Spectrum.",
+      "Now serving as the Director of Tempo ABA, Cynthia’s enthusiasm and commitment to supporting clients and their families are at the heart of her work. She skillfully navigates challenges and advocates fiercely for her clients with special needs. Her dedication and compassion shine through in every interaction, making a profound and lasting impact on the lives of those she serves.",
+    ],
+    imageUrl: cynthiaImage,
+    profileLink: "/about/Cynthia",
   },
   {
     name: "Inae Kim",
-    title: "Program Coordinator",
-    bio: `
-      Inae holds a Master of Arts in Health and Behavior Studies, Intellectual Disability/Autism, from Teachers College, Columbia University. 
-      She has extensive experience in developing programs for families and students, gained as a research assistant in 
-      Dr. Hsu-Min Chiang's Parent Education Program for Parents of Chinese American Children with Autism Spectrum Disorders (ASDs): A Pilot Study at Teachers College. 
-
-      Inae has been working in both non-profit and public schools for over 20 years, serving students with a broad range of disabilities in New York City. 
-      She has had tremendous opportunities to refine her practices by teaching in diverse classroom settings for students with Autism Spectrum Disorder, 
-      Intellectual Disabilities, Emotional Disturbances, Speech Impairments, Other Health Impairments, and more. 
-
-      Throughout these years, she has served as a Special Education Inclusion Program Coordinator, classroom teacher, SEIT provider, and SETSS provider, 
-      facilitating communication between families and schools, and designing intellectually engaging and challenging instruction to help students 
-      meet and exceed their IEP and instructional goals. She is currently pursuing an ABA Advanced Certificate program to become a Board Certified Behavior Analyst (BCBA).
-
-      Inae has a strong passion for helping her clients and families to the best of her ability. As a program coordinator, 
-      she ensures that all parents and caregivers feel knowledgeable about ABA therapy, offering support and guidance throughout the process.
-    `,
-    imageUrl: inaeImage, // Add actual path to Inae's image
-    profileLink: "/about/inae", // Replace with actual profile link
+    credentials: "M.A.Ed ",
+    title: "Co-Founder & Program Coordinator",
+    bio: [
+      "Inae holds a Master of Arts in Health and Behavior Studies, Intellectual Disability/Autism, from Teachers College, Columbia University. She has extensive experience in developing programs for families and students, gained as a research assistant in Dr. Hsu-Min Chiang's Parent Education Program for Parents of Chinese American Children with Autism Spectrum Disorders (ASDs): A Pilot Study at Teachers College.",
+      "Inae brings over 20 years of dedicated experience in both non-profit and public education, serving students with a wide range of disabilities in New York City. Her career has provided her with invaluable opportunities to refine her teaching practices across diverse classroom settings, supporting students with Autism Spectrum Disorder, Intellectual Disabilities, Emotional Disturbances, Speech Impairments, Other Health Impairments, and more.",
+      " Throughout her journey, Inae has excelled in various roles, including Special Education Inclusion Program Coordinator, classroom teacher, SEIT provider, and SETSS provider. In these positions, she has facilitated meaningful communication between families and schools, designing intellectually engaging and challenging instruction that empowers students to meet and exceed their IEP and instructional goals. Currently, she is pursuing an ABA Advanced Certificate program to become a Board Certified Behavior Analyst (BCBA), further enhancing her expertise. ",
+      "Inae's passion for helping clients and families drives her work. As a program coordinator, she prioritizes ensuring that all parents and caregivers feel informed and supported in their understanding of ABA therapy, guiding them every step of the way",
+    ],
+    imageUrl: inaeImage,
+    profileLink: "/about/inae",
   },
 ];
 
@@ -220,3 +209,37 @@ export const abaResources: ABAResource[] = [
     imgAlt: "Therapist with child",
   },
 ];
+
+export const servicesData = {
+  home: {
+    title: "Preschool Learners",
+    description: `For our preschool learners, we offer home-based early learner programs 
+    designed to prepare toddlers and young children for their future. Our trained therapists 
+    work closely with each child, creating individualized goals that encompass language 
+    development, social skills training, and effective behavior management strategies. In 
+    addition, our social skills groups provide opportunities for children to generalize their 
+    skills in a supportive and interactive setting. Throughout the entire process, our Board 
+    Certified Behavior Analysts (BCBAs) provide ongoing supervision to ensure continuous progress 
+    and monitoring.`,
+    image:
+      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+  },
+  school: {
+    title: "School-aged Learners",
+    description: `Our school-aged learner programs cater to children from Kindergarten to High School. 
+    These in-home ABA therapy programs are meticulously customized to address the specific needs of 
+    each learner. Assessment and program development are carried out by our BCBAs, ensuring a 
+    comprehensive approach. The implementation of the program is handled by trained and experienced 
+    Behavior Technicians and Registered Behavior Technicians (RBTs).`,
+    image:
+      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+  },
+  adult: {
+    title: "Adult Learners",
+    description: `For adult learners aged 18 and over, our in-home ABA therapy programs are individually crafted 
+    to meet their specific needs. We conduct thorough screenings using assessment tools that align with their areas 
+    of concern, allowing us to create comprehensive and personalized plans.`,
+    image:
+      "https://storage.googleapis.com/a1aa/image/gpkBVlMvuKJ1CFjE3N5Uj9UGlg2MPunxosEJjVtINnajAH5E.jpg",
+  },
+};

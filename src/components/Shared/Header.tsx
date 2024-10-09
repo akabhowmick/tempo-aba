@@ -47,7 +47,7 @@ export const Header = () => {
 
                     {/* Submenu */}
                     <div
-                      className={`absolute left-0 bg-green-100 text-black mt-2 shadow-lg rounded-md z-50 opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300`}
+                      className={`w-max absolute left-0 bg-green-100 text-black mt-2 shadow-lg rounded-md z-50 opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300`}
                     >
                       {item.submenu.map((subitem) => (
                         <Link

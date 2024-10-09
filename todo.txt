@@ -10,7 +10,9 @@
 4. Add resources
 5. Add services
 6. Contact and resume should both configure to the emails 
-7. Insurance info 
 8. FAQ 
 9. Page Banner (image with title)
 10. Get the url info 
+
+
+=> images (10) 

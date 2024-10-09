@@ -12,7 +12,7 @@ export const ProfilePage = () => {
   }
 
   return (
-    <div className="font-roboto bg-white text-gray-800 py-8">
+    <div className="font-roboto text-gray-800 py-8">
       <div className="container mx-auto px-4">
         {/* Breadcrumbs */}
         <nav className="mb-8">
@@ -43,7 +43,13 @@ export const ProfilePage = () => {
 
           {/* Right Column: Bio */}
           <div className="w-full md:w-2/3">
-            <p className="text-gray-800 whitespace-pre-line">{profile.bio}</p>
+            {profile.bio.map((paragraph) => {
+              return (
+                <p className="text-gray-800 whitespace-pre-line mb-4" key={paragraph}>
+                  {paragraph}
+                </p>
+              );
+            })}
           </div>
         </div>
       </div>
