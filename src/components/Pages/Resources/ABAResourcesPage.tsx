@@ -1,87 +1,93 @@
-import { abaResources } from "../../../data/content";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+// Import logos
+import ideaLogo from "../../../assets/siteImages/resources/idea.png";
+import iesLogo from "../../../assets/siteImages/resources/ies.png";
+import bacbLogo from "../../../assets/siteImages/resources/bacb.png";
+import naspLogo from "../../../assets/siteImages/resources/nasp.png";
+import usdepLogo from "../../../assets/siteImages/resources/usdep.png";
+
+// Resource data
+const resources = [
+  {
+    name: "Individuals with Disabilities Education Improvement Act",
+    url: "http://idea.ed.gov",
+    description:
+      "This is the website for the most up-to-date information on the Individuals with Disabilities Education Improvement Act (IDEA).",
+    logo: ideaLogo,
+  },
+  {
+    name: "Institute of Education Sciences",
+    url: "http://ies.ed.gov",
+    description:
+      "This website provides information about the Institute of Education Sciences (IES), a division of the U.S. Department of Education.",
+    logo: iesLogo,
+  },
+  {
+    name: "National Association of School Psychologists (NASP)",
+    url: "http://www.nasponline.org",
+    description:
+      "This website provides information for students, families, and educators on the most recent developments in school psychology.",
+    logo: naspLogo,
+  },
+  {
+    name: "U.S. Department of Education",
+    url: "https://www.ed.gov/",
+    description:
+      "This page provides news and information about the government’s educational initiatives, including standards and assessment.",
+    logo: usdepLogo,
+  },
+  {
+    name: "Behavior Analyst Certification Board (BACB)",
+    url: "https://www.bacb.com/",
+    description:
+      "The BACB website provides essential information about certification, ethics, and professional standards in ABA.",
+    logo: bacbLogo,
+  },
+];
 
 export const ABAResourcesPage = () => {
   return (
-    <main className="bg-white text-gray-800 font-open-sans">
-      {/* Hero Section */}
-      <section className="bg-green-100 py-12">
-        <div className="container mx-auto flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl font-bold text-green-600">ABA Therapy Services</h1>
-            <p className="mt-4 text-lg text-gray-700">
-              ABA therapy brings about meaningful change for children on the autism spectrum.
-            </p>
-          </div>
-          <div className="md:w-1/2 mt-8 md:mt-0">
-            <img
-              alt="Therapist with child"
-              className="rounded-lg shadow-md"
-              src="https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg"
-              width="600"
-              height="400"
-            />
-          </div>
-        </div>
-      </section>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6 text-center">Helpful Resources</h1>
+      <ul className="space-y-12">
+        {resources.map((resource, index) => (
+          <motion.li
+            key={index}
+            className="relative border rounded-lg shadow-lg hover:bg-gray-100"
+            whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Slanted rectangle background */}
+            <div className="absolute inset-0 rounded-lg transform bg-green-400 rotate-3 -z-10"></div>
+            
+            <Link to={resource.url} className="flex items-center justify-between p-6 bg-white space-x-6 relative z-10">
+              {/* Logo */}
+              <img
+                src={resource.logo}
+                alt={`${resource.name} logo`}
+                className="w-24 h-24 object-contain"
+              />
 
-      {/* Main Content */}
-      <section className="text-center mt-12 mx-5">
-        <h2 className="text-3xl font-semibold text-gray-800">
-          Improve Functional Skills and Drive Positive Change
-        </h2>
-        <p className="mt-4 text-lg text-gray-600">
-          Applied Behavior Analysis (ABA) is a systematic therapy for autism and is designed to
-          offer tailored programs. ABA, like other therapies, clinically focused and can be used to
-          foster a range of skills. Our therapy is rooted in the science of learning and behavior
-          and has been shown to help children increase useful behaviors and learn new skills.
-        </p>
-      </section>
-
-      {/* Resources */}
-      <section className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 mx-4">
-        {abaResources.map((resource) => (
-          <div key={resource.id} className="flex flex-col items-center text-center">
-            <img
-              alt={resource.imgAlt}
-              className="rounded-lg shadow-md"
-              src={resource.imgSrc}
-              width="600"
-              height="400"
-            />
-            <h3 className="mt-6 text-2xl font-semibold text-gray-800">{resource.title}</h3>
-            <p className="mt-4 text-lg text-gray-600">{resource.description}</p>
-          </div>
+              {/* Resource Info */}
+              <div className="flex-1">
+                <h2 className="text-xl font-semibold mb-2">
+                  <a
+                    href={resource.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
+                    {resource.name}
+                  </a>
+                </h2>
+                <p className="text-gray-700">{resource.description}</p>
+              </div>
+            </Link>
+          </motion.li>
         ))}
-      </section>
-
-      {/* Call to Action */}
-      <section className="mt-12 bg-green-100 py-12 text-center">
-        <h2 className="text-3xl font-semibold text-gray-800">Don't See What You're Looking For?</h2>
-        <p className="mt-4 text-lg text-gray-600">
-          We work with all kinds of behaviors. You can connect with us to get a personalized program
-          for your child. Reach out to see how we can help!
-        </p>
-        <a
-          className="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600"
-          href="#"
-        >
-          Get Started
-        </a>
-      </section>
-
-      <section className="mt-12 text-center">
-        <h2 className="text-3xl font-semibold text-gray-800">Get Started Today</h2>
-        <p className="mt-4 text-lg text-gray-600">
-          The conversation starts here. We listen and while we talk, think about things you and your
-          child can do together. Speak with us today.
-        </p>
-        <a
-          className="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600"
-          href="#"
-        >
-          Get Started
-        </a>
-      </section>
-    </main>
+      </ul>
+    </div>
   );
 };

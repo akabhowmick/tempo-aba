@@ -13,7 +13,7 @@ export const Hero = () => {
         <div className="text-center">
           <h1 className={`${commonStyles.heading} text-4xl md:text-6xl`}>Discover your Tempo</h1>
           <p className={`${commonStyles.paragraph} mt-4`}>
-            Connect with us, at Tempo ABA, where we celebrate every child's unique rhythm.
+            Connect with us, at Tempo ABA, where we celebrate everyone's unique rhythm.
           </p>
           <a
             href="#"

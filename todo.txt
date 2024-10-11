@@ -6,13 +6,11 @@
 2. Footer 
     The different links => should all relate back to sites links 
     Social media links 
-3. Add our process (step by step)
-4. Add resources
-5. Add services
+3. Add our process (step by step) => methods page (add dots on the timeline and make it closer to the line)
+5. Service Pages
 6. Contact and resume should both configure to the emails 
-8. FAQ 
-9. Page Banner (image with title)
-10. Get the url info 
+7. Page Banner (image with title)
+8. Get the url info 
 
 
 => images (10) 

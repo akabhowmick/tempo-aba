@@ -3,6 +3,7 @@ import { router } from "./components/Router";
 import { RouterProvider } from "react-router-dom";
 import { Footer } from "./components/Shared/Footer";
 import { content } from "./data/content";
+import { SupportChat } from "./components/Shared/SupportChat";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       {/* Content on top of the background */}
       <div className="relative z-10">
         <RouterProvider router={router} />
+        <SupportChat />
         <Footer />
       </div>
     </div>

@@ -11,9 +11,6 @@ import resourceImage1 from "../assets/siteImages/4824.jpg";
 import resourceImage2 from "../assets/siteImages/5767946.jpg";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
-import missionImage from "../assets/siteImages/mission.png";
-export const savedMissionImage = missionImage;
-
 export const content = {
   siteBG: backgroundImage,
   header: {
@@ -56,38 +53,45 @@ export const content = {
   hero: {
     title: "ABA - Our Approach",
     description: "At Behavior Frontiers, we take a client-centered approach to ABA.",
+    subheader:
+      "At Tempo ABA, we are committed to delivering a high-quality ABA Therapy experience for children and their families. Our dedicated team of experienced therapists and BCBAs conduct thorough assessments and create personalized treatment plans tailored to achieve each child's specific goals.",
+    subheader2:
+      "We eagerly anticipate the opportunity to meet with you and explore how we can serve to meet the unique needs of your family.",
     heroImage: heroImage,
   },
   services: {
     title: "Where do we provide our services?",
     serviceList: [
       {
-        cardTitle: "In-Home ABA",
-        cardDescription: "We offer in-home ABA services to create a familiar environment.",
+        cardTitle: "Home Based ABA",
+        cardDescription:
+          "Tailored ABA support in the comfort of your child’s home for effective skill generalization.",
         cardImage: serviceImage1,
-        cardLink: "/in-home-aba", // Link to the specific service page
+        cardLink: "services/home", // Link to the specific service page
         cardGradient: "from-blue-500 to-transparent", // Custom gradient
       },
       {
-        cardTitle: "School-Based ABA",
-        cardDescription: "Our therapists provide ABA in school settings.",
+        cardTitle: "Community Based ABA",
+        cardDescription:
+          "We integrate community outings into your child’s program to support real-world skill development.",
         cardImage: serviceImage2,
-        cardLink: "/school-based-aba",
-        cardGradient: "from-green-500 to-transparent",
+        cardLink: "/community-based-aba", // Link to the specific service page
+        cardGradient: "from-orange-500 to-transparent", // Custom gradient
       },
       {
-        cardTitle: "Community-Based ABA",
-        cardDescription: "Our services can be provided in various community settings.",
+        cardTitle: "School-Based ABA",
+        cardDescription:
+          "We provide ABA services in schools to support your child’s success in the classroom.",
         cardImage: serviceImage3,
-        cardLink: "/community-based-aba",
-        cardGradient: "from-orange-500 to-transparent",
+        cardLink: "/school-based-aba", // Link to the specific service page
+        cardGradient: "from-green-500 to-transparent", // Custom gradient
       },
       {
         cardTitle: "Center-Based ABA",
-        cardDescription: "Our clinics offer center-based ABA therapy.",
+        cardDescription: "Our clinics offer ABA therapy in a structured, professional setting.",
         cardImage: serviceImage4,
-        cardLink: "/center-based-aba",
-        cardGradient: "from-purple-500 to-transparent",
+        cardLink: "/center-based-aba", // Link to the specific service page
+        cardGradient: "from-purple-500 to-transparent", // Custom gradient
       },
     ],
   },
@@ -212,34 +216,58 @@ export const abaResources: ABAResource[] = [
 
 export const servicesData = {
   home: {
-    title: "Preschool Learners",
-    description: `For our preschool learners, we offer home-based early learner programs 
-    designed to prepare toddlers and young children for their future. Our trained therapists 
-    work closely with each child, creating individualized goals that encompass language 
-    development, social skills training, and effective behavior management strategies. In 
-    addition, our social skills groups provide opportunities for children to generalize their 
-    skills in a supportive and interactive setting. Throughout the entire process, our Board 
-    Certified Behavior Analysts (BCBAs) provide ongoing supervision to ensure continuous progress 
-    and monitoring.`,
+    title: "Home Based ABA",
+    description: `Learning in a home setting can be the most comfortable option for your child. 
+    In familiar surroundings, your child can engage in daily routines while receiving tailored support. 
+    Family members can easily receive parent training and participate in the process, fostering a collaborative 
+    environment. Home-based ABA is ideal for helping your child acquire skills in their own space and apply those 
+    skills in various settings, promoting effective generalization.`,
+    image:
+      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+  },
+  community: {
+    title: "Community Based ABA",
+    description: `If you could use some help making trips to the grocery store, playground, or park more successful, 
+    we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences 
+    are both enjoyable and effective. Our dedicated Tempo ABA team will work closely with your family to create a 
+    supportive environment, making each outing easier and more rewarding for everyone involved.`,
     image:
       "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
   },
   school: {
-    title: "School-aged Learners",
-    description: `Our school-aged learner programs cater to children from Kindergarten to High School. 
-    These in-home ABA therapy programs are meticulously customized to address the specific needs of 
-    each learner. Assessment and program development are carried out by our BCBAs, ensuring a 
-    comprehensive approach. The implementation of the program is handled by trained and experienced 
-    Behavior Technicians and Registered Behavior Technicians (RBTs).`,
+    title: "In-School Consultation",
+    description: `Our School Consulting services are tailored to address the specific needs of each school, student, 
+    and teacher. Led by our experienced Board Certified Behavior Analysts (BCBAs), who have successfully taken on 
+    leadership roles in school settings and excel in classroom management, we offer invaluable in-school consultation services. 
+    Our goal is to help schools create supportive and inclusive environments for all students through classroom setup, educator 
+    training, standardized assessments, IEP support, FBAs, BSPs, and caregiver training sessions.`,
     image:
       "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
   },
-  adult: {
-    title: "Adult Learners",
-    description: `For adult learners aged 18 and over, our in-home ABA therapy programs are individually crafted 
-    to meet their specific needs. We conduct thorough screenings using assessment tools that align with their areas 
-    of concern, allowing us to create comprehensive and personalized plans.`,
+  parentTraining: {
+    title: "Parent Training Workshops",
+    description: `ABA parent training is a vital component of any ABA program. It equips parents with essential skills 
+    to promote generalization, enhance functioning in natural settings, and reduce stress, ultimately creating a more enjoyable 
+    and fulfilling life for the entire family.`,
+    image:
+      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+  },
+  transition: {
+    title: "Transition to Adulthood",
+    description: `As children grow older, their focus shifts toward preparing for adulthood. We prioritize essential 
+    skills for this transition, including activities of daily living, appropriate social behaviors, and job training. 
+    Our programs are designed to equip individuals with the necessary tools to navigate life independently and successfully. 
+    We also emphasize communication skills, self-advocacy, and decision-making to ensure they are well-prepared for the 
+    challenges of adult life.`,
     image:
       "https://storage.googleapis.com/a1aa/image/gpkBVlMvuKJ1CFjE3N5Uj9UGlg2MPunxosEJjVtINnajAH5E.jpg",
+  },
+  center: {
+    title: "Center Based ABA (Coming Soon)",
+    description: `We are excited to announce the upcoming launch of our center-based ABA programs. These programs will offer 
+    a structured environment for skill acquisition and social interaction under the supervision of experienced BCBAs. Stay 
+    tuned for more details on this new offering!`,
+    image:
+      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
   },
 };

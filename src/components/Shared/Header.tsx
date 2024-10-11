@@ -36,7 +36,7 @@ export const Header = () => {
                     {/* Parent Menu Button */}
                     <Button
                       color="inherit"
-                      className="relative z-50 group-hover:text-green-700 flex items-center"
+                      className="relative z-50 group-hover:text-white flex items-center"
                     >
                       {item.name}
                       {/* Chevron icon */}
@@ -53,7 +53,7 @@ export const Header = () => {
                         <Link
                           to={subitem.path}
                           key={subitem.name}
-                          className="block px-4 py-2 hover:bg-green-200"
+                          className={`block px-4 py-2 hover:bg-green-200`}
                         >
                           {subitem.name}
                         </Link>

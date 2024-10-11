@@ -8,6 +8,7 @@ export const HomePage = () => {
   return (
     <>
       <Hero />
+      
       <Services />
       <FollowUp />
       <WhyUs />
