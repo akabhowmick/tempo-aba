@@ -42,8 +42,13 @@ export const ServiceCard = ({ service }: { service: ServiceCardProps }) => {
             {cardTitle}
           </motion.div>
 
-          {/* Description - Visible on Hover */}
-          <motion.div className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {/* Description - Fully Hidden and Shows on Hover */}
+          <motion.div
+            className="text-sm mt-2 hidden transform translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+            initial={{ opacity: 0, translateY: 5 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             {cardDescription}
           </motion.div>
         </div>

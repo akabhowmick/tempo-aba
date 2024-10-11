@@ -7,10 +7,9 @@
     The different links => should all relate back to sites links 
     Social media links 
 3. Add our process (step by step) => methods page (add dots on the timeline and make it closer to the line)
-5. Service Pages
-6. Contact and resume should both configure to the emails 
-7. Page Banner (image with title)
-8. Get the url info 
+5. Contact and resume should both configure to the emails 
+6. Page Banner (image with title)
+7. Get the url info 
 
 
 => images (10) 

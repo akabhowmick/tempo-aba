@@ -6,7 +6,7 @@ import { WhyUs } from "./WhyUs";
 
 export const HomePage = () => {
   return (
-    <>
+    <div className="mb-10">
       <Hero />
       
       <Services />
@@ -17,6 +17,6 @@ export const HomePage = () => {
           <ContactForm />
         </div>
       </div>
-    </>
+    </div>
   );
 };

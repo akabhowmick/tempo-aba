@@ -36,8 +36,9 @@ export const content = {
           { name: "In-School Consultation", path: "/services/school" },
           { name: "Community Based ABA", path: "/services/community" },
           { name: "Center-Based ABA", path: "/services/center" },
-          { name: "Parent Training Workshop", path: "/services/transition" },
-          { name: "Transition to Adulthood", path: "/services/adult" },
+          { name: "Parent Training Workshop", path: "/services/parentTraining" },
+          { name: "Transition to Adulthood", path: "/services/transition" },
+          { name: "Behavior Consultation", path: "/services/behavior" },
         ],
       },
       {
@@ -217,38 +218,33 @@ export const abaResources: ABAResource[] = [
 export const servicesData = {
   home: {
     title: "Home Based ABA",
-    description: `Learning in a home setting can be the most comfortable option for your child. 
-    In familiar surroundings, your child can engage in daily routines while receiving tailored support. 
-    Family members can easily receive parent training and participate in the process, fostering a collaborative 
-    environment. Home-based ABA is ideal for helping your child acquire skills in their own space and apply those 
-    skills in various settings, promoting effective generalization.`,
+    description: `Learning in a home setting can be the most comfortable option for your child. In familiar surroundings, your child can engage in daily routines while receiving tailored support. Family members can easily  receive parent training and participate in the process, fostering a collaborative environment. Home-based ABA is ideal for helping your child acquire skills in their own space and apply those skills in various settings, promoting effective generalization.`,
     image:
       "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
   },
   community: {
     title: "Community Based ABA",
-    description: `If you could use some help making trips to the grocery store, playground, or park more successful, 
-    we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences 
-    are both enjoyable and effective. Our dedicated Tempo ABA team will work closely with your family to create a 
-    supportive environment, making each outing easier and more rewarding for everyone involved.`,
+    description: `If you could use some help making trips to the grocery store, playground, or park more successful, we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences are both enjoyable and effective. Our dedicated Tempo ABA team will work closely with your family to create a supportive environment, making each outing easier and more rewarding for everyone involved.`,
     image:
       "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
   },
   school: {
     title: "In-School Consultation",
-    description: `Our School Consulting services are tailored to address the specific needs of each school, student, 
-    and teacher. Led by our experienced Board Certified Behavior Analysts (BCBAs), who have successfully taken on 
-    leadership roles in school settings and excel in classroom management, we offer invaluable in-school consultation services. 
-    Our goal is to help schools create supportive and inclusive environments for all students through classroom setup, educator 
-    training, standardized assessments, IEP support, FBAs, BSPs, and caregiver training sessions.`,
+    description: `Our School Consulting services are tailored to address the specific needs of each school, student, and teacher. Led by our experienced Board Certified Behavior Analysts (BCBAs), who have successfully taken on leadership roles in school settings and excel in classroom management, we offer invaluable in-school consultation services. Our goal is to help schools create supportive and inclusive environments for all students.`,
+    additionalInfo: [
+      "Classroom set-up for optimal learning",
+      "Educator training sessions",
+      "Standardized assessments",
+      "IEP support and development",
+      "Behavior Intervention Services; and Teacher, caregiver, and general classroom modification training",
+      "Family training sessions",
+    ],
     image:
       "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
   },
   parentTraining: {
     title: "Parent Training Workshops",
-    description: `ABA parent training is a vital component of any ABA program. It equips parents with essential skills 
-    to promote generalization, enhance functioning in natural settings, and reduce stress, ultimately creating a more enjoyable 
-    and fulfilling life for the entire family.`,
+    description: `ABA parent training is a vital component of any ABA program. It equips parents with essential skills to promote generalization, enhance functioning in natural settings, and reduce stress, ultimately creating a more enjoyable and fulfilling life for the entire family`,
     image:
       "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
   },
@@ -267,6 +263,12 @@ export const servicesData = {
     description: `We are excited to announce the upcoming launch of our center-based ABA programs. These programs will offer 
     a structured environment for skill acquisition and social interaction under the supervision of experienced BCBAs. Stay 
     tuned for more details on this new offering!`,
+    image:
+      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+  },
+  behavior: {
+    title: "Behavior Consultation",
+    description: `By cultivating collaborative and professional relationships, we aim to empower educators with the tools and knowledge necessary to create inclusive and supportive learning environments.`,
     image:
       "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
   },

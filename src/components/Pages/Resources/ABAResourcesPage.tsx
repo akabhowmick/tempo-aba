@@ -49,7 +49,7 @@ const resources = [
 
 export const ABAResourcesPage = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-14">
       <h1 className="text-3xl font-bold mb-6 text-center">Helpful Resources</h1>
       <ul className="space-y-12">
         {resources.map((resource, index) => (
@@ -62,7 +62,7 @@ export const ABAResourcesPage = () => {
             {/* Slanted rectangle background */}
             <div className="absolute inset-0 rounded-lg transform bg-green-400 rotate-3 -z-10"></div>
             
-            <Link to={resource.url} className="flex items-center justify-between p-6 bg-white space-x-6 relative z-10">
+            <Link to={resource.url} className="flex items-center rounded-lg justify-between p-6 bg-white space-x-6 relative z-10">
               {/* Logo */}
               <img
                 src={resource.logo}

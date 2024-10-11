@@ -10,7 +10,7 @@ const ChatIcon: React.FC<ChatIconProps> = ({ className }) => (
 );
 
 export const SupportChat: React.FC = () => {
-  const [isChatOpen, setIsChatOpen] = useState(true);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const toggleChat = () => {
     setIsChatOpen(!isChatOpen);
@@ -19,16 +19,16 @@ export const SupportChat: React.FC = () => {
   return (
     <div>
       <button
-        className="fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-medium border rounded-full w-16 h-16 bg-black cursor-pointer border-gray-200 p-0 hover:text-gray-900"
+        className="z-1000 fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-medium border rounded-full w-16 h-16 bg-gray-100 cursor-pointer border-green-600 p-0 hover:text-gray-900"
         type="button"
         onClick={toggleChat}
       >
-        <ChatIcon className="text-gray-600" />
+        <ChatIcon className="text-green-600" />
       </button>
 
       {isChatOpen && (
         <div
-          className="absolute bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[440px] h-[634px]"
+          className="fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-80 h-80 z-1000"
           style={{ boxShadow: "0 1px 2px 0 rgb(0 0 0 / 0.05)" }}
         >
           <div className="flex flex-col space-y-1.5 pb-6">

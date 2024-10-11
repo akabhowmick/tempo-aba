@@ -2,7 +2,7 @@ import { ContactForm } from "./ContactForm";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 export const ContactPage = () => {
-  const containerStyles = "py-10 bg-green-100 sm:py-16 lg:py-24";
+  const containerStyles = "py-10 sm:py-16 lg:py-24";
   const innerContainerStyles = "px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl flex flex-col";
   const headerStyles = "max-w-2xl mx-auto text-center ";
   const titleStyles = "text-3xl font-bold leading-tight text-white-900 sm:text-4xl lg:text-5xl";
