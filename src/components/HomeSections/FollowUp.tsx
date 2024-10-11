@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { content } from "../../data/content";
 
 export const FollowUp = () => {
@@ -16,12 +17,14 @@ export const FollowUp = () => {
         </div>
 
         {/* Text 1 */}
-        <div className="bg-green-200 p-8 flex flex-col justify-center">
+        <div className="bg-green-800 p-8 flex flex-col justify-center text-white">
           <h2 className="text-3xl font-bold mb-4">{content.resources.text1.title}</h2>
           <p className="text-lg mb-4">{content.resources.text1.description}</p>
-          <button className="bg-green-500 text-white px-4 py-2 rounded">
-            {content.resources.text1.buttonText}
-          </button>
+          <Link to={content.resources.text1.link}>
+            <button className="bg-green-500 px-4 py-2 rounded w-full">
+              {content.resources.text1.buttonText}
+            </button>
+          </Link>
         </div>
 
         {/* Image 2 (this comes after Text 2 on mobile) */}
@@ -36,12 +39,14 @@ export const FollowUp = () => {
         </div>
 
         {/* Text 2 (comes last on desktop) */}
-        <div className="bg-green-200 p-8 flex flex-col justify-center md:order-last">
+        <div className="bg-green-800 p-8 flex flex-col justify-center md:order-last text-white">
           <h2 className="text-3xl font-bold mb-4">{content.resources.text2.title}</h2>
           <p className="text-lg mb-4">{content.resources.text2.description}</p>
-          <button className="bg-green-500 text-white px-4 py-2 rounded">
-            {content.resources.text2.buttonText}
-          </button>
+          <Link to={content.resources.text2.link}>
+            <button className="bg-green-500 px-4 py-2 rounded w-full">
+              {content.resources.text2.buttonText}
+            </button>
+          </Link>
         </div>
       </div>
     </div>

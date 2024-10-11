@@ -108,6 +108,7 @@ export const content = {
       description:
         "We not only treat our clients, but we also support them as well. Check out some of these helpful resources!",
       buttonText: "Read more",
+      link: "/resources/aba"
     },
     image2: {
       type: "image",
@@ -120,6 +121,7 @@ export const content = {
       description:
         "We will provide you with the necessary tools to meet all current and future challenges.",
       buttonText: "Read more",
+      link: "/services/methods"
     },
   },
   programs: {

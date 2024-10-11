@@ -53,7 +53,7 @@ export const Header = () => {
                         <Link
                           to={subitem.path}
                           key={subitem.name}
-                          className={`block px-4 py-2 hover:bg-green-200`}
+                          className={`block px-4 py-2 hover:bg-green-800`}
                         >
                           {subitem.name}
                         </Link>
