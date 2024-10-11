@@ -2,12 +2,13 @@
     Update the white text boxes
     Update the green backgrounds 
     Update Service cards with proper info 
-    Update Focus on the family information 
 2. Footer 
-    The different links => should all relate back to sites links 
+    Services => update this col
     Social media links 
 3. Add our process (step by step) => methods page (add dots on the timeline and make it closer to the line)
 4. Contact and resume should both configure to the emails 
 5. Page Banner (image with title)
+6. Join us background
+7. Nav link hover being weird 
 
 => images (10) 

@@ -1,6 +1,6 @@
 export const InsurancePage: React.FC = () => {
   return (
-    <div className="bg-white text-gray-800 font-roboto">
+    <div className=" text-gray-800 font-roboto">
       <div className="max-w-4xl mx-auto p-6">
         {/* Icon and description */}
         <div className="text-center mb-8">

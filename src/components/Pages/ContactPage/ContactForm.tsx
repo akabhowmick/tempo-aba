@@ -4,9 +4,9 @@ export const ContactForm = () => {
   const formContainerStyles = "mt-6 overflow-hidden bg-white rounded-xl";
   const formContentStyles = "px-6 py-12 sm:p-12";
   const inputStyles =
-    "block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-green-600 caret-green-600";
+    "block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-green-800 caret-green-800";
   const buttonStyles =
-    "inline-flex cursor-pointer items-center justify-center w-full px-4 py-4 mt-2 text-base font-semibold text-white transition-all duration-200 bg-green-600 border border-transparent rounded-md focus:outline-none hover:bg-green-700 focus:bg-green-700";
+    "inline-flex cursor-pointer items-center justify-center w-full px-4 py-4 mt-2 text-base font-semibold text-white transition-all duration-200 bg-green-800 border border-transparent rounded-md focus:outline-none hover:bg-green-700 focus:bg-green-700";
 
   return (
     <div className={formContainerStyles}>

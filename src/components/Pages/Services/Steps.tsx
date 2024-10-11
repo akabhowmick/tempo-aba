@@ -68,14 +68,14 @@ const steps: Step[] = [
 
 export const Steps = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white">
+    <div className="flex items-center justify-center min-h-screen">
       <div className="relative w-full max-w-4xl p-4">
-        <h1 className="text-center text-gray-600 font-bold text-xl mb-12">
+        <h1 className="text-center text-black font-bold text-xl mb-12">
           STEPS FOR DIAGNOSIS TO TREATMENT
         </h1>
         <div className="relative">
           {/* Vertical timeline */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-300"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-5 bg-green-800"></div>
 
           {/* Steps */}
           <div className="space-y-12 mx-auto">
@@ -88,7 +88,7 @@ export const Steps = () => {
                 <StepCard step={step} />
 
                 {/* Vertical line */}
-                <div className="w-1 bg-gray-300 hidden md:block"></div>
+                <div className="w-5 bg-green-800 hidden md:block"></div>
               </div>
             ))}
           </div>
@@ -99,7 +99,7 @@ export const Steps = () => {
 };
 
 const StepCard = ({ step }: { step: Step }) => (
-  <div className="flex flex-col items-center justify-center w-60 h-60 p-2 border rounded-lg shadow-md space-y-2">
+  <div className="flex flex-col items-center bg-white justify-center w-60 h-60 p-2 border rounded-lg shadow-md space-y-2">
     <div className="text-3xl font-bold">{step.number}</div>
     <div className="text-4xl rounded-full">{step.icon}</div>
     <p className="text-center font-semibold">{step.description}</p>

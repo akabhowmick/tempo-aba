@@ -65,7 +65,7 @@ export const PageTitle = ({
 
 {/* <div class="relative">
    <img alt="Children playing in a park" class="w-full h-64 object-cover" height="500" src="https://storage.googleapis.com/a1aa/image/dm1pOq0n6Y4xMBaqeSwkeRPbOl5BD9KJqWI3Khf4d5g68ILnA.jpg" width="1920"/>
-   <div class="absolute inset-0 bg-green-600 bg-opacity-50 flex items-center justify-center">
+   <div class="absolute inset-0 bg-green-800 bg-opacity-50 flex items-center justify-center">
     <h1 class="text-white text-4xl font-bold">
      Our Process
     </h1>

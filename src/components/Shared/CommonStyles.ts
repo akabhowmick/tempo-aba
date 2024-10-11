@@ -10,7 +10,7 @@ export const commonStyles = {
   navMenu: "hidden lg:flex lg:items-center lg:justify-center lg:ml-10 lg:mr-auto lg:space-x-10",
   navLink: "text-base text-black transition-all duration-200 hover:text-white",
   ctaButton:
-    "bg-green-600 hidden lg:inline-flex items-center justify-center px-5 py-2.5 text-white font-semibold text-black border-2 border-black hover:bg-green-700 hover:text-white transition-all duration-200 focus:bg-green-700 focus:text-white",
+    "bg-green-800 hidden lg:inline-flex items-center justify-center px-5 py-2.5 text-white font-semibold text-black border-2 border-black hover:bg-green-700 hover:text-white transition-all duration-200 focus:bg-green-700 focus:text-white",
   section: "overflow-hidden h-screen",
   contentContainer: "flex flex-col lg:flex-row lg:items-center lg:max-h-[900px] p-2",
   textContainer: "flex items-center justify-center w-full lg:order-2 lg:w-7/12",

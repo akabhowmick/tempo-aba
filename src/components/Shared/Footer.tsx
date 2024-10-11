@@ -6,7 +6,7 @@ export const Footer = () => {
     "flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-700 rounded-full w-7 h-7 focus:bg-blue-600 hover:bg-blue-600 hover:border-blue-600 focus:border-blue-600";
 
   const aClasses =
-    "text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80 cursor-pointer";
+    "text-md text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80 cursor-pointer";
 
   return (
     <section className="py-10 bg-green-900 sm:pt-16 lg:pt-24">
@@ -14,13 +14,13 @@ export const Footer = () => {
         <div className="grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-4 md:gap-x-12">
           {/* Company */}
           <div>
-            <p className="text-base text-green-100">Company</p>
+            <p className="text-xl text-green-100">Company</p>
             <ul className="mt-8 space-y-4">
               {[
-                { href: "/about", text: "About" },
-                { href: "/features", text: "Features" },
-                { href: "/works", text: "Works" },
-                { href: "/career", text: "Career" },
+                { href: "/about/members", text: "Our Members" },
+                { href: "/about/mission", text: "Our Mission" },
+                { href: "/services/methods", text: "Our Methods" },
+                { href: "/careers", text: "Careers" },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href}>
@@ -33,7 +33,7 @@ export const Footer = () => {
 
           {/* Help */}
           <div>
-            <p className="text-base text-green-100">Help</p>
+            <p className="text-xl text-green-100">Services</p>
             <ul className="mt-8 space-y-4">
               {[
                 { href: "/support", text: "Customer Support" },
@@ -52,13 +52,11 @@ export const Footer = () => {
 
           {/* Resources */}
           <div>
-            <p className="text-base text-green-100">Resources</p>
+            <p className="text-xl text-green-100">Resources</p>
             <ul className="mt-8 space-y-4">
               {[
-                { href: "/insurance", text: "Insurance" },
-                { href: "/faq", text: "FAQ" },
-                { href: "/blog", text: "How to - Blog" },
-                { href: "/youtube", text: "YouTube Playlist" },
+                { href: "/resources/insurance", text: "Insurance" },
+                { href: "/resources/faq", text: "FAQ" },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href}>
@@ -71,11 +69,11 @@ export const Footer = () => {
 
           {/* Extra as */}
           <div>
-            <p className="text-base text-green-100">Extra assistance</p>
+            <p className="text-xl text-green-100">Extra assistance</p>
             <ul className="mt-8 space-y-4">
               {[
-                { href: "/terms", text: "Terms & Conditions" },
-                { href: "/privacy", text: "Privacy Policy" },
+                { href: "/contact", text: "Contact" },
+                { href: "/resources/aba", text: "ABA Resources" },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href}>
