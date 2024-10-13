@@ -73,7 +73,7 @@ export const SupportChat: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700">Name</label>
               <input
                 type="text"
-                name="name"
+                name="Name"
                 required
                 className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
                 placeholder="Your Name"
@@ -85,7 +85,7 @@ export const SupportChat: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700">Email</label>
               <input
                 type="email"
-                name="email"
+                name="Email"
                 required
                 className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
                 placeholder="Your Email"
@@ -97,7 +97,7 @@ export const SupportChat: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700">Phone Number</label>
               <input
                 type="tel"
-                name="phone"
+                name="Phone"
                 required
                 className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
                 placeholder="Your Phone Number"
@@ -108,16 +108,18 @@ export const SupportChat: React.FC = () => {
             <div>
               <label className="block text-sm font-medium text-gray-700">Topic/Subject</label>
               <select
-                name="topic"
+                name="Topic"
                 required
                 className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
               >
                 <option value="" disabled>
                   Select a topic
                 </option>
-                <option value="general">General question or inquiry</option>
-                <option value="services">I am interested in services for my child(ren)</option>
-                <option value="recruiting">Recruiting and hiring</option>
+                <option value="General question or inquiry">General question or inquiry</option>
+                <option value="I am interested in services for my child(ren)s">
+                  I am interested in services for my child(ren)
+                </option>
+                <option value="Recruiting and hiring">Recruiting and hiring</option>
               </select>
             </div>
 
@@ -125,7 +127,7 @@ export const SupportChat: React.FC = () => {
             <div>
               <label className="block text-sm font-medium text-gray-700">Message</label>
               <textarea
-                name="message"
+                name="Message"
                 required
                 rows={4}
                 className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"

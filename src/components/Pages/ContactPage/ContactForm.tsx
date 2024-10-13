@@ -25,7 +25,7 @@ export const ContactForm = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="Name"
                   required
                   placeholder="Enter your full name"
                   className={inputStyles}
@@ -42,7 +42,7 @@ export const ContactForm = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="Email"
                   required
                   placeholder="Enter your email address"
                   className={inputStyles}
@@ -59,7 +59,7 @@ export const ContactForm = () => {
                 <input
                   type="tel"
                   id="phone"
-                  name="phone"
+                  name="Phone"
                   required
                   placeholder="Enter your phone number"
                   className={inputStyles}
@@ -76,7 +76,7 @@ export const ContactForm = () => {
                 <input
                   type="text"
                   id="company"
-                  name="company"
+                  name="Company"
                   placeholder="Enter your company name"
                   className={inputStyles}
                 />
@@ -91,7 +91,7 @@ export const ContactForm = () => {
               <div className="mt-2.5 relative">
                 <textarea
                   id="message"
-                  name="message"
+                  name="Message"
                   required
                   placeholder="Enter your message"
                   className={`${inputStyles} resize-y`}

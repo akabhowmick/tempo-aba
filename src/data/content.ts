@@ -290,7 +290,7 @@ export const pageBanners = {
 };
 
 export const emailSetUp = {
-  formSubmitEmail: "https://formsubmit.co/akabhowmick@gmail.com",
+  formSubmitEmail: "https://formsubmit.co/ikim@progressiveabaservices.com",
   redirectLink: "https://tempoaba.com/",
-  ccLinks: "Cynmartinez810@gmail.com ,inaekim.ny@gmail.com",
+  ccLinks: "cmartinnez@progressiveabaservices.com",
 };

@@ -1,2 +1,4 @@
-1. Contact, resume, chat box should both configure to the emails 
-2. url work 
+1. url work 
+
+
+https://support.squarespace.com/hc/en-us/articles/205812338-Transferring-a-domain-away-from-Squarespace

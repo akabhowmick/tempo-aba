@@ -30,7 +30,7 @@ export const CareerForm = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="Name"
                   required
                   placeholder="Enter your full name"
                   className={inputStyles}
@@ -47,7 +47,7 @@ export const CareerForm = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="Email"
                   required
                   placeholder="Enter your email address"
                   className={inputStyles}
@@ -65,7 +65,7 @@ export const CareerForm = () => {
                   type="tel"
                   id="phone"
                   required
-                  name="phone"
+                  name="Phone"
                   placeholder="Enter your phone number"
                   className={inputStyles}
                 />
@@ -81,7 +81,7 @@ export const CareerForm = () => {
                 <input
                   type="text"
                   id="company"
-                  name="company"
+                  name="Company"
                   placeholder="Enter your company name"
                   className={inputStyles}
                 />
@@ -96,7 +96,7 @@ export const CareerForm = () => {
               <div className="mt-2.5 relative">
                 <textarea
                   id="message"
-                  name="message"
+                  name="Message"
                   placeholder="Enter your message"
                   className={`${inputStyles} resize-y`}
                 ></textarea>
@@ -112,7 +112,7 @@ export const CareerForm = () => {
                 <input
                   type="file"
                   id="resume"
-                  name="attachment"
+                  name="Resume-Attachment"
                   accept=".pdf"
                   className={inputStyles}
                 />
@@ -128,7 +128,7 @@ export const CareerForm = () => {
                 <input
                   type="file"
                   id="coverLetter"
-                  name="attachment"
+                  name="Cover-Letter-Attachment"
                   accept=".pdf"
                   className={inputStyles}
                 />
@@ -137,7 +137,7 @@ export const CareerForm = () => {
 
             <input type="hidden" name="_next" value={emailSetUp.redirectLink} />
             <input type="hidden" name="_subject" value="Career Form Inquiry!"></input>
-            <input type="hidden" name="_cc" value={emailSetUp.ccLinks}></input>
+            {/* <input type="hidden" name="_cc" value={emailSetUp.ccLinks}></input> */}
             <input type="hidden" name="_template" value="table"></input>
 
             {/* Submit Button */}
