@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { SubPageTitle } from "../../Shared/CommonSections";
+import { pageBanners } from "../../../data/content";
 
 const FaqPage: React.FC = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
@@ -14,8 +16,8 @@ const FaqPage: React.FC = () => {
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 py-12">
         <div className="container mx-auto px-8">
-          <h1 className="text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
-          <div className="space-y-4">
+        <SubPageTitle pageBannerInfo={pageBanners.faq}/>
+          <div className="space-y-4 py-8">
             {faqItems.map((item, index) => (
               <Accordion
                 key={index}

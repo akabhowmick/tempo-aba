@@ -20,7 +20,7 @@ export const ProfilePage = () => {
             Home
           </a>
           <span className="mx-2 text-gray-500"> &gt; </span>
-          <a className="text-blue-600 hover:underline" href="about/members">
+          <a className="text-blue-600 hover:underline" href="/about/members">
             Our Members
           </a>
           <span className="mx-2 text-gray-500"> &gt; </span>

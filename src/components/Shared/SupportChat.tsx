@@ -28,7 +28,7 @@ export const SupportChat: React.FC = () => {
 
       {isChatOpen && (
         <div
-          className="fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-80 h-80 z-1000"
+          className="fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-80 max-h-[70vh] z-1000 overflow-y-auto"
           style={{ boxShadow: "0 1px 2px 0 rgb(0 0 0 / 0.05)" }}
         >
           <div className="flex flex-col space-y-1.5 pb-6">
@@ -43,21 +43,82 @@ export const SupportChat: React.FC = () => {
               </button>
             </div>
             <p className="text-sm text-gray-600 leading-5">
-              Talk directly with our members and receive a response in 24-48 hours
+              Talk directly with our members and receive a response in 24-48 hours.
             </p>
           </div>
 
-          <div className="flex items-center pt-0">
-            <form className="flex items-center justify-center w-full space-x-2">
+          {/* Contact Form */}
+          <form className="space-y-4">
+            {/* Name Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Name</label>
               <input
-                className="flex h-10 w-full rounded-md border border-[#e5e7eb] px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] disabled:cursor-not-allowed disabled:opacity-50 text-black focus-visible:ring-offset-2 bg-white"
-                placeholder="Type your message"
+                type="text"
+                required
+                className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
+                placeholder="Your Name"
               />
-              <button className="inline-flex items-center justify-center rounded-md text-sm font-medium text-[#f9fafb] disabled:pointer-events-none disabled:opacity-50 bg-gray-800 hover:bg-[#111827E6] h-10 px-4 py-2">
-                Send
+            </div>
+
+            {/* Email Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Email</label>
+              <input
+                type="email"
+                required
+                className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
+                placeholder="Your Email"
+              />
+            </div>
+
+            {/* Phone Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Phone Number</label>
+              <input
+                type="tel"
+                required
+                className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
+                placeholder="Your Phone Number"
+              />
+            </div>
+
+            {/* Topic/Subject of Inquiry */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Topic/Subject</label>
+              <select
+                required
+                className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
+              >
+                <option value="" disabled selected>
+                  Select a topic
+                </option>
+                <option value="general">General question or inquiry</option>
+                <option value="services">I am interested in services for my child(ren)</option>
+                <option value="recruiting">Recruiting and hiring</option>
+              </select>
+            </div>
+
+            {/* Message Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Message</label>
+              <textarea
+                required
+                rows={4}
+                className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-green-500 focus:border-green-500"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+
+            {/* Submit Button */}
+            <div className="text-center">
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium text-white bg-green-800 hover:bg-green-700 px-4 py-2"
+              >
+                Send Message
               </button>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       )}
     </div>

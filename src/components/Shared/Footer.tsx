@@ -19,8 +19,8 @@ export const Footer = () => {
               {[
                 { href: "/about/members", text: "Our Members" },
                 { href: "/about/mission", text: "Our Mission" },
-                { href: "/services/methods", text: "Our Methods" },
-                { href: "/careers", text: "Careers" },
+                { href: "/about/methods", text: "Our Methods" },
+                { href: "/about/abaandautism", text: "About ABA and Autism" },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href}>
@@ -36,10 +36,10 @@ export const Footer = () => {
             <p className="text-xl text-green-100">Services</p>
             <ul className="mt-8 space-y-4">
               {[
-                { href: "/support", text: "Customer Support" },
-                { href: "/delivery", text: "Delivery Details" },
-                { href: "/terms", text: "Terms & Conditions" },
-                { href: "/privacy", text: "Privacy Policy" },
+                { href: "/services/home", text: "Home Based ABA" },
+                { href: "/services/school", text: "In-School Consultation" },
+                { href: "/services/community", text: "Community Based ABA" },
+                { href: "/careers", text: "Careers" },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href}>

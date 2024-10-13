@@ -7,6 +7,8 @@ import iesLogo from "../../../assets/siteImages/resources/ies.png";
 import bacbLogo from "../../../assets/siteImages/resources/bacb.png";
 import naspLogo from "../../../assets/siteImages/resources/nasp.png";
 import usdepLogo from "../../../assets/siteImages/resources/usdep.png";
+import { SubPageTitle } from "../../Shared/CommonSections";
+import { pageBanners } from "../../../data/content";
 
 // Resource data
 const resources = [
@@ -50,8 +52,8 @@ const resources = [
 export const ABAResourcesPage = () => {
   return (
     <div className="container mx-auto px-4 py-14">
-      <h1 className="text-3xl font-bold mb-6 text-center">Helpful Resources</h1>
-      <ul className="space-y-12">
+      <SubPageTitle pageBannerInfo={pageBanners.abaResources}/>
+      <ul className="space-y-12 py-8">
         {resources.map((resource, index) => (
           <motion.li
             key={index}
@@ -60,7 +62,6 @@ export const ABAResourcesPage = () => {
             transition={{ duration: 0.3 }}
           >
             {/* Slanted rectangle background */}
-            <div className="absolute inset-0 rounded-lg transform bg-green-600 rotate-3 -z-10"></div>
             
             <Link to={resource.url} className="flex items-center rounded-lg justify-between p-6 bg-white space-x-6 relative z-10">
               {/* Logo */}
