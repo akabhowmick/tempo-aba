@@ -9,7 +9,7 @@ export const ContactInfoBox = ({ formType }: { formType: string }) => {
 
   return (
     <div className="max-w-5xl mx-auto my-12 sm:mt-16">
-      <div className="grid grid-cols-1 gap-6 px-8 text-center md:px-0 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 px-2 text-center md:px-0 md:grid-cols-3">
         <div className={cardStyles}>
           <div className={cardContentStyles}>
             <FiPhone className={iconStyles} />
