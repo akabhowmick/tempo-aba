@@ -16,7 +16,7 @@ export const Hero = () => {
             Connect with us, at Tempo ABA, where we celebrate everyone's unique rhythm.
           </p>
           <a
-            href="#"
+            href="/about/methods"
             title="Get started with Tempo"
             className={`${commonStyles.button} mt-6`}
             role="button"

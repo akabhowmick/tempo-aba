@@ -1,14 +1,14 @@
 import { FaHandsHelping, FaUserGraduate, FaClipboardCheck, FaChartLine } from "react-icons/fa";
 
-import missionImage from "../assets/siteImages/mission.png";
+import missionImage from "../assets/siteImages/home/pikaso_edit_Candid-image-photography-natural-textures-highly-r.jpeg";
 export const savedMissionImage = missionImage;
 
 import backgroundPrinciples from "../assets/siteImages/backgrounds/greenBG.png";
 export const savedBgLightestGreen = backgroundPrinciples;
 
-import banner2 from "../assets/siteImages/banner2.jpg";
-import banner3 from "../assets/siteImages/banner3.jpg";
-import banner4 from "../assets/siteImages/banner4.png";
+import banner2 from "../assets/siteImages/banners/banner2.jpg";
+import banner3 from "../assets/siteImages/banners/banner3.jpg";
+import banner4 from "../assets/siteImages/banners/banner4.png";
 
 export const missionContent = {
   mission: {

@@ -1,5 +1,3 @@
-1. Home Page => 
-    Update Service cards with proper info 
 2. Contact, resume, chat box should both configure to the emails 
 3. images
 4. url work 

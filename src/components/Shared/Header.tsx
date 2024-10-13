@@ -15,8 +15,8 @@ export const Header = () => {
 
   return (
     <>
-      <header>
-        <AppBar position="static" className="z-50">
+      <header className="sticky top-0 z-50 ">
+        <AppBar position="sticky" className="z-50">
           <Toolbar className="flex justify-between bg-green-600">
             {/* Logo */}
             <Link to="/" className="flex gap-1 items-center">

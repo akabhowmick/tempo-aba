@@ -1,17 +1,20 @@
 import logo from "../assets/siteImages/logowithname.jpeg";
-import heroImage from "../assets/siteImages/adam-winger-7fF0iei80AQ-unsplash.jpg";
-import serviceImage1 from "../assets/siteImages/19198612.jpg";
-import serviceImage2 from "../assets/siteImages/19198612.jpg";
-import serviceImage3 from "../assets/siteImages/19198612.jpg";
-import serviceImage4 from "../assets/siteImages/19198612.jpg";
+import heroImage from "../assets/siteImages/homePage.jpg";
+import serviceImage1 from "../assets/siteImages/animated/19198612.jpg";
+import serviceImage2 from "../assets/siteImages/animated/4824.jpg";
+import serviceImage3 from "../assets/siteImages/animated/5767946.jpg";
+import serviceImage4 from "../assets/siteImages/animated/Wavy_Med-08_Single-09.jpg";
+import serviceImage5 from "../assets/siteImages/animated/Wavy_Ppl-04_Single-11.jpg";
+import serviceImage6 from "../assets/siteImages/animated/mission.png";
+import serviceImage7 from "../assets/siteImages/animated/19198612.jpg";
 import inaeImage from "../assets/siteImages/members/inae.png";
 import cynthiaImage from "../assets/siteImages/members/cynthia.png";
 
-import resourceImage1 from "../assets/siteImages/4824.jpg";
-import resourceImage2 from "../assets/siteImages/5767946.jpg";
+import resourceImage1 from "../assets/siteImages/home/resource1.jpeg";
+import resourceImage2 from "../assets/siteImages/home/resource2.jpeg";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
-import banner1 from "../assets/siteImages/banner1.jpg";
+import banner1 from "../assets/siteImages/banners/banner1.jpg";
 // import banner2 from "../assets/siteImages/banner2.jpg";
 
 export const content = {
@@ -76,30 +79,53 @@ export const content = {
         cardDescription:
           "Tailored ABA support in the comfort of your child’s home for effective skill generalization.",
         cardImage: serviceImage1,
-        cardLink: "services/home", // Link to the specific service page
-        cardGradient: "from-blue-500 to-transparent", // Custom gradient
+        cardLink: "/services/home", // Link to the specific service page
+        cardGradient: "from-purple-500 to-transparent", // Custom gradient
       },
       {
         cardTitle: "Community Based ABA",
         cardDescription:
           "We integrate community outings into your child’s program to support real-world skill development.",
         cardImage: serviceImage2,
-        cardLink: "/community-based-aba", // Link to the specific service page
-        cardGradient: "from-orange-500 to-transparent", // Custom gradient
+        cardLink: "/services/community", // Link to the specific service page
+        cardGradient: "from-blue-500 to-transparent", // Custom gradient
       },
       {
         cardTitle: "School-Based ABA",
         cardDescription:
           "We provide ABA services in schools to support your child’s success in the classroom.",
         cardImage: serviceImage3,
-        cardLink: "/school-based-aba", // Link to the specific service page
+        cardLink: "/services/school", // Link to the specific service page
         cardGradient: "from-green-600 to-transparent", // Custom gradient
       },
       {
         cardTitle: "Center-Based ABA",
         cardDescription: "Our clinics offer ABA therapy in a structured, professional setting.",
         cardImage: serviceImage4,
-        cardLink: "/center-based-aba", // Link to the specific service page
+        cardLink: "/services/center", // Link to the specific service page
+        cardGradient: "from-yellow-500 to-transparent", // Custom gradient
+      },
+      {
+        cardTitle: "Parent Training Workshops",
+        cardDescription:
+          "We integrate community outings into your child’s program to support real-world skill development.",
+        cardImage: serviceImage5,
+        cardLink: "/services/parentTraining", // Link to the specific service page
+        cardGradient: "from-orange-500 to-transparent", // Custom gradient
+      },
+      {
+        cardTitle: "Transition to Adulthood",
+        cardDescription:
+          "We provide ABA services in schools to support your child’s success in the classroom.",
+        cardImage: serviceImage6,
+        cardLink: "/services/school", // Link to the specific service page
+        cardGradient: "from-red-600 to-transparent", // Custom gradient
+      },
+      {
+        cardTitle: "Behavior Consultation",
+        cardDescription: "Our clinics offer ABA therapy in a structured, professional setting.",
+        cardImage: serviceImage7,
+        cardLink: "/services/behavior", // Link to the specific service page
         cardGradient: "from-purple-500 to-transparent", // Custom gradient
       },
     ],
