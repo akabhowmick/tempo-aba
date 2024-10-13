@@ -1,3 +1,2 @@
 1. Contact, resume, chat box should both configure to the emails 
 2. url work 
-3. chat box bug

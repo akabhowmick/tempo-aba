@@ -3,10 +3,10 @@ import heroImage from "../assets/siteImages/homePage.jpg";
 import serviceImage1 from "../assets/siteImages/animated/19198612.jpg";
 import serviceImage2 from "../assets/siteImages/animated/4824.jpg";
 import serviceImage3 from "../assets/siteImages/animated/5767946.jpg";
-import serviceImage4 from "../assets/siteImages/animated/Wavy_Med-08_Single-09.jpg";
+// import serviceImage4 from "../assets/siteImages/animated/Wavy_Med-08_Single-09.jpg";
 import serviceImage5 from "../assets/siteImages/animated/Wavy_Ppl-04_Single-11.jpg";
 import serviceImage6 from "../assets/siteImages/animated/mission.png";
-import serviceImage7 from "../assets/siteImages/animated/19198612.jpg";
+import serviceImage7 from "../assets/siteImages/animated/Cartoon married couple communicating with doctor.jpg";
 import inaeImage from "../assets/siteImages/members/inae.png";
 import cynthiaImage from "../assets/siteImages/members/cynthia.png";
 
@@ -106,13 +106,13 @@ export const content = {
         cardLink: "/services/school", // Link to the specific service page
         cardGradient: "from-green-600 to-transparent", // Custom gradient
       },
-      {
-        cardTitle: "Center-Based ABA",
-        cardDescription: "Our clinics offer ABA therapy in a structured, professional setting.",
-        cardImage: serviceImage4,
-        cardLink: "/services/center", // Link to the specific service page
-        cardGradient: "from-yellow-500 to-transparent", // Custom gradient
-      },
+      // {
+      //   cardTitle: "Center-Based ABA",
+      //   cardDescription: "Our clinics offer ABA therapy in a structured, professional setting.",
+      //   cardImage: serviceImage4,
+      //   cardLink: "/services/center", // Link to the specific service page
+      //   cardGradient: "from-yellow-500 to-transparent", // Custom gradient
+      // },
       {
         cardTitle: "Parent Training Workshops",
         cardDescription:
@@ -287,4 +287,10 @@ export const pageBanners = {
     title: "Helpful Resources",
     subtitle: "At Tempo ABA we support them at every turn.",
   },
+};
+
+export const emailSetUp = {
+  formSubmitEmail: "https://formsubmit.co/akabhowmick@gmail.com",
+  redirectLink: "https://tempoaba.com/",
+  ccLinks: "Cynmartinez810@gmail.com ,inaekim.ny@gmail.com",
 };

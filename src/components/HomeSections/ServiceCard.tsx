@@ -15,7 +15,7 @@ export const ServiceCard = ({ service }: { service: ServiceCardProps }) => {
   return (
     <Link to={cardLink}>
       <motion.div
-        className="relative rounded-lg overflow-hidden cursor-pointer w-60 group"
+        className="relative rounded-lg overflow-hidden cursor-pointer w-80 h-60 group" // Set a fixed height
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         whileHover={{ scale: 1.05 }}
@@ -25,8 +25,6 @@ export const ServiceCard = ({ service }: { service: ServiceCardProps }) => {
           src={cardImage}
           alt={cardTitle}
           className="w-full h-full object-cover"
-          height="400"
-          width="600"
         />
 
         {/* Background Gradient */}

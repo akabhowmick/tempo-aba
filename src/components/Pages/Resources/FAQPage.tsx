@@ -28,10 +28,11 @@ const FaqPage: React.FC = () => {
                   expandIcon={<ArrowDownwardIcon />}
                   aria-controls={`panel${index}bh-content`}
                   id={`panel${index}bh-header`}
+                  className="border-none shadow-none rounded-md"
                 >
                   <Typography className="semibold">{index+1}. {item.question}</Typography>
                 </AccordionSummary>
-                <AccordionDetails>
+                <AccordionDetails className="border-none shadow-none rounded-md">
                   <Typography>{item.answer}</Typography>
                 </AccordionDetails>
               </Accordion>

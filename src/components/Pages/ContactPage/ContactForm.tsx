@@ -1,3 +1,4 @@
+import { emailSetUp } from "../../../data/content";
 import { SectionTitle } from "../../Shared/CommonSections";
 
 export const ContactForm = () => {
@@ -13,8 +14,9 @@ export const ContactForm = () => {
       <div className={formContentStyles}>
         <SectionTitle title="Reach out to us!" />
 
-        <form action="#" method="POST" className="mt-14">
+        <form action={emailSetUp.formSubmitEmail} method="POST" className="mt-14">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
+            {/* Name field */}
             <div>
               <label htmlFor="name" className="text-base font-medium text-gray-900">
                 Your Name
@@ -23,12 +25,15 @@ export const ContactForm = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  required
                   placeholder="Enter your full name"
                   className={inputStyles}
                 />
               </div>
             </div>
 
+            {/* Email field */}
             <div>
               <label htmlFor="email" className="text-base font-medium text-gray-900">
                 Email Address
@@ -37,12 +42,15 @@ export const ContactForm = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   placeholder="Enter your email address"
                   className={inputStyles}
                 />
               </div>
             </div>
 
+            {/* Phone field */}
             <div>
               <label htmlFor="phone" className="text-base font-medium text-gray-900">
                 Phone Number
@@ -51,12 +59,15 @@ export const ContactForm = () => {
                 <input
                   type="tel"
                   id="phone"
+                  name="phone"
+                  required
                   placeholder="Enter your phone number"
                   className={inputStyles}
                 />
               </div>
             </div>
 
+            {/* Company field */}
             <div>
               <label htmlFor="company" className="text-base font-medium text-gray-900">
                 Company Name
@@ -65,12 +76,14 @@ export const ContactForm = () => {
                 <input
                   type="text"
                   id="company"
+                  name="company"
                   placeholder="Enter your company name"
                   className={inputStyles}
                 />
               </div>
             </div>
 
+            {/* Message field */}
             <div className="sm:col-span-2">
               <label htmlFor="message" className="text-base font-medium text-gray-900">
                 Message
@@ -78,14 +91,25 @@ export const ContactForm = () => {
               <div className="mt-2.5 relative">
                 <textarea
                   id="message"
+                  name="message"
+                  required
                   placeholder="Enter your message"
                   className={`${inputStyles} resize-y`}
                 ></textarea>
               </div>
             </div>
 
+            {/* Hidden input for redirect after submission (optional) */}
+            <input type="hidden" name="_next" value={emailSetUp.redirectLink} />
+            <input type="hidden" name="_subject" value="Contact Form Inquiry!"></input>
+            <input type="hidden" name="_cc" value={emailSetUp.ccLinks}></input>
+            <input type="hidden" name="_template" value="table"></input>
+
+            {/* Submit button */}
             <div className="sm:col-span-2">
-              <div className={buttonStyles}>Send</div>
+              <button type="submit" className={buttonStyles}>
+                Send
+              </button>
             </div>
           </div>
         </form>
