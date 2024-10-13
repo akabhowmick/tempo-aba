@@ -1,7 +1,6 @@
 1. Home Page => 
     Update Service cards with proper info 
-3. Contact, resume, chat box should both configure to the emails 
-
-=> images (10) 
-
-=> URL work 
+2. Contact, resume, chat box should both configure to the emails 
+3. images
+4. url work 
+5. chat box bug
