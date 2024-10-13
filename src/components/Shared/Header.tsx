@@ -94,6 +94,7 @@ export const Header = () => {
         </AppBar>
 
         {/* Mobile Menu */}
+        {/* Mobile Menu */}
         <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-600 p-4 md:hidden`}>
           {content.header.navItems.map((item) =>
             item.submenu ? (
@@ -111,7 +112,15 @@ export const Header = () => {
                 {isDropdownOpen === item.name && (
                   <div className="pl-4">
                     {item.submenu.map((subitem) => (
-                      <Link to={subitem.path} key={subitem.name} className="block text-white py-2">
+                      <Link
+                        to={subitem.path}
+                        key={subitem.name}
+                        className="block text-white py-2"
+                        onClick={() => {
+                          setMobileMenuOpen(false); // Close mobile menu
+                          window.scrollTo(0, 0); // Scroll to top
+                        }}
+                      >
                         {subitem.name}
                       </Link>
                     ))}
@@ -119,12 +128,27 @@ export const Header = () => {
                 )}
               </div>
             ) : (
-              <Link to={item.path} key={item.name} className="block text-white py-2">
+              <Link
+                to={item.path}
+                key={item.name}
+                className="block text-white py-2"
+                onClick={() => {
+                  setMobileMenuOpen(false); // Close mobile menu
+                  window.scrollTo(0, 0); // Scroll to top
+                }}
+              >
                 {item.name}
               </Link>
             )
           )}
-          <Link to="/contact" className="block text-white py-2">
+          <Link
+            to="/contact"
+            className="block text-white py-2"
+            onClick={() => {
+              setMobileMenuOpen(false); // Close mobile menu
+              window.scrollTo(0, 0); // Scroll to top
+            }}
+          >
             Contact Us
           </Link>
         </div>

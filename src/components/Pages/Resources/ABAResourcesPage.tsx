@@ -52,36 +52,31 @@ const resources = [
 export const ABAResourcesPage = () => {
   return (
     <div className="container mx-auto px-4 py-14">
-      <SubPageTitle pageBannerInfo={pageBanners.abaResources}/>
-      <ul className="space-y-12 py-8">
+      <SubPageTitle pageBannerInfo={pageBanners.abaResources} />
+      {/* Flex container for cards, default to column on mobile */}
+      <ul className="flex flex-col space-y-8 py-8 md:space-y-0 md:flex-row md:flex-wrap gap-8 justify-center">
         {resources.map((resource, index) => (
           <motion.li
             key={index}
-            className="relative border rounded-lg shadow-lg hover:bg-gray-100"
+            className="relative border bg-white rounded-lg shadow-lg hover:bg-white flex flex-col md:flex-row md:w-full md:max-w-md" // Set max width for each card
             whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
             transition={{ duration: 0.3 }}
           >
-            {/* Slanted rectangle background */}
-            
-            <Link to={resource.url} className="flex items-center rounded-lg justify-between p-6 bg-white space-x-6 relative z-10">
+            <Link
+              to={resource.url}
+              className="flex-col justify-center items-center rounded-lg p-6 relative z-10"
+            >
               {/* Logo */}
               <img
                 src={resource.logo}
                 alt={`${resource.name} logo`}
-                className="w-24 h-24 object-contain"
+                className="w-24 h-24 object-contain mb-4" // Add margin for spacing
               />
 
               {/* Resource Info */}
               <div className="flex-1">
                 <h2 className="text-xl font-semibold mb-2">
-                  <a
-                    href={resource.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                  >
-                    {resource.name}
-                  </a>
+                  <p className="text-blue-600 hover:underline">{resource.name}</p>
                 </h2>
                 <p className="text-gray-700">{resource.description}</p>
               </div>

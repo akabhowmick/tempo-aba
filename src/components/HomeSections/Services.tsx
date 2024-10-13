@@ -8,9 +8,9 @@ const services = content.services.serviceList.map((service) => {
 
 export const Services: React.FC = () => {
   return (
-    <section className="py-16 ">
+    <section className="py-16 px-4">
       <SectionTitle title={content.services.title} />
-      <div className="flex flex-wrap justify-center gap-8 mt-12">{services}</div>
+      <div className="p-4 flex flex-wrap justify-center gap-8 mt-12">{services}</div>
     </section>
   );
 };

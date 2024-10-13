@@ -24,7 +24,7 @@ export const SubPageTitle = ({ pageBannerInfo }: { pageBannerInfo: pageBannerInf
     <div className="relative">
       <img alt={alt} className="w-full h-64 object-cover opacity-75" src={src} />
       <div className="absolute inset-0 flex flex-col items-center justify-end text-white">
-        <h1 className="text-4xl font-bold pb-2">{title}</h1>
+        <h1 className="text-4xl text-center font-bold p-2">{title}</h1>
         <p className="text-lg text-center pb-4">{subtitle}</p>
       </div>
     </div>

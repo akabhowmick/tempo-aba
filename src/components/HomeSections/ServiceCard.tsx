@@ -15,7 +15,7 @@ export const ServiceCard = ({ service }: { service: ServiceCardProps }) => {
   return (
     <Link to={cardLink}>
       <motion.div
-        className="relative rounded-lg overflow-hidden cursor-pointer w-80 h-60 group" // Set a fixed height
+        className="relative rounded-lg overflow-hidden cursor-pointer w-80 max-w-[calc(100vw-40px)] h-60 group" // Set a fixed height
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         whileHover={{ scale: 1.05 }}
