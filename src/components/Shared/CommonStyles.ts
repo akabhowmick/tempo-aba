@@ -1,4 +1,3 @@
-
 export const commonStyles = {
   container: "relative",
   header: "absolute inset-x-0 top-0 z-10 w-full",
@@ -28,4 +27,5 @@ export const commonStyles = {
   imageContainer: "relative w-full overflow-hidden lg:w-5/12 lg:order-1",
   image: "w-full",
   pageTitle: "text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl",
+  containerStyles: "container mx-auto px-4 py-8",
 };

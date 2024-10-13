@@ -18,11 +18,12 @@ export const router = createBrowserRouter(
     <Route path="/" element={<Header />}>
       <Route path="/" element={<HomePage />} />
       {/* About Us */}
-      <Route path="/about/members" element={<OurMembersPage />} />
-      <Route path="/about/mission" element={<MissionPage />} />
-      <Route path="/about/:member" element={<ProfilePage />} />
-      <Route path="/about/abaandaustism" element={<ABAAutism />} />
+      <Route path="/about/abaandautism" element={<ABAAutism />} />
       <Route path="/about/methods" element={<MethodPage />} />
+      <Route path="/about/mission" element={<MissionPage />} />
+      <Route path="/about/members" element={<OurMembersPage />} />
+      <Route path="/about/members/:member" element={<ProfilePage />} />
+      
 
       <Route path="/careers" element={<CareerPage />} />
 

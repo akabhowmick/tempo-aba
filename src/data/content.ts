@@ -36,7 +36,6 @@ export const content = {
       {
         name: "Services",
         submenu: [
-          
           { name: "Home Based ABA", path: "/services/home" },
           { name: "In-School Consultation", path: "/services/school" },
           { name: "Community Based ABA", path: "/services/community" },
@@ -162,7 +161,7 @@ export const teamBios = [
       "Now serving as the Director of Tempo ABA, Cynthia’s enthusiasm and commitment to supporting clients and their families are at the heart of her work. She skillfully navigates challenges and advocates fiercely for her clients with special needs. Her dedication and compassion shine through in every interaction, making a profound and lasting impact on the lives of those she serves.",
     ],
     imageUrl: cynthiaImage,
-    profileLink: "/about/Cynthia",
+    profileLink: "/about/members/Cynthia",
   },
   {
     name: "Inae Kim",
@@ -175,7 +174,7 @@ export const teamBios = [
       "Inae's passion for helping clients and families drives her work. As a program coordinator, she prioritizes ensuring that all parents and caregivers feel informed and supported in their understanding of ABA therapy, guiding them every step of the way",
     ],
     imageUrl: inaeImage,
-    profileLink: "/about/inae",
+    profileLink: "/about/members/inae",
   },
 ];
 
@@ -293,7 +292,32 @@ export const pageBanners = {
     title: "Members",
     subtitle: "Welcome to Tempo ABA Services, where compassion meets expertise.",
   },
-  methods: { alt: "methodsImage", src: banner1, title: "Methods and Process", subtitle: "" },
+  methods: {
+    alt: "methodsImage",
+    src: banner1,
+    title: "Methods and Process",
+    subtitle: "Learn About Our Process",
+  },
   services: { alt: "servicesImage", src: banner1, title: "Services", subtitle: "Our offerings" },
-  contact: { alt: "contactImage", src: banner1, title: "Contact Us", subtitle: "Let's connect" },
+  contact: {
+    alt: "contactImage",
+    src: banner1,
+    title: "Contact Us",
+    subtitle: "Get in touch with us for any inquiries or support. ",
+  },
+  aba: { alt: "abaImage", src: banner1, title: "ABA and Autism", subtitle: "" },
+  joinUs: {
+    alt: "joinImage",
+    src: banner1,
+    title: "Join us in helping others!",
+    subtitle: "Complete the form below and we will shortly be in touch with you",
+  },
+  faq: { alt: "faqImage", src: banner1, title: "Frequently Asked Questions", subtitle: "" },
+  insurance: { alt: "insuranceImage", src: banner1, title: "Insurance", subtitle: "" },
+  abaResources: {
+    alt: "abaResourcesImage",
+    src: banner1,
+    title: "Helpful Resources",
+    subtitle: "At Tempo ABA we support them at every turn.",
+  },
 };
