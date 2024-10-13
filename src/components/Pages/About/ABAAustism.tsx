@@ -11,18 +11,18 @@ export const ABAAutism = () => {
       <h2 className="text-2xl font-bold text-center pt-8">{abaText.abaPage.section1.title}</h2>
       <ContentSection
         paragraph={abaText.abaPage.section1.paragraph1}
-        image={membersContent.image1}
+        image={membersContent.image8}
         index={1}
       />
       <h2 className="text-2xl font-bold text-center pt-8">{abaText.abaPage.section2.title}</h2>
       <ContentSection
         paragraph={abaText.abaPage.section2.paragraph1}
-        image={membersContent.image1}
+        image={membersContent.image9}
         index={2}
       />
       <ContentSection
         paragraph={abaText.abaPage.section2.paragraph2}
-        image={membersContent.image2}
+        image={membersContent.image7}
         index={1}
       />
       <ContentSection

@@ -51,7 +51,7 @@ export const OurMembersPage = () => (
 
     <ContentSection paragraph={membersContent.paragraph1} image={membersContent.image1} index={1} />
     <ContentSection paragraph={membersContent.paragraph2} image={membersContent.image2} index={2} />
-    <ContentSection paragraph={membersContent.paragraph3} image={membersContent.image3} index={3} />
+    <ContentSection paragraph={membersContent.paragraph3} image={membersContent.image5} index={3} />
 
     <h2 className="text-4xl font-bold mt-8 mb-4 text-center">Our Team</h2>
 

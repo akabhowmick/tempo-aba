@@ -11,17 +11,17 @@ const MethodPage: React.FC = () => {
         <SubPageTitle pageBannerInfo={pageBanners.methods} />
         <ContentSection
           paragraph={content.hero.subheader1 + " " + content.hero.subheader2}
-          image={membersContent.image3}
+          image={membersContent.image4}
           index={2}
         />
         <ContentSection
           paragraph={content.hero.subheader3}
-          image={membersContent.image1}
+          image={membersContent.image3}
           index={1}
         />
         <ContentSection
           paragraph={content.hero.subheader4}
-          image={membersContent.image2}
+          image={membersContent.image6}
           index={2}
         />
         <Steps />

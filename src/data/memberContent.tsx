@@ -10,6 +10,13 @@ import banner2 from "../assets/siteImages/banners/banner2.jpg";
 import banner3 from "../assets/siteImages/banners/banner3.jpg";
 import banner4 from "../assets/siteImages/banners/banner4.png";
 
+import banner5 from "../assets/siteImages/home/method1.jpeg";
+import banner6 from "../assets/siteImages/home/method2.jpeg";
+import banner7 from "../assets/siteImages/home/method3.jpeg";
+import aba1 from "../assets/siteImages/home/aba1.jpeg";
+import aba2 from "../assets/siteImages/home/aba2.jpeg";
+import aba3 from "../assets/siteImages/home/aba3.jpeg";
+
 export const missionContent = {
   mission: {
     title: "Our Mission:",
@@ -60,4 +67,11 @@ export const membersContent = {
   image1: banner2,
   image2: banner3,
   image3: banner4,
+  image4: banner5,
+  image5: banner6,
+  image6: banner7,
+  image7: aba1,
+  image8: aba2,
+  image9: aba3,
+  image10: missionImage,
 };

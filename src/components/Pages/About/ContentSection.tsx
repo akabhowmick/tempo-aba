@@ -8,9 +8,9 @@ export const ContentSection = ({
   index: number;
 }) => (
   <div
-    className={`flex flex-col ${
+    className={`flex flex-col p-4 my-8 ${
       index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-    } items-center my-4 gap-10} p-4 my-4`}
+    } items-center my-4 gap-10}`}
   >
     <div className="md:w-1/2 flex flex-col gap-4">
       <p className="text-lg leading-relaxed">{paragraph}</p>

@@ -14,6 +14,14 @@ import resourceImage1 from "../assets/siteImages/home/resource1.jpeg";
 import resourceImage2 from "../assets/siteImages/home/resource2.jpeg";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
+import servicePageImage1 from "../assets/siteImages/home/service1.jpeg";
+import servicePageImage2 from "../assets/siteImages/home/service2.jpeg";
+import servicePageImage3 from "../assets/siteImages/home/service3.jpeg";
+import servicePageImage4 from "../assets/siteImages/home/service4.jpeg";
+import servicePageImage5 from "../assets/siteImages/home/service5.jpeg";
+import servicePageImage6 from "../assets/siteImages/home/service6.jpeg";
+import servicePageImage7 from "../assets/siteImages/home/service7.jpeg";
+
 import banner1 from "../assets/siteImages/banners/banner1.jpg";
 // import banner2 from "../assets/siteImages/banner2.jpg";
 
@@ -158,19 +166,6 @@ export const content = {
       link: "/services/methods",
     },
   },
-  programs: {
-    title: "Our Programs",
-    earlyIntervention: "Early Intervention for children aged 0-3...",
-    comprehensive: "Comprehensive Program for children 3+...",
-    focused: "Focused ABA Programs designed for specific behavioral issues...",
-    parentTraining: "Parent-Control Programs for involving parents...",
-  },
-  resourcesData: [
-    { name: "Organization 1", imageUrl: "https://via.placeholder.com/150" },
-    { name: "Organization 2", imageUrl: "https://via.placeholder.com/150" },
-    { name: "Organization 3", imageUrl: "https://via.placeholder.com/150" },
-    { name: "Organization 4", imageUrl: "https://via.placeholder.com/150" },
-  ],
   footer: {
     text: "If you want to learn more about ABA, contact our team today!",
   },
@@ -204,65 +199,16 @@ export const teamBios = [
   },
 ];
 
-interface ABAResource {
-  id: number;
-  title: string;
-  description: string;
-  imgSrc: string;
-  imgAlt: string;
-}
-
-export const abaResources: ABAResource[] = [
-  {
-    id: 1,
-    title: "Therapy provided at your preferred time and location",
-    description:
-      "We understand that each child is unique and requires a personalized approach. Our therapy sessions are designed to fit into your schedule and can be provided at home, in school, or at our centers.",
-    imgSrc:
-      "https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg",
-    imgAlt: "Therapist with child",
-  },
-  {
-    id: 2,
-    title: "Guiding your child along the path of success",
-    description:
-      "Our team of highly skilled therapists work closely with your child to develop a customized plan that addresses their unique needs and helps them achieve their full potential.",
-    imgSrc:
-      "https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg",
-    imgAlt: "Therapist with child",
-  },
-  {
-    id: 3,
-    title: "Is ABA therapy right for your child?",
-    description:
-      "Every child is unique, and our therapists work closely with you to determine if ABA therapy is the right fit for your child. We provide a thorough assessment and develop a tailored therapy plan.",
-    imgSrc:
-      "https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg",
-    imgAlt: "Therapist with child",
-  },
-  {
-    id: 4,
-    title: "Sample Behaviors We Help With",
-    description:
-      "Our ABA therapy programs are designed to help children develop a range of skills, including communication, social/emotional skills, adaptive daily living skills, and reducing problem behaviors.",
-    imgSrc:
-      "https://storage.googleapis.com/a1aa/image/CeMjxniBUH25QSgfLoEoPmNDo7Als1oHqqVoNXDVwRBzimiTA.jpg",
-    imgAlt: "Therapist with child",
-  },
-];
-
 export const servicesData = {
   home: {
     title: "Home Based ABA",
     description: `Learning in a home setting can be the most comfortable option for your child. In familiar surroundings, your child can engage in daily routines while receiving tailored support. Family members can easily  receive parent training and participate in the process, fostering a collaborative environment. Home-based ABA is ideal for helping your child acquire skills in their own space and apply those skills in various settings, promoting effective generalization.`,
-    image:
-      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+    image: servicePageImage1,
   },
   community: {
     title: "Community Based ABA",
     description: `If you could use some help making trips to the grocery store, playground, or park more successful, we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences are both enjoyable and effective. Our dedicated Tempo ABA team will work closely with your family to create a supportive environment, making each outing easier and more rewarding for everyone involved.`,
-    image:
-      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+    image: servicePageImage2,
   },
   school: {
     title: "In-School Consultation",
@@ -275,14 +221,12 @@ export const servicesData = {
       "Behavior Intervention Services; and Teacher, caregiver, and general classroom modification training",
       "Family training sessions",
     ],
-    image:
-      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+    image: servicePageImage3,
   },
   parentTraining: {
     title: "Parent Training Workshops",
     description: `ABA parent training is a vital component of any ABA program. It equips parents with essential skills to promote generalization, enhance functioning in natural settings, and reduce stress, ultimately creating a more enjoyable and fulfilling life for the entire family`,
-    image:
-      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+    image: servicePageImage4,
   },
   transition: {
     title: "Transition to Adulthood",
@@ -291,22 +235,19 @@ export const servicesData = {
     Our programs are designed to equip individuals with the necessary tools to navigate life independently and successfully. 
     We also emphasize communication skills, self-advocacy, and decision-making to ensure they are well-prepared for the 
     challenges of adult life.`,
-    image:
-      "https://storage.googleapis.com/a1aa/image/gpkBVlMvuKJ1CFjE3N5Uj9UGlg2MPunxosEJjVtINnajAH5E.jpg",
+    image: servicePageImage5,
   },
   center: {
     title: "Center Based ABA (Coming Soon)",
     description: `We are excited to announce the upcoming launch of our center-based ABA programs. These programs will offer 
     a structured environment for skill acquisition and social interaction under the supervision of experienced BCBAs. Stay 
     tuned for more details on this new offering!`,
-    image:
-      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+    image: servicePageImage6,
   },
   behavior: {
     title: "Behavior Consultation",
     description: `By cultivating collaborative and professional relationships, we aim to empower educators with the tools and knowledge necessary to create inclusive and supportive learning environments.`,
-    image:
-      "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+    image: servicePageImage7,
   },
 };
 
