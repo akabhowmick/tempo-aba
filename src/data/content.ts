@@ -25,6 +25,8 @@ export const content = {
         submenu: [
           { name: "Our Members", path: "/about/members" },
           { name: "Our Mission", path: "/about/mission" },
+          { name: "Our Methods", path: "/about/methods" },
+          { name: "ABA & Autism", path: "/about/abaandautism" },
         ],
       },
       {
@@ -34,7 +36,7 @@ export const content = {
       {
         name: "Services",
         submenu: [
-          { name: "Methods", path: "/services/methods" },
+          
           { name: "Home Based ABA", path: "/services/home" },
           { name: "In-School Consultation", path: "/services/school" },
           { name: "Community Based ABA", path: "/services/community" },
@@ -57,10 +59,14 @@ export const content = {
   hero: {
     title: "ABA - Our Approach",
     description: "At Behavior Frontiers, we take a client-centered approach to ABA.",
-    subheader:
+    subheader1:
       "At Tempo ABA, we are committed to delivering a high-quality ABA Therapy experience for children and their families. Our dedicated team of experienced therapists and BCBAs conduct thorough assessments and create personalized treatment plans tailored to achieve each child's specific goals.",
     subheader2:
       "We eagerly anticipate the opportunity to meet with you and explore how we can serve to meet the unique needs of your family.",
+    subheader3:
+      "At Tempo ABA, our mission is to deliver outstanding therapy grounded in the principles of Applied Behavior Analysis (ABA). We are dedicated to empowering individuals to discover their unique strengths and potential, embracing the challenges of their learning journey toward independence.",
+    subheader4:
+      "We are committed to fostering a positive, inclusive, and diverse environment for our employees, the families we support, and our broader community. Our personalized approach to therapy ensures that collaboration among team members and families creates a safe and nurturing environment throughout your journey with us. We understand that navigating the path to effective care can be overwhelming for families and clients. So, where do you begin? Let us guide you through the process!",
     heroImage: heroImage,
   },
   services: {
@@ -287,4 +293,7 @@ export const pageBanners = {
     title: "Members",
     subtitle: "Welcome to Tempo ABA Services, where compassion meets expertise.",
   },
+  methods: { alt: "methodsImage", src: banner1, title: "Methods and Process", subtitle: "" },
+  services: { alt: "servicesImage", src: banner1, title: "Services", subtitle: "Our offerings" },
+  contact: { alt: "contactImage", src: banner1, title: "Contact Us", subtitle: "Let's connect" },
 };

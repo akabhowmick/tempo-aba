@@ -11,6 +11,7 @@ import { MissionPage } from "./Pages/About/MissionPage";
 import { InsurancePage } from "./Pages/Resources/InsuranceInfo";
 import { ABAResourcesPage } from "./Pages/Resources/ABAResourcesPage";
 import { ServicePage } from "./Pages/Services/ServicePage";
+import { ABAAutism } from "./Pages/About/ABAAustism";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,13 +21,13 @@ export const router = createBrowserRouter(
       <Route path="/about/members" element={<OurMembersPage />} />
       <Route path="/about/mission" element={<MissionPage />} />
       <Route path="/about/:member" element={<ProfilePage />} />
+      <Route path="/about/abaandaustism" element={<ABAAutism />} />
+      <Route path="/about/methods" element={<MethodPage />} />
 
       <Route path="/careers" element={<CareerPage />} />
 
       {/* Services */}
-      <Route path="/services/methods" element={<MethodPage />} />
       <Route path="/services/:learnerType" element={<ServicePage />} />
-
 
       {/* Resources */}
       <Route path="/resources/faq" element={<FaqPage />} />

@@ -8,7 +8,7 @@ export const commonStyles = {
   navButton:
     "inline-flex items-center p-2 text-sm text-white uppercase transition-all duration-200 bg-black lg:hidden focus:bg-gray-800 hover:bg-gray-800",
   navMenu: "hidden lg:flex lg:items-center lg:justify-center lg:ml-10 lg:mr-auto lg:space-x-10",
-  navLink: "text-base text-black transition-all duration-200 hover:text-white",
+  navLink: "text-white text-black transition-all duration-200 hover:text-white",
   ctaButton:
     "bg-green-800 hidden lg:inline-flex items-center justify-center px-5 py-2.5 text-white font-semibold text-black border-2 border-black hover:bg-green-700 hover:text-white transition-all duration-200 focus:bg-green-700 focus:text-white",
   section: "overflow-hidden h-screen",
@@ -18,7 +18,7 @@ export const commonStyles = {
   heading: "text-4xl font-bold sm:text-6xl xl:text-7xl",
   paragraph: "mt-4 text-base  sm:text-xl",
   button:
-    "inline-flex items-center px-6 py-5 text-base font-semibold text-black transition-all duration-200 bg-green-600 mt-4 hover:bg-green-600 focus:bg-green-600",
+    "inline-flex items-center px-6 py-5 text-white font-semibold transition-all duration-200 bg-green-600 mt-4 hover:bg-green-600 focus:bg-green-600",
   appLinks: "mt-8 border-t-2 border-black lg:mt-auto sm:mt-14",
   appLinkContainer: "pt-8 sm:flex sm:items-center sm:justify-between sm:pt-14",
   appLinkText: "text-base font-semibold text-black",

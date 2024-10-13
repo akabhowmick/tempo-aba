@@ -73,7 +73,8 @@ const steps: Step[] = [
 // Steps Timeline component
 export const Steps = () => {
   return (
-    <div className="flex justify-center align-middle">
+    <div className="flex-col md:flex-row justify-center align-middle pt-8">
+      <h2 className="text-2xl text-center font-bold">Step-by-step process</h2>
       <VerticalTimeline layout="2-columns" className="mx-auto md:w-2/3 p-4">
         {steps.map((step, index) => (
           <VerticalTimelineElement

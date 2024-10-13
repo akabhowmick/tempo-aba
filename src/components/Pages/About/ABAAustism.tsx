@@ -1,7 +1,7 @@
 import { savedBgLightestGreen, savedMissionImage } from "../../../data/memberContent";
 import { missionContent } from "../../../data/memberContent.tsx";
 
-export const MissionPage: React.FC = () => {
+export const ABAAutism = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row items-center my-4 gap-10">

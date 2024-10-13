@@ -47,17 +47,19 @@ export const Header = () => {
 
                     {/* Submenu */}
                     <div
-                      className={`w-max absolute left-0 bg-green-800 text-white mt-2 shadow-lg rounded-md z-50 opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300`}
+                      className={`w-max absolute left-0 bg-green-800 text-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300`}
                     >
-                      {item.submenu.map((subitem) => (
-                        <Link
-                          to={subitem.path}
-                          key={subitem.name}
-                          className={`block px-4 py-2 rounded-md hover:bg-green-800 hover:underline`}
-                        >
-                          {subitem.name}
-                        </Link>
-                      ))}
+                      <div className="hover:group">
+                        {item.submenu.map((subitem) => (
+                          <Link
+                            to={subitem.path}
+                            key={subitem.name}
+                            className={`block px-4 py-2 rounded-md hover:bg-green-700`}
+                          >
+                            {subitem.name}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ) : (
