@@ -1,3 +1,5 @@
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import {
   FaUsers,
   FaPhone,
@@ -10,16 +12,18 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 
+// Step interface
 interface Step {
   number: number;
   icon: JSX.Element;
   description: string;
 }
 
+// Steps data
 const steps: Step[] = [
   {
     number: 1,
-    icon: <FaUsers className="text-blue-600" />,
+    icon: <FaUsers className="text-orange-500" />,
     description: "Child receives a diagnosis of Autism Spectrum Disorders.",
   },
   {
@@ -29,19 +33,19 @@ const steps: Step[] = [
   },
   {
     number: 3,
-    icon: <FaCreditCard className="text-blue-600" />,
+    icon: <FaCreditCard className="text-orange-500" />,
     description:
       "The Tempo ABA intake coordinator will verify benefits with health insurance providers or explore alternative payment options.",
   },
   {
     number: 4,
-    icon: <FaUserMd className="text-green-500" />,
+    icon: <FaUserMd className="text-orange-500" />,
     description:
       "Once insurance coverage is confirmed, we will schedule an assessment with a licensed Behavior Analyst.",
   },
   {
     number: 5,
-    icon: <FaFileAlt className="text-blue-600" />,
+    icon: <FaFileAlt className="text-orange-500" />,
     description: "Receive comprehensive reports and recommendations for services if applicable.",
   },
   {
@@ -51,57 +55,42 @@ const steps: Step[] = [
   },
   {
     number: 7,
-    icon: <FaCheckCircle className="text-blue-600" />,
+    icon: <FaCheckCircle className="text-orange-500" />,
     description: "Insurance approval.",
   },
   {
     number: 8,
-    icon: <FaCalendarCheck className="text-green-500" />,
+    icon: <FaCalendarCheck className="text-orange-500" />,
     description: "Schedule ABA treatment with your Tempo ABA team.",
   },
   {
     number: 9,
-    icon: <FaChartLine className="text-blue-600" />,
+    icon: <FaChartLine className="text-orange-500" />,
     description: "Ongoing monitoring and evaluation.",
   },
 ];
 
+// Steps Timeline component
 export const Steps = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="relative w-full max-w-4xl p-4">
-        <h1 className="text-center text-black font-bold text-xl mb-12">
-          STEPS FOR DIAGNOSIS TO TREATMENT
-        </h1>
-        <div className="relative">
-          {/* Vertical timeline */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-5 bg-green-800"></div>
-
-          {/* Steps */}
-          <div className="space-y-12 mx-auto">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`flex items-center justify-between ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"}`}
-              >
-                {/* Left or right content depending on index */}
-                <StepCard step={step} />
-
-                {/* Vertical line */}
-                <div className="w-5 bg-green-800 hidden md:block"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <div className="flex justify-center align-middle">
+      <VerticalTimeline layout="2-columns" className="mx-auto md:w-2/3 p-4">
+        {steps.map((step, index) => (
+          <VerticalTimelineElement
+            key={index}
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "rgb(21 128 61)", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid rgb(21 128 61)" }}
+            iconStyle={{ background: "rgb(21 128 61)", color: "#fff" }}
+            icon={step.icon}
+          >
+            <h3 className="vertical-timeline-element-title text-xl font-bold">
+              Step {step.number}
+            </h3>
+            <p>{step.description}</p>
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
     </div>
   );
 };
-
-const StepCard = ({ step }: { step: Step }) => (
-  <div className="flex flex-col items-center bg-white justify-center w-60 h-60 p-2 border rounded-lg shadow-md space-y-2">
-    <div className="text-3xl font-bold">{step.number}</div>
-    <div className="text-4xl rounded-full">{step.icon}</div>
-    <p className="text-center font-semibold">{step.description}</p>
-  </div>
-);

@@ -1,14 +1,12 @@
 1. Home Page => 
-    Update the white text boxes
-    Update the green backgrounds 
     Update Service cards with proper info 
 2. Footer 
     Services => update this col
-    Social media links 
-3. Add our process (step by step) => methods page (add dots on the timeline and make it closer to the line)
 4. Contact and resume should both configure to the emails 
 5. Page Banner (image with title)
-6. Join us background
 7. Nav link hover being weird 
+8. Make the aba and autism page 
 
 => images (10) 
+
+=> URL work 

@@ -60,7 +60,7 @@ export const ABAResourcesPage = () => {
             transition={{ duration: 0.3 }}
           >
             {/* Slanted rectangle background */}
-            <div className="absolute inset-0 rounded-lg transform bg-green-400 rotate-3 -z-10"></div>
+            <div className="absolute inset-0 rounded-lg transform bg-green-600 rotate-3 -z-10"></div>
             
             <Link to={resource.url} className="flex items-center rounded-lg justify-between p-6 bg-white space-x-6 relative z-10">
               {/* Logo */}

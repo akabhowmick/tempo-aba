@@ -25,7 +25,7 @@ export const ServicePage = () => {
           )}
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0 md:ml-8 relative">
-          <div className="absolute inset-0 bg-green-400 rounded-lg transform rotate-6"></div>
+          <div className="absolute inset-0 bg-green-600 rounded-lg transform rotate-6"></div>
           <img
             alt="Group of professionals smiling"
             className="relative rounded-lg"

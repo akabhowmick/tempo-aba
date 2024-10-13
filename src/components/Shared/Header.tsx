@@ -17,7 +17,7 @@ export const Header = () => {
     <>
       <header>
         <AppBar position="static" className="z-50">
-          <Toolbar className="flex justify-between bg-green-500">
+          <Toolbar className="flex justify-between bg-green-600">
             {/* Logo */}
             <Link to="/" className="flex gap-1 items-center">
               <img
@@ -53,7 +53,7 @@ export const Header = () => {
                         <Link
                           to={subitem.path}
                           key={subitem.name}
-                          className={`block px-4 py-2 hover:bg-green-800`}
+                          className={`block px-4 py-2 rounded-md hover:bg-green-800 hover:underline`}
                         >
                           {subitem.name}
                         </Link>
@@ -92,7 +92,7 @@ export const Header = () => {
         </AppBar>
 
         {/* Mobile Menu */}
-        <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-500 p-4 md:hidden`}>
+        <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-600 p-4 md:hidden`}>
           {content.header.navItems.map((item) =>
             item.submenu ? (
               <div key={item.name}>

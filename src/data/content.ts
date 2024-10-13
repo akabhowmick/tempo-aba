@@ -11,6 +11,9 @@ import resourceImage1 from "../assets/siteImages/4824.jpg";
 import resourceImage2 from "../assets/siteImages/5767946.jpg";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
+import banner1 from "../assets/siteImages/banner1.jpg";
+// import banner2 from "../assets/siteImages/banner2.jpg";
+
 export const content = {
   siteBG: backgroundImage,
   header: {
@@ -85,7 +88,7 @@ export const content = {
           "We provide ABA services in schools to support your child’s success in the classroom.",
         cardImage: serviceImage3,
         cardLink: "/school-based-aba", // Link to the specific service page
-        cardGradient: "from-green-500 to-transparent", // Custom gradient
+        cardGradient: "from-green-600 to-transparent", // Custom gradient
       },
       {
         cardTitle: "Center-Based ABA",
@@ -108,7 +111,7 @@ export const content = {
       description:
         "We not only treat our clients, but we also support them as well. Check out some of these helpful resources!",
       buttonText: "Read more",
-      link: "/resources/aba"
+      link: "/resources/aba",
     },
     image2: {
       type: "image",
@@ -121,7 +124,7 @@ export const content = {
       description:
         "We will provide you with the necessary tools to meet all current and future challenges.",
       buttonText: "Read more",
-      link: "/services/methods"
+      link: "/services/methods",
     },
   },
   programs: {
@@ -273,5 +276,15 @@ export const servicesData = {
     description: `By cultivating collaborative and professional relationships, we aim to empower educators with the tools and knowledge necessary to create inclusive and supportive learning environments.`,
     image:
       "https://storage.googleapis.com/a1aa/image/c5g80pee4EnuwEIqiyQHWfxrrxf3eooYZme80yiDLa4IjAH5E.jpg",
+  },
+};
+
+export const pageBanners = {
+  mission: { alt: "missionImage", src: banner1, title: "Our Mission", subtitle: "" },
+  members: {
+    alt: "membersImage",
+    src: banner1,
+    title: "Members",
+    subtitle: "Welcome to Tempo ABA Services, where compassion meets expertise.",
   },
 };

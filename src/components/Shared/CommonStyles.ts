@@ -18,7 +18,7 @@ export const commonStyles = {
   heading: "text-4xl font-bold sm:text-6xl xl:text-7xl",
   paragraph: "mt-4 text-base  sm:text-xl",
   button:
-    "inline-flex items-center px-6 py-5 text-base font-semibold text-black transition-all duration-200 bg-green-300 mt-4 hover:bg-green-400 focus:bg-green-400",
+    "inline-flex items-center px-6 py-5 text-base font-semibold text-black transition-all duration-200 bg-green-600 mt-4 hover:bg-green-600 focus:bg-green-600",
   appLinks: "mt-8 border-t-2 border-black lg:mt-auto sm:mt-14",
   appLinkContainer: "pt-8 sm:flex sm:items-center sm:justify-between sm:pt-14",
   appLinkText: "text-base font-semibold text-black",

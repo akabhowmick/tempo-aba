@@ -3,8 +3,12 @@ import { FaHandsHelping, FaUserGraduate, FaClipboardCheck, FaChartLine } from "r
 import missionImage from "../assets/siteImages/mission.png";
 export const savedMissionImage = missionImage;
 
-import backgroundPrinciples from "../assets/siteImages/backgrounds/greenBG.png"
+import backgroundPrinciples from "../assets/siteImages/backgrounds/greenBG.png";
 export const savedBgLightestGreen = backgroundPrinciples;
+
+import banner2 from "../assets/siteImages/banner2.jpg";
+import banner3 from "../assets/siteImages/banner3.jpg";
+import banner4 from "../assets/siteImages/banner4.png";
 
 export const missionContent = {
   mission: {
@@ -18,7 +22,7 @@ export const missionContent = {
     title: "Our Guiding Principles:",
     principles: [
       {
-        icon: <FaHandsHelping className="text-green-500 w-9 h-9" />,
+        icon: <FaHandsHelping className="text-green-600 w-9 h-9" />,
         title: "Collaboration",
         description:
           "Collaboration among service providers and caregivers is essential in the implementation and success of treatment plans.",
@@ -43,4 +47,17 @@ export const missionContent = {
       },
     ],
   },
+};
+
+export const membersContent = {
+  title: "The Story of Cynthia and Inae:",
+  paragraph1:
+    "Tempo ABA Services was born from the passion and dedication of Cynthia and Inae, sparked during their first meeting when Inae was an intern under Cynthia's guidance as her lead Special Education teacher. This shared commitment to making a difference laid the foundation for our mission.",
+  paragraph2:
+    "With over 20 years of combined experience in Special Education and Applied Behavior Analysis (ABA), Cynthia and Inae are equipped with the expertise to provide exceptional care. Cynthia brings a wealth of professional experience in ABA along with strong administrative skills, while Inae excels in developing programs and services for clients and families, drawing from her diverse and dynamic background across various settings.",
+  paragraph3:
+    "Together, their extensive experience working with students, clients, families, and professionals drives Tempo ABA to deliver the highest quality services to our community. United by their passion for helping individuals of all ages with Autism Spectrum Disorders, Cynthia and Inae are dedicated to fostering growth, learning, and independence for every client they serve.",
+  image1: banner2,
+  image2: banner3,
+  image3: banner4,
 };
