@@ -4,7 +4,7 @@ import { ContactForm } from "../Pages/ContactPage/ContactForm";
 
 export const ContactInfoBox = ({ formType }: { formType: string }) => {
   const cardStyles = "overflow-hidden bg-white rounded-xl";
-  const cardContentStyles = "p-6";
+  const cardContentStyles = "p-6 text-lg";
   const iconStyles = "flex-shrink-0 w-10 h-10 mx-auto text-gray-400";
 
   return (
@@ -13,28 +13,53 @@ export const ContactInfoBox = ({ formType }: { formType: string }) => {
         <div className={cardStyles}>
           <div className={cardContentStyles}>
             <FiPhone className={iconStyles} />
-            <p className="mt-6 text-lg font-medium text-gray-900">+1 (917) 496 6144</p>
-            <p className="mt-1 text-lg font-medium text-gray-900">+1 (917) 582 9560</p>
+            <p className="mt-6">
+              <a
+                href="tel:+19174966144"
+                className=" font-medium text-gray-900 hover:underline"
+              >
+                +1 (917) 496 6144
+              </a>
+            </p>
+            <p className="mt-1">
+              <a
+                href="tel:+19175829560"
+                className=" font-medium text-gray-900 hover:underline"
+              >
+                +1 (917) 582 9560
+              </a>
+            </p>
           </div>
         </div>
 
         <div className={cardStyles}>
           <div className={cardContentStyles}>
             <FiMail className={iconStyles} />
-            <p className="mt-6 text-lg font-medium text-gray-900">contact@auraui.com</p>
-            <p className="mt-1 text-lg font-medium text-gray-900">hr@auraui.com</p>
+            <a
+              href="mailto:contact@auraui.com"
+              className="mt-6 block font-medium text-gray-900 hover:underline"
+            >
+              Cynmartinez810@gmail.com
+            </a>
+            <a
+              href="mailto:hr@auraui.com"
+              className="mt-1  block font-medium text-gray-900 hover:underline"
+            >
+              inaekim.ny@gmail.com
+            </a>
           </div>
         </div>
 
         <div className={cardStyles}>
           <div className={cardContentStyles}>
             <FiMapPin className={iconStyles} />
-            <p className="mt-6 text-lg font-medium leading-relaxed text-gray-900">
-              8502, Sector 28, Ingle Colony, Patna, India
+            <p className="mt-6 block font-medium leading-relaxed text-gray-900">
+              Long Island, New York
             </p>
           </div>
         </div>
       </div>
+
       {formType === "career" ? <CareerForm /> : <ContactForm />}
     </div>
   );
