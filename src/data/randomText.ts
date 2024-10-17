@@ -3,12 +3,12 @@ export const abaText = {
     section1: {
       title: "About Applied Behavior Analysis",
       paragraph1:
-        "The science of Applied Behavior Analysis (ABA) is the systematic study of behavior and learning processes. ABA focuses on understanding how behavior is influenced by the environment and how specific interventions can be designed and applied to improve socially significant behaviors. It uses data-driven techniques to analyze and modify behavior, with a primary goal of enhancing functional skills, increasing independence, and improving quality of life. ABA is widely used to treat individuals with Autism Spectrum Disorder (ASD) but is also applied in various settings, including education, therapy, and organizational behavior management.",
+        "The science of Applied Behavior Analysis (ABA) is the systematic study of behavior and learning processes. ABA focuses on understanding how behavior is influenced by the environment and how specific interventions can be designed and applied to improve socially significant behaviors. It uses data-driven techniques to analyze and modify behavior, with a primary goal of enhancing functional skills, increasing independence, and improving quality of life. ABA is widely used to treat individuals with autism spectrum disorder (ASD) but is also applied in various settings, including education, therapy, and organizational behavior management.",
     },
     section2: {
       title: "About ABA Therapy",
       paragraph1:
-        "Applied Behavior Analysis (ABA) therapy is a research-driven approach that utilizes behavioral principles to create significant improvements in quality of life. It includes the assessment, design, and application of strategies aimed at developing functional skills in various areas. ABA has been shown to be effective in helping children diagnosed with Autism Spectrum Disorder.",
+        "Applied Behavior Analysis (ABA) therapy is a research-driven approach that utilizes behavioral principles to create significant improvements in quality of life. It includes the assessment, design, and application of strategies aimed at developing functional skills in various areas. ABA has been shown to be effective in helping children diagnosed with autism spectrum disorder.",
       paragraph2:
         "In ABA therapy, setting goals/targets is fundamental to directing the treatment process and supporting individuals with autism in reaching their maximum potential. The main focus of ABA therapy is to enhance the overall quality of life for individuals with autism by improving their communication, social, and adaptive skills. Establishing measurable, well-defined goals is key to the therapy's success. These goals not only provide direction and focus but also serve as a benchmark for tracking progress for therapists, individuals, and families.",
       paragraph3:

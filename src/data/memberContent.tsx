@@ -7,15 +7,15 @@ import backgroundPrinciples from "../assets/siteImages/backgrounds/greenBG.png";
 export const savedBgLightestGreen = backgroundPrinciples;
 
 import banner2 from "../assets/siteImages/banners/banner2.jpg";
-import banner3 from "../assets/siteImages/banners/banner3.jpg";
+import banner3 from "../assets/siteImages/members/members-2.png";
 import banner4 from "../assets/siteImages/banners/banner4.png";
 
-import banner5 from "../assets/siteImages/home/method1.jpeg";
-import banner6 from "../assets/siteImages/home/method2.jpeg";
-import banner7 from "../assets/siteImages/home/method3.jpeg";
-import aba1 from "../assets/siteImages/home/aba1.jpeg";
-import aba2 from "../assets/siteImages/home/aba2.jpeg";
-import aba3 from "../assets/siteImages/home/aba3.jpeg";
+import banner5 from "../assets/siteImages/members/members-3.png";
+import banner6 from "../assets/siteImages/home/method2.png";
+import banner7 from "../assets/siteImages/home/method3.png";
+import aba1 from "../assets/siteImages/home/aba1.png";
+import aba2 from "../assets/siteImages/members/members-2.png";
+import aba3 from "../assets/siteImages/home/aba3.png";
 
 export const missionContent = {
   mission: {
@@ -59,11 +59,13 @@ export const missionContent = {
 export const membersContent = {
   title: "The Story of Cynthia and Inae:",
   paragraph1:
-    "Tempo ABA Services was born from the passion and dedication of Cynthia and Inae, sparked during their first meeting when Inae was an intern under Cynthia's guidance as her lead Special Education teacher. This shared commitment to making a difference laid the foundation for our mission.",
+    "Tempo ABA Services was born from the passion and dedication of Cynthia and Inae, sparked since their first meeting, when Inae was an intern in Cynthia's special education classroom. This shared commitment to making a difference laid the foundation for our mission.",
   paragraph2:
     "With over 20 years of combined experience in Special Education and Applied Behavior Analysis (ABA), Cynthia and Inae are equipped with the expertise to provide exceptional care. Cynthia brings a wealth of professional experience in ABA along with strong administrative skills, while Inae excels in developing programs and services for clients and families, drawing from her diverse and dynamic background across various settings.",
   paragraph3:
-    "Together, their extensive experience working with students, clients, families, and professionals drives Tempo ABA to deliver the highest quality services to our community. United by their passion for helping individuals of all ages with Autism Spectrum Disorders, Cynthia and Inae are dedicated to fostering growth, learning, and independence for every client they serve.",
+    "Together, their extensive experience working with students, clients, families, and professionals drives Tempo ABA to deliver the highest quality services to our community. United by their passion for helping individuals of all ages with autism spectrum disorders, Cynthia and Inae are dedicated to fostering growth, learning, and independence for every client they serve.",
+  paragraph4:
+    "Tempo ABA Services was born from the passion and dedication of Cynthia and Inae, sparked since their first meeting, when Inae was an intern in Cynthia's special education classroom. This shared commitment to making a difference laid the foundation for our mission. With over 20 years of combined experience in Special Education and Applied Behavior Analysis (ABA), Cynthia and Inae are equipped with the expertise to provide exceptional care. Cynthia brings a wealth of professional experience in ABA along with strong administrative skills, while Inae excels in developing programs and services for clients and families, drawing from her diverse and dynamic background across various settings. Together, their extensive experience working with students, clients, families, and professionals drives Tempo ABA to deliver the highest quality services to our community. United by their passion for helping individuals of all ages with autism spectrum disorders, Cynthia and Inae are dedicated to fostering growth, learning, and independence for every client they serve.",
   image1: banner2,
   image2: banner3,
   image3: banner4,

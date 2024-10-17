@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { pageBanners, teamBios } from "../../../data/content";
+import { content, pageBanners, teamBios } from "../../../data/content";
 import { SubPageTitle } from "../../Shared/CommonSections";
 import { membersContent } from "../../../data/memberContent";
 import { ContentSection } from "./ContentSection";
@@ -37,21 +37,30 @@ const TeamBioCard = ({
     </h2>
     <p className="text-md font-semibold text-gray-600">{title}</p>
     <p className="text-sm text-gray-600 mt-2 py-2">{truncateText(bio, 250)}</p>
-    <Link to={profileLink} className="text-blue-800 font-semibold mt-2 inline-block">
+    <Link
+      to={profileLink}
+      className="text-blue-800 font-semibold mt-2 inline-block"
+      onClick={() => {
+        window.scrollTo(0, 0); // Scroll to top
+      }}
+    >
       Learn More
     </Link>
   </div>
 );
 
-
-
 export const OurMembersPage = () => (
   <div className="container mx-auto px-4 py-8">
     <SubPageTitle pageBannerInfo={pageBanners.members} />
 
-    <ContentSection paragraph={membersContent.paragraph1} image={membersContent.image1} index={1} />
+    {/* <ContentSection paragraph={membersContent.paragraph1} image={membersContent.image1} index={1} />
     <ContentSection paragraph={membersContent.paragraph2} image={membersContent.image2} index={2} />
-    <ContentSection paragraph={membersContent.paragraph3} image={membersContent.image5} index={3} />
+    <ContentSection paragraph={membersContent.paragraph3} image={membersContent.image5} index={3} /> */}
+    <ContentSection
+      paragraph={membersContent.paragraph4}
+      image={content.header.siteLogo}
+      index={2}
+    />
 
     <h2 className="text-4xl font-bold mt-8 mb-4 text-center">Our Team</h2>
 

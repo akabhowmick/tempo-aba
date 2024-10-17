@@ -11,19 +11,19 @@ import { MissionPage } from "./Pages/About/MissionPage";
 import { InsurancePage } from "./Pages/Resources/InsuranceInfo";
 import { ABAResourcesPage } from "./Pages/Resources/ABAResourcesPage";
 import { ServicePage } from "./Pages/Services/ServicePage";
-import { ABAAutism } from "./Pages/About/ABAAustism";
+import { ABAautism  } from "./Pages/About/ABAAustism";
+
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Header />}>
       <Route path="/" element={<HomePage />} />
       {/* About Us */}
-      <Route path="/about/abaandautism" element={<ABAAutism />} />
+      <Route path="/about/abaandautism" element={<ABAautism  />} />
       <Route path="/about/methods" element={<MethodPage />} />
       <Route path="/about/mission" element={<MissionPage />} />
       <Route path="/about/members" element={<OurMembersPage />} />
       <Route path="/about/members/:member" element={<ProfilePage />} />
-      
 
       <Route path="/careers" element={<CareerPage />} />
 

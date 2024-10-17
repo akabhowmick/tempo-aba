@@ -41,7 +41,7 @@ export const InsurancePage: React.FC = () => {
             <p className="text-lg">
               Our team is dedicated to assisting you in understanding your benefits and coverage. We
               can help you determine which services are covered by your plan and provide clarity on
-              the costs associated with therapy sessions or an entire course of treatment.
+              the costs associated with therapy sessions.
             </p>
             <p className="text-lg mt-4">
               Additionally, we’re committed to working with you to establish a payment plan that

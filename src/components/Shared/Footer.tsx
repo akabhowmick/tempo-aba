@@ -20,7 +20,7 @@ export const Footer = () => {
                 { href: "/about/members", text: "Our Members" },
                 { href: "/about/mission", text: "Our Mission" },
                 { href: "/about/methods", text: "Our Methods" },
-                { href: "/about/abaandautism", text: "About ABA and Autism" },
+                { href: "/about/abaandautism", text: "About ABA and autism " },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href}>

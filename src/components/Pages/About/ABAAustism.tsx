@@ -4,7 +4,7 @@ import { abaText } from "../../../data/randomText";
 import { SubPageTitle } from "../../Shared/CommonSections";
 import { ContentSection } from "./ContentSection";
 
-export const ABAAutism = () => {
+export const ABAautism  = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <SubPageTitle pageBannerInfo={pageBanners.aba} />

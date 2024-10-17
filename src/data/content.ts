@@ -14,13 +14,13 @@ import resourceImage1 from "../assets/siteImages/home/resource1.jpeg";
 import resourceImage2 from "../assets/siteImages/home/resource2.jpeg";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
-import servicePageImage1 from "../assets/siteImages/home/service1.jpeg";
-import servicePageImage2 from "../assets/siteImages/home/service2.jpeg";
-import servicePageImage3 from "../assets/siteImages/home/service3.jpeg";
-import servicePageImage4 from "../assets/siteImages/home/service4.jpeg";
+import servicePageImage1 from "../assets/siteImages/home/aba3.png";
+import servicePageImage2 from "../assets/siteImages/home/method3.png";
+import servicePageImage3 from "../assets/siteImages/home/method2.png";
+import servicePageImage4 from "../assets/siteImages/members/members-2.png";
 import servicePageImage5 from "../assets/siteImages/home/service5.jpeg";
 import servicePageImage6 from "../assets/siteImages/home/service6.jpeg";
-import servicePageImage7 from "../assets/siteImages/home/service7.jpeg";
+import servicePageImage7 from "../assets/siteImages/home/aba1.png";
 
 import banner1 from "../assets/siteImages/banners/banner1.jpg";
 // import banner2 from "../assets/siteImages/banner2.jpg";
@@ -37,7 +37,7 @@ export const content = {
           { name: "Our Members", path: "/about/members" },
           { name: "Our Mission", path: "/about/mission" },
           { name: "Our Methods", path: "/about/methods" },
-          { name: "ABA & Autism", path: "/about/abaandautism" },
+          { name: "ABA & autism ", path: "/about/abaandautism" },
         ],
       },
       {
@@ -50,17 +50,17 @@ export const content = {
           { name: "Home Based ABA", path: "/services/home" },
           { name: "In-School Consultation", path: "/services/school" },
           { name: "Community Based ABA", path: "/services/community" },
-          { name: "Center-Based ABA", path: "/services/center" },
-          { name: "Parent Training Workshop", path: "/services/parentTraining" },
+          // { name: "Center-Based ABA", path: "/services/center" },
+          { name: "Parent Training and Workshops", path: "/services/parentTraining" },
           { name: "Transition to Adulthood", path: "/services/transition" },
-          { name: "Behavior Consultation", path: "/services/behavior" },
+          { name: "Behavioral Consultation", path: "/services/behavior" },
         ],
       },
       {
         name: "Resources",
         submenu: [
           { name: "Insurance", path: "/resources/insurance" },
-          { name: "ABA Resources", path: "/resources/aba" },
+          { name: "Resources", path: "/resources/aba" },
           { name: "FAQ", path: "/resources/faq" },
         ],
       },
@@ -114,7 +114,7 @@ export const content = {
       //   cardGradient: "from-yellow-500 to-transparent", // Custom gradient
       // },
       {
-        cardTitle: "Parent Training Workshops",
+        cardTitle: "Parent Training and Workshopss",
         cardDescription:
           "We integrate community outings into your child’s program to support real-world skill development.",
         cardImage: serviceImage5,
@@ -126,11 +126,11 @@ export const content = {
         cardDescription:
           "We provide ABA services in schools to support your child’s success in the classroom.",
         cardImage: serviceImage6,
-        cardLink: "/services/school", // Link to the specific service page
+        cardLink: "/services/transition", // Link to the specific service page
         cardGradient: "from-red-600 to-transparent", // Custom gradient
       },
       {
-        cardTitle: "Behavior Consultation",
+        cardTitle: "Behavioral Consultation",
         cardDescription: "Our clinics offer ABA therapy in a structured, professional setting.",
         cardImage: serviceImage7,
         cardLink: "/services/behavior", // Link to the specific service page
@@ -148,7 +148,7 @@ export const content = {
       type: "text",
       title: "Resource Links",
       description:
-        "We not only treat our clients, but we also support them as well. Check out some of these helpful resources!",
+        "Check out some of these helpful resources!",
       buttonText: "Read more",
       link: "/resources/aba",
     },
@@ -159,11 +159,11 @@ export const content = {
     },
     text2: {
       type: "text",
-      title: "Our Process",
+      title: "Our process",
       description:
         "We will provide you with the necessary tools to meet all current and future challenges.",
       buttonText: "Read more",
-      link: "/services/methods",
+      link: "/about/members",
     },
   },
   footer: {
@@ -178,7 +178,7 @@ export const teamBios = [
     title: "Co-Founder & Director",
     bio: [
       "Cynthia has a Bachelor's degree in Psychology from Hunter College, City University of New York, a Master's degree in Special Education from City College, City University of New York, a Master's degree in School Building Leadership from Touro College, and a Master's degree in Applied Behavior Analysis from St. Joseph's College. Cynthia holds professional certifications as a New York State Special Education Teacher and School Administrator. Cynthia is a Board Certified Behavior Analyst (BCBA), and is a licensed behavior analyst in New York State (LBA).",
-      "Cynthia's journey in the field of Autism and Developmental Disabilities began as a Medicaid Service Coordinator, where her passion for helping others first took root. Since then, she has embraced a variety of roles, including Special Education Teacher, Clinical Supervisor, Program Coordinator, Supervising BCBA, and Program Director at a dedicated school for children on the Autism Spectrum.",
+      "Cynthia's journey in the field of autism  and Developmental Disabilities began as a Medicaid Service Coordinator, where her passion for helping others first took root. Since then, she has embraced a variety of roles, including Special Education Teacher, Clinical Supervisor, Program Coordinator, Supervising BCBA, and Program Director at a dedicated school for children on the autism  Spectrum.",
       "Now serving as the Director of Tempo ABA, Cynthia’s enthusiasm and commitment to supporting clients and their families are at the heart of her work. She skillfully navigates challenges and advocates fiercely for her clients with special needs. Her dedication and compassion shine through in every interaction, making a profound and lasting impact on the lives of those she serves.",
     ],
     imageUrl: cynthiaImage,
@@ -189,8 +189,8 @@ export const teamBios = [
     credentials: "M.A.Ed ",
     title: "Co-Founder & Program Coordinator",
     bio: [
-      "Inae holds a Master of Arts in Health and Behavior Studies, Intellectual Disability/Autism, from Teachers College, Columbia University. She has extensive experience in developing programs for families and students, gained as a research assistant in Dr. Hsu-Min Chiang's Parent Education Program for Parents of Chinese American Children with Autism Spectrum Disorders (ASDs): A Pilot Study at Teachers College.",
-      "Inae brings over 20 years of dedicated experience in both non-profit and public education, serving students with a wide range of disabilities in New York City. Her career has provided her with invaluable opportunities to refine her teaching practices across diverse classroom settings, supporting students with Autism Spectrum Disorder, Intellectual Disabilities, Emotional Disturbances, Speech Impairments, Other Health Impairments, and more.",
+      "Inae holds a Master of Arts in Health and Behavior Studies, intellectual disability/autism , from Teachers College, Columbia University. She has extensive experience in developing programs for families and students, gained as a research assistant in Dr. Hsu-Min Chiang's Parent Education Program for Parents of Chinese American Children with autism spectrum disorders (ASDs): A Pilot Study at Teachers College.",
+      "Inae brings over 20 years of dedicated experience in both non-profit and public education, serving students with a wide range of disabilities in New York City. Her career has provided her with invaluable opportunities to refine her teaching practices across diverse classroom settings, supporting students with autism spectrum disorder, Intellectual Disabilities, Emotional Disturbances, Speech Impairments, Other Health Impairments, and more.",
       " Throughout her journey, Inae has excelled in various roles, including Special Education Inclusion Program Coordinator, classroom teacher, SEIT provider, and SETSS provider. In these positions, she has facilitated meaningful communication between families and schools, designing intellectually engaging and challenging instruction that empowers students to meet and exceed their IEP and instructional goals. Currently, she is pursuing an ABA Advanced Certificate program to become a Board Certified Behavior Analyst (BCBA), further enhancing her expertise. ",
       "Inae's passion for helping clients and families drives her work. As a program coordinator, she prioritizes ensuring that all parents and caregivers feel informed and supported in their understanding of ABA therapy, guiding them every step of the way",
     ],
@@ -207,7 +207,7 @@ export const servicesData = {
   },
   community: {
     title: "Community Based ABA",
-    description: `If you could use some help making trips to the grocery store, playground, or park more successful, we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences are both enjoyable and effective. Our dedicated Tempo ABA team will work closely with your family to create a supportive environment, making each outing easier and more rewarding for everyone involved.`,
+    description: `If you could use some help making trips to the grocery store, playground, or park more successful, we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences are both enjoyable and effective. Our dedicated Tempo ABA team will work closely with your family to create a supportive environment, making outing easier and more rewarding for everyone involved.`,
     image: servicePageImage2,
   },
   school: {
@@ -224,7 +224,7 @@ export const servicesData = {
     image: servicePageImage3,
   },
   parentTraining: {
-    title: "Parent Training Workshops",
+    title: "Parent Training and Workshopss",
     description: `ABA parent training is a vital component of any ABA program. It equips parents with essential skills to promote generalization, enhance functioning in natural settings, and reduce stress, ultimately creating a more enjoyable and fulfilling life for the entire family`,
     image: servicePageImage4,
   },
@@ -238,14 +238,12 @@ export const servicesData = {
     image: servicePageImage5,
   },
   center: {
-    title: "Center Based ABA (Coming Soon)",
-    description: `We are excited to announce the upcoming launch of our center-based ABA programs. These programs will offer 
-    a structured environment for skill acquisition and social interaction under the supervision of experienced BCBAs. Stay 
-    tuned for more details on this new offering!`,
+    title: "Center Based ABA",
+    description: `Coming Soon!`,
     image: servicePageImage6,
   },
   behavior: {
-    title: "Behavior Consultation",
+    title: "Behavioral Consultation",
     description: `By cultivating collaborative and professional relationships, we aim to empower educators with the tools and knowledge necessary to create inclusive and supportive learning environments.`,
     image: servicePageImage7,
   },
@@ -256,14 +254,14 @@ export const pageBanners = {
   members: {
     alt: "membersImage",
     src: banner1,
-    title: "Members",
+    title: "Who we are",
     subtitle: "Welcome to Tempo ABA Services, where compassion meets expertise.",
   },
   methods: {
     alt: "methodsImage",
     src: banner1,
-    title: "Methods and Process",
-    subtitle: "Learn About Our Process",
+    title: "Methods and process",
+    subtitle: "Learn about our process",
   },
   services: { alt: "servicesImage", src: banner1, title: "Services", subtitle: "Our offerings" },
   contact: {
@@ -272,11 +270,11 @@ export const pageBanners = {
     title: "Contact Us",
     subtitle: "Get in touch with us for any inquiries or support. ",
   },
-  aba: { alt: "abaImage", src: banner1, title: "ABA and Autism", subtitle: "" },
+  aba: { alt: "abaImage", src: banner1, title: "ABA and autism ", subtitle: "" },
   joinUs: {
     alt: "joinImage",
     src: banner1,
-    title: "Join us in helping others!",
+    title: "Join our team!",
     subtitle: "Complete the form below and we will shortly be in touch with you",
   },
   faq: { alt: "faqImage", src: banner1, title: "Frequently Asked Questions", subtitle: "" },
@@ -285,7 +283,7 @@ export const pageBanners = {
     alt: "abaResourcesImage",
     src: banner1,
     title: "Helpful Resources",
-    subtitle: "At Tempo ABA we support them at every turn.",
+    subtitle: "",
   },
 };
 

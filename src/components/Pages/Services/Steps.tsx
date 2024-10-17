@@ -24,7 +24,7 @@ const steps: Step[] = [
   {
     number: 1,
     icon: <FaUsers className="text-orange-500" />,
-    description: "Child receives a diagnosis of Autism Spectrum Disorders.",
+    description: "Child receives a diagnosis of autism spectrum disorders.",
   },
   {
     number: 2,

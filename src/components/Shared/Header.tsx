@@ -19,10 +19,16 @@ export const Header = () => {
         <AppBar position="sticky" id="app-bar" className="z-50">
           <Toolbar className="flex justify-between bg-green-600 p-2">
             {/* Logo */}
-            <Link to="/" className="flex gap-1 items-center">
+            <Link
+              to="/"
+              className="flex gap-1 items-center"
+              onClick={() => {
+                window.scrollTo(0, 0); // Scroll to top
+              }}
+            >
               <img
                 src={content.header.siteLogo}
-                className="rounded-md w-10"
+                className="rounded-md w-12"
                 alt={content.header.logoAlt}
               />
               <span>Tempo ABA</span>
@@ -55,6 +61,9 @@ export const Header = () => {
                             to={subitem.path}
                             key={subitem.name}
                             className={`block px-4 py-2 rounded-md hover:bg-green-700`}
+                            onClick={() => {
+                              window.scrollTo(0, 0); // Scroll to top
+                            }}
                           >
                             {subitem.name}
                           </Link>
@@ -63,7 +72,13 @@ export const Header = () => {
                     </div>
                   </div>
                 ) : (
-                  <Link to={item.path} key={item.name}>
+                  <Link
+                    to={item.path}
+                    key={item.name}
+                    onClick={() => {
+                      window.scrollTo(0, 0); // Scroll to top
+                    }}
+                  >
                     <Button color="inherit">{item.name}</Button>
                   </Link>
                 )
@@ -71,7 +86,12 @@ export const Header = () => {
             </div>
 
             {!isMobile && (
-              <Link to="/contact">
+              <Link
+                to="/contact"
+                onClick={() => {
+                  window.scrollTo(0, 0); // Scroll to top
+                }}
+              >
                 <Button color="inherit" className={commonStyles.ctaButton}>
                   Contact Us
                 </Button>

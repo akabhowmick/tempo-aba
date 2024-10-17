@@ -13,7 +13,12 @@ export const ServiceCard = ({ service }: { service: ServiceCardProps }) => {
   const { cardTitle, cardImage, cardDescription, cardLink, cardGradient } = service;
 
   return (
-    <Link to={cardLink}>
+    <Link
+      to={cardLink}
+      onClick={() => {
+        window.scrollTo(0, 0); // Scroll to top
+      }}
+    >
       <motion.div
         className="relative rounded-lg overflow-hidden cursor-pointer w-80 max-w-[calc(100vw-40px)] h-60 group" // Set a fixed height
         initial={{ opacity: 0, y: 50 }}
@@ -21,11 +26,7 @@ export const ServiceCard = ({ service }: { service: ServiceCardProps }) => {
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
-        <img
-          src={cardImage}
-          alt={cardTitle}
-          className="w-full h-full object-cover"
-        />
+        <img src={cardImage} alt={cardTitle} className="w-full h-full object-cover" />
 
         {/* Background Gradient */}
         <div className={`absolute inset-0 bg-gradient-to-t ${cardGradient} opacity-75`} />
