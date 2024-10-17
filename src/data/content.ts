@@ -34,9 +34,9 @@ export const content = {
       {
         name: "About Us",
         submenu: [
-          { name: "Our Members", path: "/about/members" },
+          { name: "Who we are", path: "/about/members" },
           { name: "Our Mission", path: "/about/mission" },
-          { name: "Our Methods", path: "/about/methods" },
+          { name: "Approach and Process ", path: "/about/methods" },
           { name: "ABA & autism ", path: "/about/abaandautism" },
         ],
       },
@@ -260,7 +260,7 @@ export const pageBanners = {
   methods: {
     alt: "methodsImage",
     src: banner1,
-    title: "Methods and process",
+    title: "Approach and process",
     subtitle: "Learn about our process",
   },
   services: { alt: "servicesImage", src: banner1, title: "Services", subtitle: "Our offerings" },

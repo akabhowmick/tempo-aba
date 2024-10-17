@@ -17,9 +17,9 @@ export const Footer = () => {
             <p className="text-xl text-green-100">Company</p>
             <ul className="mt-8 space-y-4">
               {[
-                { href: "/about/members", text: "Our Members" },
+                { href: "/about/members", text: "Who we are" },
                 { href: "/about/mission", text: "Our Mission" },
-                { href: "/about/methods", text: "Our Methods" },
+                { href: "/about/methods", text: "Approach and Process " },
                 { href: "/about/abaandautism", text: "About ABA and autism " },
               ].map((item, index) => (
                 <li key={index}>
