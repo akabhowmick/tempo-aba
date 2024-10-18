@@ -178,7 +178,7 @@ export const teamBios = [
     title: "Co-Founder & Director",
     bio: [
       "Cynthia has a Bachelor's degree in Psychology from Hunter College, City University of New York, a Master's degree in Special Education from City College, City University of New York, a Master's degree in School Building Leadership from Touro College, and a Master's degree in Applied Behavior Analysis from St. Joseph's College. Cynthia holds professional certifications as a New York State Special Education Teacher and School Administrator. Cynthia is a Board Certified Behavior Analyst (BCBA), and is a licensed behavior analyst in New York State (LBA).",
-      "Cynthia's journey in the field of autism  and Developmental Disabilities began as a Medicaid Service Coordinator, where her passion for helping others first took root. Since then, she has embraced a variety of roles, including Special Education Teacher, Clinical Supervisor, Program Coordinator, Supervising BCBA, and Program Director at a dedicated school for children on the autism  Spectrum.",
+      "Cynthia's journey in the field of autism  and developmental disabilities began as a Medicaid Service Coordinator, where her passion for helping others first took root. Since then, she has embraced a variety of roles, including Special Education Teacher, Clinical Supervisor, Program Coordinator, Supervising BCBA, and Program Director at a dedicated school for children on the autism  Spectrum.",
       "Now serving as the Director of Tempo ABA, Cynthia’s enthusiasm and commitment to supporting clients and their families are at the heart of her work. She skillfully navigates challenges and advocates fiercely for her clients with special needs. Her dedication and compassion shine through in every interaction, making a profound and lasting impact on the lives of those she serves.",
     ],
     imageUrl: cynthiaImage,
@@ -190,7 +190,7 @@ export const teamBios = [
     title: "Co-Founder & Program Coordinator",
     bio: [
       "Inae holds a Master of Arts in Health and Behavior Studies, intellectual disability/autism , from Teachers College, Columbia University. She has extensive experience in developing programs for families and students, gained as a research assistant in Dr. Hsu-Min Chiang's Parent Education Program for Parents of Chinese American Children with autism spectrum disorders (ASDs): A Pilot Study at Teachers College.",
-      "Inae brings over 20 years of dedicated experience in both non-profit and public education, serving students with a wide range of disabilities in New York City. Her career has provided her with invaluable opportunities to refine her teaching practices across diverse classroom settings, supporting students with autism spectrum disorder, Intellectual Disabilities, Emotional Disturbances, Speech Impairments, Other Health Impairments, and more.",
+      "Inae brings over 20 years of dedicated experience in both non-profit and public education, serving students with a wide range of disabilities in New York City. Her career has provided her with invaluable opportunities to refine her teaching practices across diverse classroom settings, supporting students with autism spectrum disorder, intellectual disabilities, emotional disturbances, speech impairments, other health impairments, and more.",
       " Throughout her journey, Inae has excelled in various roles, including Special Education Inclusion Program Coordinator, classroom teacher, SEIT provider, and SETSS provider. In these positions, she has facilitated meaningful communication between families and schools, designing intellectually engaging and challenging instruction that empowers students to meet and exceed their IEP and instructional goals. Currently, she is pursuing an ABA Advanced Certificate program to become a Board Certified Behavior Analyst (BCBA), further enhancing her expertise. ",
       "Inae's passion for helping clients and families drives her work. As a program coordinator, she prioritizes ensuring that all parents and caregivers feel informed and supported in their understanding of ABA therapy, guiding them every step of the way",
     ],
@@ -230,7 +230,7 @@ export const servicesData = {
   },
   transition: {
     title: "Transition to Adulthood",
-    description: `As children grow older, their focus shifts toward preparing for adulthood. We prioritize essential 
+    description: `As children grow older, the focus shifts toward preparing for adulthood. We prioritize essential 
     skills for this transition, including activities of daily living, appropriate social behaviors, and job training. 
     Our programs are designed to equip individuals with the necessary tools to navigate life independently and successfully. 
     We also emphasize communication skills, self-advocacy, and decision-making to ensure they are well-prepared for the 
