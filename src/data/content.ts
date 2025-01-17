@@ -161,7 +161,7 @@ export const content = {
       type: "text",
       title: "Our process",
       description:
-        "We will provide you with the necessary tools to meet all current and future challenges.",
+        "We will provide you with the necessary tools to meet current and future challenges.",
       buttonText: "Read more",
       link: "/about/members",
     },
@@ -288,7 +288,7 @@ export const pageBanners = {
 };
 
 export const emailSetUp = {
-  formSubmitEmail: "https://formsubmit.co/cynmartinez810@gmail.com",
+  formSubmitEmail: "https://formsubmit.co/cmartinez@tempoaba.com",
   redirectLink: "https://tempoaba.com/",
-  ccLinks: "inaekim.ny@gmail.com",
+  ccLinks: "ikim@tempoaba.com",
 };
