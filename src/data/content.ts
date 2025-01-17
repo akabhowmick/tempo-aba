@@ -163,7 +163,7 @@ export const content = {
       description:
         "We will provide you with the necessary tools to meet current and future challenges.",
       buttonText: "Read more",
-      link: "/about/members",
+      link: "/about/methods",
     },
   },
   footer: {

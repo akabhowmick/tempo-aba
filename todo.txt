@@ -1,7 +1,5 @@
 1. change the main image
-2. change the email: cmartinez@tempoaba.com and ikim@tempoaba.com 
-3. remove services from tempo aba services 
 4. application => for join us download, complete and upload 
-5. 
+
 
 
