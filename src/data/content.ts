@@ -290,5 +290,6 @@ export const pageBanners = {
 export const emailSetUp = {
   formSubmitEmail: "https://formsubmit.co/cynmartinez810@gmail.com",
   redirectLink: "https://tempoaba.com/",
-  ccLinks: "ikim@tempoaba.com, cmartinez@tempoaba.com"
+  ccLinks: "inaekim.ny@gmail.com", 
+  // ccLinks: "ikim@tempoaba.com, cmartinez@tempoaba.com"
 };
