@@ -137,7 +137,8 @@ export const CareerForm = () => {
 
             <input type="hidden" name="_next" value={emailSetUp.redirectLink} />
             <input type="hidden" name="_subject" value="Career Form Inquiry!"></input>
-            {/* <input type="hidden" name="_cc" value={emailSetUp.ccLinks}></input> */}
+            <input type="hidden" name="_cc" value={emailSetUp.ccLinks}></input>
+            
             <input type="hidden" name="_template" value="table"></input>
 
             {/* Submit Button */}
