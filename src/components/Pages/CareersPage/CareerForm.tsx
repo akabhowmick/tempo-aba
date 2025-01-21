@@ -72,22 +72,6 @@ export const CareerForm = () => {
               </div>
             </div>
 
-            {/* Company field */}
-            <div>
-              <label htmlFor="company" className="text-base font-medium text-gray-900">
-                Company Name
-              </label>
-              <div className="mt-2.5 relative">
-                <input
-                  type="text"
-                  id="company"
-                  name="Company"
-                  placeholder="Enter your company name"
-                  className={inputStyles}
-                />
-              </div>
-            </div>
-
             {/* Message field */}
             <div className="sm:col-span-2">
               <label htmlFor="message" className="text-base font-medium text-gray-900">
