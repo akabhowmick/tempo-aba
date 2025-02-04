@@ -1,5 +1,5 @@
 import logo from "../assets/siteImages/logowithname.jpeg";
-import heroImage from "../assets/siteImages/homePage.jpg";
+import heroImage from "../assets/siteImages/homePage.png";
 import serviceImage1 from "../assets/siteImages/animated/19198612.jpg";
 import serviceImage2 from "../assets/siteImages/animated/4824.jpg";
 import serviceImage3 from "../assets/siteImages/animated/5767946.jpg";
@@ -288,8 +288,8 @@ export const pageBanners = {
 };
 
 export const emailSetUp = {
-  formSubmitEmail: "https://formsubmit.co/cynmartinez810@gmail.com",
+  formSubmitEmail: "https://formsubmit.co/cmartinez@tempoaba.com",
   redirectLink: "https://tempoaba.com/",
-  ccLinks: "inaekim.ny@gmail.com", 
+  ccLinks: "ikim@tempoaba.com", 
   // ccLinks: "ikim@tempoaba.com, cmartinez@tempoaba.com"
 };
