@@ -1,5 +1,5 @@
 import logo from "../assets/siteImages/logowithname.jpeg";
-import heroImage from "../assets/siteImages/homePage.png";
+import heroImage from "../assets/siteImages/home/IMG_5457.jpeg"
 import serviceImage1 from "../assets/siteImages/animated/19198612.jpg";
 import serviceImage2 from "../assets/siteImages/animated/4824.jpg";
 import serviceImage3 from "../assets/siteImages/animated/5767946.jpg";
@@ -14,9 +14,9 @@ import resourceImage1 from "../assets/siteImages/home/resource1.jpeg";
 import resourceImage2 from "../assets/siteImages/home/resource2.jpeg";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
-import servicePageImage1 from "../assets/siteImages/home/aba3.png";
+import servicePageImage1 from "../assets/siteImages/home/IMG_5459.jpeg";
 import servicePageImage2 from "../assets/siteImages/home/method3.png";
-import servicePageImage3 from "../assets/siteImages/home/method2.png";
+import servicePageImage3 from "../assets/siteImages/home/aba3.png";
 import servicePageImage4 from "../assets/siteImages/members/members-2.png";
 import servicePageImage5 from "../assets/siteImages/home/service5.jpeg";
 import servicePageImage6 from "../assets/siteImages/home/service6.jpeg";

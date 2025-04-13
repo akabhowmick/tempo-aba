@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <section
       className={`${commonStyles.section} relative`}
-      style={{ height: "calc(100vh - 64px)" }}
+      style={{ height: "calc(100vh - 80px)" }}
     >
       <div
         className={`absolute inset-0 z-10 flex flex-col justify-end items-center bg-black bg-opacity-50 text-white p-4`}
@@ -30,11 +30,11 @@ export const Hero = () => {
       </div>
 
       <div
-        className="absolute inset-0 z-0 bg-cover bg-top"
+        className="absolute inset-0 z-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${content.hero.heroImage})` }}
       />
 
-      <div className="relative h-full w-full" />
+      <div id="random" className="relative h-full w-full" />
     </section>
   );
 };
