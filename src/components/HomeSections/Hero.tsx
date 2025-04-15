@@ -1,11 +1,31 @@
+import { useEffect, useState } from "react";
 import { content } from "../../data/content";
 import { commonStyles } from "../Shared/CommonStyles";
 
 export const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust breakpoint as needed
+    };
+
+    // Initial check
+    handleResize();
+
+    // Listen for window resize events
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <section
-      className={`${commonStyles.section} relative`}
-      style={{ height: "calc(100vh - 80px)" }}
+      className={`${commonStyles.section} relative ${
+        isMobile ? "h-[60vh]" : "h-[calc(100vh - 80px)]"
+      }`}
     >
       <div
         className={`absolute inset-0 z-10 flex flex-col justify-end items-center bg-black bg-opacity-50 text-white p-4`}
@@ -30,11 +50,10 @@ export const Hero = () => {
       </div>
 
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
+        id="hero-image"
+        className="absolute inset-0 z-0 bg-contain bg-no-repeat md:bg-cover bg-center"
         style={{ backgroundImage: `url(${content.hero.heroImage})` }}
       />
-
-      <div id="random" className="relative h-full w-full" />
     </section>
   );
 };
