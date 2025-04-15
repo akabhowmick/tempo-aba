@@ -30,7 +30,7 @@ export const Hero = () => {
       </div>
 
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
+        className="absolute inset-0 z-0 bg-center bg-no-repeat bg-contain sm:bg-cover"
         style={{ backgroundImage: `url(${content.hero.heroImage})` }}
       />
 
