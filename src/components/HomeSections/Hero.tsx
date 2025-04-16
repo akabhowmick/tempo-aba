@@ -10,13 +10,10 @@ export const Hero = () => {
       setIsMobile(window.innerWidth < 768); // Adjust breakpoint as needed
     };
 
-    // Initial check
     handleResize();
 
-    // Listen for window resize events
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -24,7 +21,7 @@ export const Hero = () => {
   return (
     <section
       className={`${commonStyles.section} relative ${
-        isMobile ? "h-[60vh]" : "h-[calc(100vh - 80px)]"
+        isMobile ? "h-[calc(84vh)]" : "h-[calc(100vh - 80px)]"
       }`}
     >
       <div
