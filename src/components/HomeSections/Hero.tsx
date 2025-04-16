@@ -21,11 +21,11 @@ export const Hero = () => {
   return (
     <section
       className={`${commonStyles.section} relative ${
-        isMobile ? "h-[calc(84vh)]" : "h-[calc(100vh - 80px)]"
+        isMobile ? "h-[calc(80vh)]" : "h-[calc(100vh - 80px)]"
       }`}
     >
       <div
-        className={`absolute inset-0 z-10 flex flex-col justify-end items-center bg-black bg-opacity-50 text-white p-4`}
+        className={`absolute inset-0 z-10 flex flex-col justify-end items-center bg-black bg-opacity-30 text-white p-4`}
       >
         <div className="text-center align-bottom">
           <div className="flex gap-4 items-center align-middle justify-center">
