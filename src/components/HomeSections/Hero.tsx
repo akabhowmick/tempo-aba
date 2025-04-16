@@ -21,7 +21,7 @@ export const Hero = () => {
   return (
     <section
       className={`${commonStyles.section} relative ${
-        isMobile ? "h-[calc(80vh)]" : "h-[calc(100vh - 80px)]"
+        isMobile ? "h-[calc(70vh)]" : "h-[calc(100vh - 80px)]"
       }`}
     >
       <div
