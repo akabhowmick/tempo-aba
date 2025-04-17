@@ -20,8 +20,8 @@ export const Hero = () => {
   }, []);
   return (
     <section
-      className={`${commonStyles.section} relative ${
-        isMobile ? "h-[calc(55vh)]" : "h-[calc(100vh - 80px)]"
+      className={`overflow-hidden relative ${
+        isMobile ? "h-[calc(55vh)]" : "h-[calc(100vh-80px)]"
       }`}
     >
       <div
