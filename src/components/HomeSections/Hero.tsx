@@ -20,29 +20,32 @@ export const Hero = () => {
   }, []);
   return (
     <section
-      className={`overflow-hidden relative ${
-        isMobile ? "h-[calc(70vh)]" : "h-[calc(100vh-80px)]"
-      }`}
+      className={`overflow-hidden relative ${isMobile ? "h-[calc(70vh)]" : "h-[calc(100vh-80px)]"}`}
     >
-      <div
-        className={`absolute inset-0 z-10 flex flex-col justify-end items-center bg-black bg-opacity-30 text-white p-4`}
-      >
-        <div className="text-center align-bottom">
-          <div className="flex gap-4 items-center align-middle justify-center">
-            <img src={content.header.siteLogo} className="w-14 md:w-24 rounded-md" />
-            <h1 className={`${commonStyles.heading} text-4xl md:text-6xl`}>Discover your Tempo</h1>
+      <div className={`absolute inset-0 z-10 bg-black bg-opacity-30 flex flex-col text-white p-4`}>
+        <div className="text-center flex flex-col justify-end items-center h-full">
+          <div className="mb-12 md:mb-4">
+            {" "}
+            <div className="flex gap-4 flex-row md:justify-center md:gap-4">
+              <img src={content.header.siteLogo} className="w-14 md:w-24 rounded-md" />
+              <h1 className={`${commonStyles.heading} text-4xl md:text-6xl text-center`}>
+                Discover your Tempo
+              </h1>
+            </div>
+            <p className={`${commonStyles.paragraph} mt-4 text-center`}>
+              Connect with us, at Tempo ABA, where we celebrate everyone's unique rhythm.
+            </p>
           </div>
-          <p className={`${commonStyles.paragraph} mt-4`}>
-            Connect with us, at Tempo ABA, where we celebrate everyone's unique rhythm.
-          </p>
-          <a
-            href="/about/methods"
-            title="Get started with Tempo"
-            className={`${commonStyles.button} mt-6`}
-            role="button"
-          >
-            Learn More About Us!
-          </a>
+          <div>
+            <a
+              href="/about/methods"
+              title="Get started with Tempo"
+              className={`${commonStyles.button} mt-6`}
+              role="button"
+            >
+              Learn More About Us!
+            </a>
+          </div>
         </div>
       </div>
 
