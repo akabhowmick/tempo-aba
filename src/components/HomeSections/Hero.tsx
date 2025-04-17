@@ -21,7 +21,7 @@ export const Hero = () => {
   return (
     <section
       className={`${commonStyles.section} relative ${
-        isMobile ? "h-[calc(70vh)]" : "h-[calc(100vh - 80px)]"
+        isMobile ? "h-[calc(84vh)]" : "h-[calc(100vh - 80px)]"
       }`}
     >
       <div
@@ -48,8 +48,12 @@ export const Hero = () => {
 
       <div
         id="hero-image"
-        className="absolute inset-0 z-0 bg-contain bg-no-repeat md:bg-cover bg-center"
-        style={{ backgroundImage: `url(${content.hero.heroImage})` }}
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${
+            isMobile ? content.hero.heroMobileImage : content.hero.heroImage
+          })`,
+        }}
       />
     </section>
   );

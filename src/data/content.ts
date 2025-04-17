@@ -1,9 +1,9 @@
 import logo from "../assets/siteImages/logowithname.jpeg";
-import heroImage from "../assets/siteImages/home/IMG_5457.jpeg"
+import heroImage from "../assets/siteImages/home/IMG_5457.jpeg";
+import mobileHeroImage from "../assets/siteImages/home/mobilehero1.png";
 import serviceImage1 from "../assets/siteImages/animated/19198612.jpg";
 import serviceImage2 from "../assets/siteImages/animated/4824.jpg";
 import serviceImage3 from "../assets/siteImages/animated/5767946.jpg";
-// import serviceImage4 from "../assets/siteImages/animated/Wavy_Med-08_Single-09.jpg";
 import serviceImage5 from "../assets/siteImages/animated/Wavy_Ppl-04_Single-11.jpg";
 import serviceImage6 from "../assets/siteImages/animated/mission.png";
 import serviceImage7 from "../assets/siteImages/animated/Cartoon married couple communicating with doctor.jpg";
@@ -78,6 +78,7 @@ export const content = {
     subheader4:
       "We are committed to fostering a positive, inclusive, and diverse environment for our employees, the families we support, and our broader community. Our personalized approach to therapy ensures that collaboration among team members and families creates a safe and nurturing environment throughout your journey with us. We understand that navigating the path to effective care can be overwhelming for families and clients. So, where do you begin? Let us guide you through the process!",
     heroImage: heroImage,
+    heroMobileImage: mobileHeroImage,
   },
   services: {
     title: "Where do we provide our services?",
@@ -147,8 +148,7 @@ export const content = {
     text1: {
       type: "text",
       title: "Resource Links",
-      description:
-        "Check out some of these helpful resources!",
+      description: "Check out some of these helpful resources!",
       buttonText: "Read more",
       link: "/resources/aba",
     },
@@ -290,6 +290,6 @@ export const pageBanners = {
 export const emailSetUp = {
   formSubmitEmail: "https://formsubmit.co/cmartinez@tempoaba.com",
   redirectLink: "https://tempoaba.com/",
-  ccLinks: "ikim@tempoaba.com", 
+  ccLinks: "ikim@tempoaba.com",
   // ccLinks: "ikim@tempoaba.com, cmartinez@tempoaba.com"
 };
