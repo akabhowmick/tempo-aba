@@ -21,7 +21,7 @@ export const Hero = () => {
   return (
     <section
       className={`overflow-hidden relative ${
-        isMobile ? "h-[calc(55vh)]" : "h-[calc(100vh-80px)]"
+        isMobile ? "h-[calc(70vh)]" : "h-[calc(100vh-80px)]"
       }`}
     >
       <div
