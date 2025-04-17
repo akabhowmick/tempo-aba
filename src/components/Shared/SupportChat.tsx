@@ -32,11 +32,11 @@ export const SupportChat: React.FC = () => {
   return (
     <div>
       <button
-        className="z-50 fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-medium border rounded-full w-16 h-16 bg-gray-100 cursor-pointer border-green-800 p-0 hover:text-gray-900"
+        className="z-50 fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-small border rounded-full w-16 h-16 bg-green-600 cursor-pointer border-green-600 p-0 hover:text-gray-900"
         type="button"
         onClick={toggleChat}
       >
-        <ChatIcon className="text-green-800" />
+        <ChatIcon className="text-white" />
       </button>
 
       {isChatOpen && (
