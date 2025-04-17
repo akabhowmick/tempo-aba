@@ -26,7 +26,7 @@ export const Hero = () => {
         <div className="text-center flex flex-col justify-end items-center h-full">
           <div className="mb-12 md:mb-4">
             {" "}
-            <div className="flex gap-4 flex-row md:justify-center md:gap-4">
+            <div className=" hidden md:flex gap-4 flex-row md:justify-center md:gap-4">
               <img src={content.header.siteLogo} className="w-14 md:w-24 rounded-md" />
               <h1 className={`${commonStyles.heading} text-4xl md:text-6xl text-center`}>
                 Discover your Tempo
