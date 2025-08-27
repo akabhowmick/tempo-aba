@@ -27,11 +27,10 @@ export const Header = () => {
               }}
             >
               <img
-                src={content.header.siteLogo}
+                src={content.header.siteLogo2}
                 className="rounded-md w-12"
                 alt={content.header.logoAlt}
               />
-              <span>Tempo ABA</span>
             </Link>
 
             {/* Desktop Menu */}

@@ -89,8 +89,8 @@ export const Footer = () => {
 
         <div className="flex flex-wrap items-center gap-4">
           <img
-            className="h-8 w-auto md:order-1"
-            src={content.header.siteLogo}
+            className="w-12 rounded md:order-1"
+            src={content.header.siteLogo2}
             alt="Tempo"
             height={200}
             width={200}

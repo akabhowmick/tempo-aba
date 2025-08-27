@@ -1,4 +1,5 @@
-import logo from "../assets/siteImages/logowithname.jpeg";
+import logov1 from "../assets/siteImages/logov4.jpg";
+import logov2 from "../assets/siteImages/logowithname.jpeg";
 import heroImage from "../assets/siteImages/home/IMG_5457.jpeg";
 import mobileHeroImage from "../assets/siteImages/home/mobilehero1.png";
 import serviceImage1 from "../assets/siteImages/animated/19198612.jpg";
@@ -28,7 +29,8 @@ import banner1 from "../assets/siteImages/banners/banner1.jpg";
 export const content = {
   siteBG: backgroundImage,
   header: {
-    siteLogo: logo,
+    siteLogo: logov1,
+    siteLogo2: logov2,
     logoAlt: "Logo",
     navItems: [
       {
