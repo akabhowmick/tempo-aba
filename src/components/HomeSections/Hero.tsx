@@ -39,9 +39,8 @@ export const Hero = () => {
           <div>
             <a
               href="/about/methods"
-              title="Get started with Tempo"
+              aria-label="Learn more about Tempo ABA's methods and approach"
               className={`${commonStyles.button} mt-6`}
-              role="button"
             >
               Learn More About Us!
             </a>
