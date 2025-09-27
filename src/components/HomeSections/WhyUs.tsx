@@ -52,7 +52,7 @@ export const WhyUs = () => {
           {contentData.map((item, index) => (
             <div key={index} className="w-full md:w-1/4 p-4 gap-4">
               {/* Icon */}
-              <div className="mx-auto mb-4">{item.icon}</div>
+              <div className="mx-auto mb-4" aria-label={item.title}>{item.icon}</div>
 
               {/* Title */}
               <h2 className="text-xl font-bold mb-4">{item.title}</h2>
