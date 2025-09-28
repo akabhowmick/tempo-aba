@@ -98,9 +98,13 @@ export const CareerForm = () => {
                   id="resume"
                   name="Resume-Attachment"
                   accept=".pdf"
+                  aria-describedby="resume-help"
                   className={inputStyles}
                 />
               </div>
+              <p id="resume-help" className="text-sm text-gray-600 mt-1">
+                PDF format only, maximum 5MB
+              </p>
             </div>
 
             {/* Cover Letter Upload */}
@@ -115,14 +119,18 @@ export const CareerForm = () => {
                   name="Cover-Letter-Attachment"
                   accept=".pdf"
                   className={inputStyles}
+                  aria-describedby="cover-letter-help"
                 />
               </div>
+              <p id="cover-letter-help" className="text-sm text-gray-600 mt-1">
+                PDF format only, maximum 5MB
+              </p>
             </div>
 
             <input type="hidden" name="_next" value={emailSetUp.redirectLink} />
             <input type="hidden" name="_subject" value="Career Form Inquiry!"></input>
             <input type="hidden" name="_cc" value={emailSetUp.ccLinks}></input>
-            
+
             <input type="hidden" name="_template" value="table"></input>
 
             {/* Submit Button */}

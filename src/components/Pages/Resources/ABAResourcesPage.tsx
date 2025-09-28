@@ -64,6 +64,9 @@ export const ABAResourcesPage = () => {
           >
             <Link
               to={resource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${resource.name} (opens in new tab)`}
               className="flex-col justify-center items-center rounded-lg p-6 relative z-10"
             >
               {/* Logo */}

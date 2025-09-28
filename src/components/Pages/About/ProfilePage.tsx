@@ -15,7 +15,7 @@ export const ProfilePage = () => {
     <div className="font-roboto text-gray-800 py-8">
       <div className="container mx-auto px-4">
         {/* Breadcrumbs */}
-        <nav className="mb-8">
+        <nav className="mb-8" aria-label="Breadcrumb">
           <a className="text-blue-600 hover:underline" href="/">
             Home
           </a>
