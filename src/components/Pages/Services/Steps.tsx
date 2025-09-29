@@ -74,8 +74,14 @@ const steps: Step[] = [
 export const Steps = () => {
   return (
     <div className="flex-col md:flex-row justify-center align-middle pt-8">
-      <h2 className="text-2xl text-center font-bold">Step-by-step process</h2>
-      <VerticalTimeline layout="2-columns" className="mx-auto md:w-2/3 p-4">
+      <h2 className="text-2xl text-center font-bold" id="steps-heading">
+        Step-by-step process
+      </h2>
+      <VerticalTimeline
+        layout="2-columns"
+        className="mx-auto md:w-2/3 p-4"
+        aria-labelledby="steps-heading"
+      >
         {steps.map((step, index) => (
           <VerticalTimelineElement
             key={index}

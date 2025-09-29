@@ -96,31 +96,8 @@ export const Footer = () => {
             width={200}
           />
 
-          {/* <ul className="flex items-center space-x-3 md:order-3">
-            {[
-              {
-                icon: <FiTwitter className="w-4 h-4" />,
-                href: "https://twitter.com",
-              },
-              {
-                icon: <FiFacebook className="w-4 h-4" />,
-                href: "https://facebook.com",
-              },
-              {
-                icon: <FiInstagram className="w-4 h-4" />,
-                href: "https://instagram.com",
-              },
-            ].map((item, index) => (
-              <li key={index}>
-                <a href={item.href} target="_blank" rel="noopener noreferrer">
-                  <div className={iconStyles}>{item.icon}</div>
-                </a>
-              </li>
-            ))}
-          </ul> */}
-
           <p className="w-full mt-8 text-sm text-center text-gray-100 md:mt-0 md:w-auto md:order-2">
-            © Copyright 2024, Tempo ABA. Site made by{" "}
+            © Copyright 2025, Tempo ABA. Site made by{" "}
             <a href="http://akashbhowmick.com">AKA Code</a>
           </p>
         </div>
