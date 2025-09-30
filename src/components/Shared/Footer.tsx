@@ -23,7 +23,7 @@ export const Footer = () => {
                 { href: "/about/abaandautism", text: "About ABA and autism " },
               ].map((item, index) => (
                 <li key={index}>
-                  <a href={item.href}>
+                  <a href={item.href} aria-label={`Navigate to ${item.text} page`}>
                     <span className={aClasses}>{item.text}</span>
                   </a>
                 </li>
@@ -42,7 +42,7 @@ export const Footer = () => {
                 { href: "/careers", text: "Careers" },
               ].map((item, index) => (
                 <li key={index}>
-                  <a href={item.href}>
+                  <a href={item.href} aria-label={`Navigate to ${item.text} page`}>
                     <span className={aClasses}>{item.text}</span>
                   </a>
                 </li>
@@ -59,7 +59,7 @@ export const Footer = () => {
                 { href: "/resources/faq", text: "FAQ" },
               ].map((item, index) => (
                 <li key={index}>
-                  <a href={item.href}>
+                  <a href={item.href} aria-label={`Navigate to ${item.text} page`}>
                     <span className={aClasses}>{item.text}</span>
                   </a>
                 </li>
@@ -76,7 +76,7 @@ export const Footer = () => {
                 { href: "/resources/aba", text: "ABA Resources" },
               ].map((item, index) => (
                 <li key={index}>
-                  <a href={item.href}>
+                  <a href={item.href} aria-label={`Navigate to ${item.text} page`}>
                     <span className={aClasses}>{item.text}</span>
                   </a>
                 </li>
@@ -98,7 +98,9 @@ export const Footer = () => {
 
           <p className="w-full mt-8 text-sm text-center text-gray-100 md:mt-0 md:w-auto md:order-2">
             © Copyright 2025, Tempo ABA. Site made by{" "}
-            <a href="http://akashbhowmick.com">AKA Code</a>
+            <a href="http://akashbhowmick.com" aria-label={`Navigate to Website Designer's page`}>
+              AKA Code
+            </a>
           </p>
         </div>
       </div>
