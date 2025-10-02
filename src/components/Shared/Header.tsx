@@ -34,7 +34,7 @@ export const Header = () => {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-4">
+            <nav className="hidden md:flex space-x-4" aria-label="Main navigation">
               {content.header.navItems.map((item) =>
                 item.submenu ? (
                   <div key={item.name} className="relative group">
@@ -42,6 +42,8 @@ export const Header = () => {
                     <Button
                       color="inherit"
                       className="relative z-50 group-hover:text-white flex items-center"
+                      aria-expanded="false"
+                      aria-haspopup="true"
                     >
                       {item.name}
                       {/* Chevron icon */}
@@ -82,7 +84,7 @@ export const Header = () => {
                   </Link>
                 )
               )}
-            </div>
+            </nav>
 
             {!isMobile && (
               <Link
