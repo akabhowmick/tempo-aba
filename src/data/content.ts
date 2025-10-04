@@ -107,7 +107,7 @@ export const content = {
           "We provide ABA services in schools to support your child’s success in the classroom.",
         cardImage: serviceImage3,
         cardLink: "/services/school", // Link to the specific service page
-        cardGradient: "from-green-600 to-transparent", // Custom gradient
+        cardGradient: "from-green-700 to-transparent", // Custom gradient
       },
       // {
       //   cardTitle: "Center-Based ABA",

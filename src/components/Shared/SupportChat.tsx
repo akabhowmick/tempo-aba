@@ -32,9 +32,11 @@ export const SupportChat: React.FC = () => {
   return (
     <div>
       <button
-        className="z-50 fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-small border rounded-full w-16 h-16 bg-green-600 cursor-pointer border-green-600 p-0 hover:text-gray-900"
+        className="z-50 fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-small border rounded-full w-16 h-16 bg-green-700 cursor-pointer border-green-700 p-0 hover:text-gray-900"
         type="button"
         onClick={toggleChat}
+        aria-label={isChatOpen ? "Close support chat" : "Open support chat"}
+        aria-expanded={isChatOpen}
       >
         <ChatIcon className="text-white" />
       </button>
@@ -148,6 +150,9 @@ export const SupportChat: React.FC = () => {
               >
                 Send Message
               </button>
+            </div>
+            <div role="status" aria-live="polite" className="sr-only">
+              Support chat form
             </div>
           </form>
         </div>

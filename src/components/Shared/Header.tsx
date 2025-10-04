@@ -15,9 +15,9 @@ export const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-green-600">
+      <header className="sticky top-0 z-50 bg-green-700">
         <AppBar position="sticky" id="app-bar" className="z-50">
-          <Toolbar className="flex justify-between bg-green-600 p-2">
+          <Toolbar className="flex justify-between bg-green-700 p-2">
             {/* Logo */}
             <Link
               to="/"
@@ -115,7 +115,7 @@ export const Header = () => {
         </AppBar>
 
         {/* Mobile Menu */}
-        <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-600 p-4 md:hidden`}>
+        <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-700 p-4 md:hidden`}>
           {content.header.navItems.map((item) =>
             item.submenu ? (
               <div key={item.name}>

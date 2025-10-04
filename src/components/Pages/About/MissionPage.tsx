@@ -13,7 +13,7 @@ export const MissionPage: React.FC = () => {
           <p className="text-lg leading-relaxed">{missionContent.mission.paragraph2}</p>
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0 md:ml-8 relative">
-          <div className="absolute inset-0 bg-green-600 rounded-lg transform rotate-6"></div>
+          <div className="absolute inset-0 bg-green-700 rounded-lg transform rotate-6"></div>
           <img
             alt="Group of professionals smiling"
             className="relative rounded-lg"
@@ -25,7 +25,7 @@ export const MissionPage: React.FC = () => {
       </div>
 
       <div className="relative my-20">
-        <div className="absolute inset-0 bg-green-600 rounded-lg transform rotate-3 -z-10"></div>
+        <div className="absolute inset-0 bg-green-700 rounded-lg transform rotate-3 -z-10"></div>
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 text-white bg-cover rounded-lg relative">
           <div
             className="space-y-8 lg:pr-16 xl:pr-24 lg:col-span-2 lg:space-y-12 p-4 bg-cover rounded-lg"

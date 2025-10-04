@@ -29,7 +29,7 @@ export const missionContent = {
     title: "Our Guiding Principles:",
     principles: [
       {
-        icon: <FaHandsHelping className="text-green-600 w-9 h-9" />,
+        icon: <FaHandsHelping className="text-green-700 w-9 h-9" />,
         title: "Collaboration",
         description:
           "Collaboration among service providers and caregivers is essential in the implementation and success of treatment plans.",

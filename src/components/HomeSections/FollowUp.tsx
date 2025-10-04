@@ -26,7 +26,7 @@ export const FollowUp = () => {
               window.scrollTo(0, 0); // Scroll to top
             }}
           >
-            <button className="bg-green-600 px-4 py-2 rounded w-full">
+            <button className="bg-green-800 px-4 py-2 rounded w-full">
               {content.resources.text1.buttonText}
             </button>
           </Link>
@@ -51,7 +51,7 @@ export const FollowUp = () => {
           <Link to={content.resources.text2.link} onClick={() => {
                 window.scrollTo(0, 0); // Scroll to top
               }}>
-            <button className="bg-green-600 px-4 py-2 rounded w-full">
+            <button className="bg-green-800 px-4 py-2 rounded w-full">
               {content.resources.text2.buttonText}
             </button>
           </Link>
