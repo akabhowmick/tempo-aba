@@ -10,6 +10,14 @@ export const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
+  const handleKeyDown = (e: React.KeyboardEvent, itemName: string) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setDropdownOpen(isDropdownOpen === itemName ? null : itemName);
+    } else if (e.key === "Escape") {
+      setDropdownOpen(null);
+    }
+  };
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
@@ -42,19 +50,30 @@ export const Header = () => {
                     <Button
                       color="inherit"
                       className="relative z-50 group-hover:text-white flex items-center"
-                      aria-expanded="false"
+                      aria-expanded={isDropdownOpen === item.name}
                       aria-haspopup="true"
+                      onKeyDown={(e) => handleKeyDown(e, item.name)}
+                      onMouseEnter={() => setDropdownOpen(item.name)}
+                      onMouseLeave={() => setDropdownOpen(null)}
                     >
                       {item.name}
-                      {/* Chevron icon */}
                       <span className="ml-2">
-                        <FaChevronDown className={`transition-transform duration-300`} />
+                        <FaChevronDown
+                          className={`transition-transform duration-300 ${
+                            isDropdownOpen === item.name ? "rotate-180" : ""
+                          }`}
+                          aria-hidden="true"
+                        />
                       </span>
                     </Button>
 
                     {/* Submenu */}
                     <div
-                      className={`w-max absolute left-0 bg-green-800 text-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300`}
+                      className={`w-max absolute left-0 bg-green-800 text-white shadow-lg rounded-md z-50 transition-opacity duration-300 ${
+                        isDropdownOpen === item.name ? "opacity-100 visible" : "opacity-0 invisible"
+                      }`}
+                      role="menu"
+                      aria-label={`${item.name} submenu`}
                     >
                       <div className="hover:group">
                         {item.submenu.map((subitem) => (
