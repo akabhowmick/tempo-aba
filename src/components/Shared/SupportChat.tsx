@@ -25,7 +25,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
   const chatRef = useRef<HTMLDivElement | null>(null);
 
   const inputStyles: string =
-    "mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-2 focus:ring-green-600 focus:border-green-500";
+    "mt-1 block w-full border border-white-300 rounded-md p-2 text-sm focus:ring-2 focus:ring-green-600 focus:border-green-500";
   const inputErrorStyles: string =
     "mt-1 block w-full border-2 border-red-500 rounded-md p-2 text-sm focus:ring-2 focus:ring-red-500";
 
@@ -127,19 +127,19 @@ export const SupportChat: React.FC = (): JSX.Element => {
         >
           <div className="flex flex-col space-y-1.5 pb-6">
             <div className="flex justify-between items-center">
-              <h2 id="chat-title" className="font-semibold text-lg text-gray-800">
+              <h2 id="chat-title" className="font-semibold text-lg text-white-800">
                 Get in touch with us!
               </h2>
 
               <button
-                className="p-1 -m-1 text-gray-400 transition-all duration-200 bg-white rounded-md hover:bg-gray-100 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-600"
+                className="p-1 -m-1 text-white-400 transition-all duration-200 bg-white rounded-md hover:bg-white-100 hover:text-white-700 focus:outline-none focus:ring-2 focus:ring-green-600"
                 onClick={toggleChat}
                 aria-label="Close support chat"
               >
                 <FiX size={20} />
               </button>
             </div>
-            <p id="chat-description" className="text-sm text-gray-600 leading-5">
+            <p id="chat-description" className="text-sm text-white-600 leading-5">
               Talk directly with our members and receive a response in 24-48 hours.
             </p>
           </div>
@@ -170,7 +170,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
           >
             {/* Name Field */}
             <div>
-              <label htmlFor="chat-name" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="chat-name" className="block text-sm font-medium text-white-700">
                 Name <span className="text-red-600" aria-label="required">*</span>
               </label>
               <input
@@ -193,7 +193,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
 
             {/* Email Field */}
             <div>
-              <label htmlFor="chat-email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="chat-email" className="block text-sm font-medium text-white-700">
                 Email <span className="text-red-600" aria-label="required">*</span>
               </label>
               <input
@@ -216,7 +216,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
 
             {/* Phone Field */}
             <div>
-              <label htmlFor="chat-phone" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="chat-phone" className="block text-sm font-medium text-white-700">
                 Phone Number <span className="text-red-600" aria-label="required">*</span>
               </label>
               <input
@@ -230,7 +230,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
                 className={errors.phone ? inputErrorStyles : inputStyles}
                 placeholder="(555) 123-4567"
               />
-              <p id="chat-phone-help" className="mt-1 text-xs text-gray-600">
+              <p id="chat-phone-help" className="mt-1 text-xs text-white-600">
                 Format: (555) 123-4567
               </p>
               {errors.phone && (
@@ -242,7 +242,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
 
             {/* Topic/Subject of Inquiry */}
             <div>
-              <label htmlFor="chat-topic" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="chat-topic" className="block text-sm font-medium text-white-700">
                 Topic/Subject <span className="text-red-600" aria-label="required">*</span>
               </label>
               <select
@@ -273,7 +273,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
 
             {/* Message Field */}
             <div>
-              <label htmlFor="chat-message" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="chat-message" className="block text-sm font-medium text-white-700">
                 Message <span className="text-red-600" aria-label="required">*</span>
               </label>
               <textarea

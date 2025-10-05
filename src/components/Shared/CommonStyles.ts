@@ -5,7 +5,7 @@ export const commonStyles = {
   headerContent: "flex items-center justify-between h-16 lg:h-20",
   logo: "w-auto h-8",
   navButton:
-    "inline-flex items-center p-2 text-sm text-white uppercase transition-all duration-200 bg-black lg:hidden focus:bg-gray-800 hover:bg-gray-800",
+    "inline-flex items-center p-2 text-sm text-white uppercase transition-all duration-200 bg-black lg:hidden focus:bg-white-800 hover:bg-white-800",
   navMenu: "hidden lg:flex lg:items-center lg:justify-center lg:ml-10 lg:mr-auto lg:space-x-10",
   navLink: "text-white text-black transition-all duration-200 hover:text-white",
   ctaButton:
@@ -26,6 +26,6 @@ export const commonStyles = {
   appIcon: "w-auto rounded h-14 sm:h-16",
   imageContainer: "relative w-full overflow-hidden lg:w-5/12 lg:order-1",
   image: "w-full",
-  pageTitle: "text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl",
+  pageTitle: "text-3xl font-bold leading-tight text-white-900 sm:text-4xl lg:text-5xl",
   containerStyles: "container mx-auto px-4 py-8",
 };

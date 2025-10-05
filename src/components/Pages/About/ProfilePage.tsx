@@ -12,19 +12,19 @@ export const ProfilePage = () => {
   }
 
   return (
-    <div className="font-roboto text-gray-800 py-8">
+    <div className="font-roboto text-white-800 py-8">
       <div className="container mx-auto px-4">
         {/* Breadcrumbs */}
         <nav className="mb-8" aria-label="Breadcrumb">
-          <a className="text-blue-600 hover:underline" href="/">
+          <a className="text-blue-700 hover:underline" href="/">
             Home
           </a>
-          <span className="mx-2 text-gray-500"> &gt; </span>
-          <a className="text-blue-600 hover:underline" href="/about/members">
+          <span className="mx-2 text-white-500"> &gt; </span>
+          <a className="text-blue-700 hover:underline" href="/about/members">
             Who we are
           </a>
-          <span className="mx-2 text-gray-500"> &gt; </span>
-          <span className="text-gray-800">{profile.name}</span>
+          <span className="mx-2 text-white-500"> &gt; </span>
+          <span className="text-white-800">{profile.name}</span>
         </nav>
 
         {/* Profile Content */}
@@ -40,8 +40,8 @@ export const ProfilePage = () => {
 
             {/* Name and Title under the image */}
             <div className="mt-4">
-              <h1 className="text-2xl font-bold text-gray-900">{profile.name}</h1>
-              <h2 className="text-xl text-gray-600">{profile.title}</h2>
+              <h1 className="text-2xl font-bold text-white-900">{profile.name}</h1>
+              <h2 className="text-xl text-white-600">{profile.title}</h2>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ export const ProfilePage = () => {
           <div className="w-full md:w-2/3">
             {profile.bio.map((paragraph) => {
               return (
-                <p className="text-gray-800 whitespace-pre-line mb-4" key={paragraph}>
+                <p className="text-white-800 whitespace-pre-line mb-4" key={paragraph}>
                   {paragraph}
                 </p>
               );

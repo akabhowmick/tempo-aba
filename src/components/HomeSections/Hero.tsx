@@ -51,6 +51,7 @@ export const Hero = () => {
       <div
         id="hero-image"
         className="absolute inset-0 z-0 bg-cover bg-center"
+        role="presentation"
         style={{
           backgroundImage: `url(${
             isMobile ? content.hero.heroMobileImage : content.hero.heroImage

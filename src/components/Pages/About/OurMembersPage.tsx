@@ -32,11 +32,11 @@ const TeamBioCard = ({
         src={imageUrl}
       />
     </div>
-    <h2 className="text-xl font-bold text-gray-900 mt-10">
-      {name} - <span className="text-gray-600">{credentials}</span>
+    <h2 className="text-xl font-bold text-white-900 mt-10">
+      {name} - <span className="text-white-600">{credentials}</span>
     </h2>
-    <p className="text-md font-semibold text-gray-600">{title}</p>
-    <p className="text-sm text-gray-600 mt-2 py-2">{truncateText(bio, 250)}</p>
+    <p className="text-md font-semibold text-white-600">{title}</p>
+    <p className="text-sm text-white-600 mt-2 py-2">{truncateText(bio, 250)}</p>
     <Link
       to={profileLink}
       className="text-blue-800 font-semibold mt-2 inline-block"

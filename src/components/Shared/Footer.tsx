@@ -2,8 +2,6 @@
 import { content } from "../../data/content";
 
 export const Footer = () => {
-  // const iconStyles =
-  //   "flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-700 rounded-full w-7 h-7 focus:bg-blue-600 hover:bg-blue-600 hover:border-blue-600 focus:border-blue-600";
 
   const aClasses =
     "text-md text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80 cursor-pointer";
@@ -85,7 +83,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <hr className="mt-16 mb-10 border-gray-800" />
+        <hr className="mt-16 mb-10 border-white-800" />
 
         <div className="flex flex-wrap items-center gap-4">
           <img
@@ -96,7 +94,7 @@ export const Footer = () => {
             width={200}
           />
 
-          <p className="w-full mt-8 text-sm text-center text-gray-100 md:mt-0 md:w-auto md:order-2">
+          <p className="w-full mt-8 text-sm text-center text-white-100 md:mt-0 md:w-auto md:order-2">
             © Copyright 2025, Tempo ABA. Site made by{" "}
             <a href="http://akashbhowmick.com" aria-label={`Navigate to Website Designer's page`}>
               AKA Code
