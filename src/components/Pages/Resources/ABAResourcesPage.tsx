@@ -79,7 +79,7 @@ export const ABAResourcesPage = () => {
               {/* Resource Info */}
               <div className="flex-1">
                 <h2 className="text-xl font-semibold mb-2">
-                  <p className="text-blue-700 hover:underline">{resource.name}</p>
+                  <p className="text-blue-800 hover:underline">{resource.name}</p>
                 </h2>
                 <p className="text-white-700">{resource.description}</p>
               </div>

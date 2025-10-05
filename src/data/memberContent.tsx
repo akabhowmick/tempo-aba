@@ -35,7 +35,7 @@ export const missionContent = {
           "Collaboration among service providers and caregivers is essential in the implementation and success of treatment plans.",
       },
       {
-        icon: <FaUserGraduate className="text-blue-700 w-9 h-9" />,
+        icon: <FaUserGraduate className="text-blue-800 w-9 h-9" />,
         title: "Individualized Learning",
         description:
           "Each child’s unique background, strengths, learning styles, and interests plays an integral role in the development of an effective individualized treatment plan.",

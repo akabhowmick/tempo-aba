@@ -114,6 +114,7 @@ export const CareerForm = (): JSX.Element => {
                   id="name"
                   name="Name"
                   required
+                  autoComplete="name"
                   aria-required="true"
                   aria-invalid={errors.name ? "true" : "false"}
                   aria-describedby={errors.name ? "name-error" : undefined}
@@ -138,6 +139,7 @@ export const CareerForm = (): JSX.Element => {
                   type="email"
                   id="email"
                   name="Email"
+                  autoComplete="email"
                   required
                   aria-required="true"
                   aria-invalid={errors.email ? "true" : "false"}
@@ -163,6 +165,7 @@ export const CareerForm = (): JSX.Element => {
                   type="tel"
                   id="phone"
                   name="Phone"
+                  autoComplete="tel"
                   required
                   aria-required="true"
                   aria-invalid={errors.phone ? "true" : "false"}

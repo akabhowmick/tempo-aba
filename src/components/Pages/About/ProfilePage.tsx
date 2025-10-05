@@ -16,11 +16,11 @@ export const ProfilePage = () => {
       <div className="container mx-auto px-4">
         {/* Breadcrumbs */}
         <nav className="mb-8" aria-label="Breadcrumb">
-          <a className="text-blue-700 hover:underline" href="/">
+          <a className="text-blue-800 hover:underline" href="/">
             Home
           </a>
           <span className="mx-2 text-white-500"> &gt; </span>
-          <a className="text-blue-700 hover:underline" href="/about/members">
+          <a className="text-blue-800 hover:underline" href="/about/members">
             Who we are
           </a>
           <span className="mx-2 text-white-500"> &gt; </span>

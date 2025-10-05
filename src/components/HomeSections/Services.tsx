@@ -10,7 +10,9 @@ export const Services: React.FC = () => {
   return (
     <section className="py-16 px-4">
       <SectionTitle title={content.services.title} />
-      <div className="p-4 flex flex-wrap justify-center gap-8 mt-12">{services}</div>
+      <div className="p-4 flex flex-wrap justify-center gap-8 mt-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:max-w-7xl lg:mx-auto">
+        {services}
+      </div>
     </section>
   );
 };

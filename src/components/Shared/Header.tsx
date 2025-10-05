@@ -10,6 +10,7 @@ export const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
+  
   const handleKeyDown = (e: React.KeyboardEvent, itemName: string) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -45,7 +46,12 @@ export const Header = () => {
             <nav className="hidden md:flex space-x-4" aria-label="Main navigation">
               {content.header.navItems.map((item) =>
                 item.submenu ? (
-                  <div key={item.name} className="relative group">
+                  <div 
+                    key={item.name} 
+                    className="relative group"
+                    onMouseEnter={() => setDropdownOpen(item.name)}
+                    onMouseLeave={() => setDropdownOpen(null)}
+                  >
                     {/* Parent Menu Button */}
                     <Button
                       color="inherit"
@@ -53,8 +59,6 @@ export const Header = () => {
                       aria-expanded={isDropdownOpen === item.name}
                       aria-haspopup="true"
                       onKeyDown={(e) => handleKeyDown(e, item.name)}
-                      onMouseEnter={() => setDropdownOpen(item.name)}
-                      onMouseLeave={() => setDropdownOpen(null)}
                     >
                       {item.name}
                       <span className="ml-2">

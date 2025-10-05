@@ -177,6 +177,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
                 type="text"
                 id="chat-name"
                 name="Name"
+                autoComplete="name"
                 required
                 aria-required="true"
                 aria-invalid={errors.name ? "true" : "false"}
@@ -200,6 +201,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
                 type="email"
                 id="chat-email"
                 name="Email"
+                autoComplete="email"
                 required
                 aria-required="true"
                 aria-invalid={errors.email ? "true" : "false"}
@@ -223,6 +225,7 @@ export const SupportChat: React.FC = (): JSX.Element => {
                 type="tel"
                 id="chat-phone"
                 name="Phone"
+                autoComplete="tel"
                 required
                 aria-required="true"
                 aria-invalid={errors.phone ? "true" : "false"}

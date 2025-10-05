@@ -106,6 +106,7 @@ export const ContactForm = (): JSX.Element => {
                   type="text"
                   id="name"
                   name="Name"
+                  autoComplete="name"
                   required
                   aria-required="true"
                   aria-invalid={errors.name ? "true" : "false"}
@@ -132,6 +133,7 @@ export const ContactForm = (): JSX.Element => {
                   id="email"
                   name="Email"
                   required
+                  autoComplete="email"
                   aria-required="true"
                   aria-invalid={errors.email ? "true" : "false"}
                   aria-describedby={errors.email ? "email-error" : undefined}
@@ -156,6 +158,7 @@ export const ContactForm = (): JSX.Element => {
                   type="tel"
                   id="phone"
                   name="Phone"
+                  autoComplete="tel"
                   required
                   aria-required="true"
                   aria-invalid={errors.phone ? "true" : "false"}
