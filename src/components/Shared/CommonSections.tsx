@@ -23,6 +23,7 @@ export const SubPageTitle = ({ pageBannerInfo }: { pageBannerInfo: pageBannerInf
   return (
     <div className="relative">
       <img alt={alt} className="w-full h-64 object-cover opacity-75" src={src} />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60" />
       <div className="absolute inset-0 flex flex-col items-center justify-end text-white">
         <h1 className="text-4xl text-center font-bold p-2">{title}</h1>
         <p className="text-lg text-center pb-4">{subtitle}</p>
@@ -63,5 +64,3 @@ export const PageTitle = ({
     </section>
   );
 };
-
-

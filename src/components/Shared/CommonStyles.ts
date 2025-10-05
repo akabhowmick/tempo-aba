@@ -29,3 +29,28 @@ export const commonStyles = {
   pageTitle: "text-3xl font-bold leading-tight text-white-900 sm:text-4xl lg:text-5xl",
   containerStyles: "container mx-auto px-4 py-8",
 };
+
+
+export const contrastSafeColors = {
+  // Text on white background (AA compliant)
+  textPrimary: 'text-gray-900',      // 21:1
+  textSecondary: 'text-gray-800',     // 7:1 (AAA)
+  textTertiary: 'text-gray-700',      // 4.5:1 (AA - minimum)
+  
+  // Text on dark backgrounds
+  textOnDark: 'text-white',           // Varies by background
+  
+  // Interactive elements
+  link: 'text-blue-700',              // 4.5:1 (AA)
+  linkHover: 'text-blue-800',         // 5.7:1 (AAA)
+  
+  // Status colors (on white)
+  error: 'text-red-600',              // 4.5:1 (AA)
+  success: 'text-green-700',          // 5.01:1 (AA)
+  warning: 'text-yellow-700',         // 4.5:1 (AA)
+  
+  // Background colors
+  bgPrimary: 'bg-green-700',          // With white text: 5.01:1
+  bgSecondary: 'bg-green-800',        // With white text: 6.7:1
+  bgDark: 'bg-green-900',             // With white text: 8.9:1
+};

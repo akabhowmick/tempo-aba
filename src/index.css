@@ -18,6 +18,23 @@
 
 /* Focus visible styles */
 *:focus-visible {
-  outline: 2px solid #16a34a;
+  outline: 3px solid #16a34a; /* green-600 - thicker outline */
   outline-offset: 2px;
+  border-radius: 2px; /* softer corners */
+}
+
+/* Add focus for buttons specifically */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #16a34a;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2); /* green glow */
+}
+
+@layer base {
+  input::placeholder,
+  textarea::placeholder {
+    color: #6b7280; /* gray-500 - better than default gray-400 */
+    opacity: 1; /* Firefox fix */
+  }
 }

@@ -38,19 +38,19 @@ export const ServiceCard = ({ service }: { service: ServiceCardProps }) => {
           />
 
           {/* Background Gradient */}
-          <div className={`absolute inset-0 bg-gradient-to-t ${cardGradient} opacity-75`} />
+          <div className={`absolute inset-0 bg-gradient-to-t ${cardGradient} opacity-85`} />
 
           {/* Title and Description */}
           <div className="absolute bottom-4 left-4 text-white">
             <motion.h3
-              className="text-xl font-semibold group-hover:-translate-y-5 transition-transform"
+              className="text-xl font-semibold group-hover:-translate-y-2 transition-transform"
               transition={{ type: "spring", stiffness: 300 }}
             >
               {cardTitle}
             </motion.h3>
 
             <motion.p
-              className="text-sm mt-2 hidden transform translate-y-5 opacity-0 group-hover:block group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+              className="text-sm mt-0.5 hidden transform translate-y-5 opacity-0 group-hover:block group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 drop-shadow-md"
               initial={{ opacity: 0, translateY: 5 }}
               animate={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 0.3 }}
