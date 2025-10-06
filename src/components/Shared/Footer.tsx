@@ -7,12 +7,12 @@ export const Footer = () => {
     "text-md text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80 cursor-pointer";
 
   return (
-    <section className="py-10 bg-green-900 sm:pt-16 lg:pt-24">
+    <footer className="py-10 bg-green-900 sm:pt-16 lg:pt-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-4 md:gap-x-12">
           {/* Company */}
           <div>
-            <p className="text-xl text-green-100">Company</p>
+            <p className="text-xl text-white">Company</p>
             <ul className="mt-8 space-y-4">
               {[
                 { href: "/about/members", text: "Who we are" },
@@ -31,7 +31,7 @@ export const Footer = () => {
 
           {/* Help */}
           <div>
-            <p className="text-xl text-green-100">Services</p>
+            <p className="text-xl text-white">Services</p>
             <ul className="mt-8 space-y-4">
               {[
                 { href: "/services/home", text: "Home Based ABA" },
@@ -50,7 +50,7 @@ export const Footer = () => {
 
           {/* Resources */}
           <div>
-            <p className="text-xl text-green-100">Resources</p>
+            <p className="text-xl text-white">Resources</p>
             <ul className="mt-8 space-y-4">
               {[
                 { href: "/resources/insurance", text: "Insurance" },
@@ -67,7 +67,7 @@ export const Footer = () => {
 
           {/* Extra as */}
           <div>
-            <p className="text-xl text-green-100">Extra assistance</p>
+            <p className="text-xl text-white">Extra assistance</p>
             <ul className="mt-8 space-y-4">
               {[
                 { href: "/contact", text: "Contact" },
@@ -94,7 +94,7 @@ export const Footer = () => {
             width={200}
           />
 
-          <p className="w-full mt-8 text-sm text-center text-white-100 md:mt-0 md:w-auto md:order-2">
+          <p className="w-full mt-8 text-sm text-center text-white md:mt-0 md:w-auto md:order-2">
             © Copyright 2025, Tempo ABA. Site made by{" "}
             <a href="http://akashbhowmick.com" aria-label={`Navigate to Website Designer's page`}>
               AKA Code
@@ -102,6 +102,6 @@ export const Footer = () => {
           </p>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };

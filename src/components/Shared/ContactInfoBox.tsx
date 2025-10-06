@@ -16,7 +16,7 @@ export const ContactInfoBox = ({ formType }: { formType: string }) => {
             <p className="mt-6">
               <a
                 href="tel:+19174966144"
-                className=" font-medium text-white-900 hover:underline"
+                className=" font-medium text-white hover:underline"
               >
                 +1 (917) 496 6144
               </a>
@@ -24,7 +24,7 @@ export const ContactInfoBox = ({ formType }: { formType: string }) => {
             <p className="mt-1">
               <a
                 href="tel:+19175829560"
-                className=" font-medium text-white-900 hover:underline"
+                className=" font-medium text-white hover:underline"
               >
                 +1 (917) 582 9560
               </a>
@@ -37,13 +37,13 @@ export const ContactInfoBox = ({ formType }: { formType: string }) => {
             <FiMail className={iconStyles} />
             <a
               href="mailto:contact@auraui.com"
-              className="mt-6 block font-medium text-white-900 hover:underline"
+              className="mt-6 block font-medium text-white hover:underline"
             >
               Cynmartinez810@gmail.com
             </a>
             <a
               href="mailto:hr@auraui.com"
-              className="mt-1  block font-medium text-white-900 hover:underline"
+              className="mt-1  block font-medium text-white hover:underline"
             >
               inaekim.ny@gmail.com
             </a>
@@ -53,7 +53,7 @@ export const ContactInfoBox = ({ formType }: { formType: string }) => {
         <div className={cardStyles}>
           <div className={cardContentStyles}>
             <FiMapPin className={iconStyles} />
-            <p className="mt-6 block font-medium leading-relaxed text-white-900">
+            <p className="mt-6 block font-medium leading-relaxed text-white">
               Long Island, New York
             </p>
           </div>

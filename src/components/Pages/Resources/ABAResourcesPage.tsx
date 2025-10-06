@@ -81,7 +81,7 @@ export const ABAResourcesPage = () => {
                 <h2 className="text-xl font-semibold mb-2">
                   <p className="text-blue-800 hover:underline">{resource.name}</p>
                 </h2>
-                <p className="text-white-700">{resource.description}</p>
+                <p className="text-white">{resource.description}</p>
               </div>
             </Link>
           </motion.li>

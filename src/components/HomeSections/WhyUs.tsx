@@ -57,7 +57,7 @@ export const WhyUs = () => {
               </div>
 
               {/* Title */}
-              <h2 className="text-xl font-bold mb-4">{item.title}</h2>
+              <h3 className="text-xl font-bold mb-4">{item.title}</h3>
 
               {/* Description */}
               <p className="text-white-700 text-sm">{item.description}</p>

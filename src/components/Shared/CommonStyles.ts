@@ -26,7 +26,7 @@ export const commonStyles = {
   appIcon: "w-auto rounded h-14 sm:h-16",
   imageContainer: "relative w-full overflow-hidden lg:w-5/12 lg:order-1",
   image: "w-full",
-  pageTitle: "text-3xl font-bold leading-tight text-white-900 sm:text-4xl lg:text-5xl",
+  pageTitle: "text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl",
   containerStyles: "container mx-auto px-4 py-8",
 };
 

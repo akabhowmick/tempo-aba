@@ -98,7 +98,7 @@ export const ContactForm = (): JSX.Element => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-6">
             {/* Name field */}
             <div>
-              <label htmlFor="name" className="text-base font-medium text-white-900">
+              <label htmlFor="name" className="text-base font-medium text-green-900">
                 Your Name <span className="text-red-600" aria-label="required">*</span>
               </label>
               <div className="mt-2.5 relative">
@@ -124,7 +124,7 @@ export const ContactForm = (): JSX.Element => {
 
             {/* Email field */}
             <div>
-              <label htmlFor="email" className="text-base font-medium text-white-900">
+              <label htmlFor="email" className="text-base font-medium text-green-900">
                 Email Address <span className="text-red-600" aria-label="required">*</span>
               </label>
               <div className="mt-2.5 relative">
@@ -150,7 +150,7 @@ export const ContactForm = (): JSX.Element => {
 
             {/* Phone field */}
             <div>
-              <label htmlFor="phone" className="text-base font-medium text-white-900">
+              <label htmlFor="phone" className="text-base font-medium text-green-900">
                 Phone Number <span className="text-red-600" aria-label="required">*</span>
               </label>
               <div className="mt-2.5 relative">
@@ -167,7 +167,7 @@ export const ContactForm = (): JSX.Element => {
                   className={errors.phone ? inputErrorStyles : inputStyles}
                 />
               </div>
-              <p id="phone-help" className="mt-1 text-sm text-white-600">
+              <p id="phone-help" className="mt-1 text-sm text-green-900">
                 Format: (555) 123-4567 or 555-123-4567
               </p>
               {errors.phone && (
@@ -179,7 +179,7 @@ export const ContactForm = (): JSX.Element => {
 
             {/* Message field */}
             <div className="sm:col-span-2">
-              <label htmlFor="message" className="text-base font-medium text-white-900">
+              <label htmlFor="message" className="text-base font-medium text-green-900">
                 Message <span className="text-red-600" aria-label="required">*</span>
               </label>
               <div className="mt-2.5 relative">
@@ -195,7 +195,7 @@ export const ContactForm = (): JSX.Element => {
                   className={errors.message ? `${inputErrorStyles} resize-y` : `${inputStyles} resize-y`}
                 ></textarea>
               </div>
-              <p id="message-help" className="mt-1 text-sm text-white-600">
+              <p id="message-help" className="mt-1 text-sm text-green-900">
                 Please provide details about your inquiry
               </p>
               {errors.message && (
