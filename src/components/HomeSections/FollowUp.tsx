@@ -27,11 +27,11 @@ export const FollowUp = () => {
                   src={card.image.src}
                 />
               </div>
-              <div className="text-center md:text-left flex flex-col flex-grow">
+              <div className="text-center flex flex-col flex-grow">
                 <h2 className="text-3xl font-bold mb-4 text-green-800">
                   {card.text.title}
                 </h2>
-                <p className="text-lg mb-6 text-gray-700 flex-grow">
+                <p className="text-lg mb-6 text-left text-gray-700 flex-grow">
                   {card.text.description}
                 </p>
                 <Link

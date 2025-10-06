@@ -48,9 +48,9 @@ export const WhyUs = () => {
         <SectionTitle title="Focus Areas" />
 
         {/* Content Section */}
-        <div className="flex flex-wrap justify-between text-center gap-4">
+        <div className="flex flex-wrap justify-between text-center gap-2">
           {contentData.map((item, index) => (
-            <div key={index} className="w-full md:w-1/4 p-4 gap-4">
+            <div key={index} className="w-full md:w-1/4 p-4 gap-2">
               {/* Icon */}
               <div className="mx-auto mb-4" role="img" aria-label={`${item.title} icon`}>
                 {item.icon}
