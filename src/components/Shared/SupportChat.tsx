@@ -1,345 +1,282 @@
-import React, { useState, useRef, useEffect, FormEvent } from "react";
-import { FiMessageSquare, FiX } from "react-icons/fi";
-import { emailSetUp } from "../../data/content";
+import React, { useEffect, useRef, useState } from "react";
 
-interface ChatIconProps {
-  className: string;
-}
+export default function SupportChat() {
+  const [open, setOpen] = useState(false);
+  const [status, setStatus] = useState<string>("");
+  const [submitting, setSubmitting] = useState(false);
 
-interface FormErrors {
-  name?: string;
-  email?: string;
-  phone?: string;
-  topic?: string;
-  message?: string;
-}
+  const fabRef = useRef<HTMLButtonElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
 
-const ChatIcon = ({ className }: ChatIconProps): JSX.Element => (
-  <FiMessageSquare className={className} size={30} />
-);
+  // Form state
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
 
-export const SupportChat: React.FC = (): JSX.Element => {
-  const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [formStatus, setFormStatus] = useState<string>("");
-  const chatRef = useRef<HTMLDivElement | null>(null);
+  const [errors, setErrors] = useState<{ name?: string; email?: string; msg?: string }>({});
 
-  const inputStyles: string =
-    "mt-1 block w-full border border-white-300 rounded-md p-2 text-sm focus:ring-2 focus:ring-green-600 focus:border-green-500";
-  const inputErrorStyles: string =
-    "mt-1 block w-full border-2 border-red-500 rounded-md p-2 text-sm focus:ring-2 focus:ring-red-500";
-
-  const toggleChat = (): void => {
-    setIsChatOpen(!isChatOpen);
-    if (!isChatOpen) {
-      // Clear errors and status when opening
-      setErrors({});
-      setFormStatus("");
-    }
-  };
-
+  // Inert the rest of the page when dialog open
   useEffect(() => {
-    if (isChatOpen && chatRef.current) {
-      const firstInput = chatRef.current.querySelector("input");
-      firstInput?.focus();
+    const root = document.querySelector("main") || document.body;
+    if (!root) return;
+    if (open) {
+      root.setAttribute("inert", "");
+      root.setAttribute("aria-hidden", "true");
+    } else {
+      root.removeAttribute("inert");
+      root.removeAttribute("aria-hidden");
     }
-  }, [isChatOpen]);
+    return () => {
+      root.removeAttribute("inert");
+      root.removeAttribute("aria-hidden");
+    };
+  }, [open]);
 
-  const handleClickOutside = (event: MouseEvent): void => {
-    if (chatRef.current && !chatRef.current.contains(event.target as Node)) {
-      setIsChatOpen(false);
-    }
-  };
+  // Focus trap
+  useEffect(() => {
+    if (!open) return;
+    const dialog = dialogRef.current!;
+    const focusable = () => getFocusable(dialog);
 
-  const validateForm = (formData: FormData): FormErrors => {
-    const newErrors: FormErrors = {};
+    // focus first field
+    const first = focusable()[0];
+    first?.focus();
 
-    const name: FormDataEntryValue | null = formData.get("Name");
-    if (!name || (typeof name === "string" && !name.trim())) {
-      newErrors.name = "Name is required";
-    }
-
-    const email: FormDataEntryValue | null = formData.get("Email");
-    if (!email || (typeof email === "string" && !email.trim())) {
-      newErrors.email = "Email is required";
-    } else if (typeof email === "string" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-
-    const phone: FormDataEntryValue | null = formData.get("Phone");
-    if (!phone || (typeof phone === "string" && !phone.trim())) {
-      newErrors.phone = "Phone number is required";
-      // eslint-disable-next-line no-useless-escape
-    } else if (typeof phone === "string" && !/^\+?[\d\s\-\(\)]+$/.test(phone)) {
-      newErrors.phone = "Please enter a valid phone number";
-    }
-
-    const topic: FormDataEntryValue | null = formData.get("Topic");
-    if (!topic || (typeof topic === "string" && !topic.trim())) {
-      newErrors.topic = "Please select a topic";
-    }
-
-    const message: FormDataEntryValue | null = formData.get("Message");
-    if (!message || (typeof message === "string" && !message.trim())) {
-      newErrors.message = "Message is required";
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        setOpen(false);
+        fabRef.current?.focus();
+      } else if (e.key === "Tab") {
+        const els = focusable();
+        if (!els.length) return;
+        const firstEl = els[0];
+        const lastEl = els[els.length - 1];
+        if (e.shiftKey && document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        } else if (!e.shiftKey && document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
     }
 
-    return newErrors;
-  };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
-    const formData: FormData = new FormData(e.currentTarget);
-    const newErrors: FormErrors = validateForm(formData);
+  function getFocusable(root: HTMLElement | null) {
+    if (!root) return [] as HTMLElement[];
+    const sel =
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"]), input, select, textarea, [role="checkbox"]';
+    return Array.from(root.querySelectorAll<HTMLElement>(sel)).filter(
+      (el) => !el.hasAttribute("disabled") && el.getAttribute("aria-hidden") !== "true"
+    );
+  }
 
-    if (Object.keys(newErrors).length > 0) {
-      e.preventDefault();
-      setErrors(newErrors);
-      setFormStatus("Please fix the errors below before submitting");
+  function validate() {
+    const errs: typeof errors = {};
+    if (!name.trim()) errs.name = "Please enter your name.";
+    if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) errs.email = "Enter a valid email.";
+    if (!msg.trim()) errs.msg = "Please add a brief message.";
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("");
+    if (!validate()) {
+      // focus the first invalid field
+      const fields = [
+        { id: "chat-name", ok: !errors.name },
+        { id: "chat-email", ok: !errors.email },
+        { id: "chat-msg", ok: !errors.msg },
+      ];
+      const firstInvalid = fields.find((f) => !f.ok);
+      if (firstInvalid) document.getElementById(firstInvalid.id)?.focus();
       return;
     }
-
-    setErrors({});
-    setFormStatus("Submitting your message...");
-  };
-
-  useEffect((): (() => void) => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return (): void => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+    try {
+      setSubmitting(true);
+      // Simulate request
+      await new Promise((r) => setTimeout(r, 500));
+      setStatus("Thanks! We’ll get back to you shortly.");
+      setName("");
+      setEmail("");
+      setMsg("");
+    } catch {
+      setStatus("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   return (
-    <div>
+    <>
+      {/* Floating Action Button */}
       <button
-        className="z-50 fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-small border rounded-full w-16 h-16 bg-green-700 cursor-pointer border-green-700 p-0 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 transition-colors"
+        ref={fabRef}
         type="button"
-        onClick={toggleChat}
-        aria-label={isChatOpen ? "Close support chat" : "Open support chat"}
-        aria-expanded={isChatOpen}
+        aria-haspopup="dialog"
         aria-controls="support-chat-dialog"
+        aria-expanded={open}
+        className="fixed bottom-6 right-6 rounded-full px-4 py-3 text-white bg-blue-600 shadow focus:outline-none focus:ring"
+        onClick={() => setOpen(true)}
       >
-        <ChatIcon className="text-white" />
+        Chat
       </button>
 
-      {isChatOpen && (
+      {/* Modal overlay + dialog */}
+      {open && (
         <div
-          ref={chatRef}
-          id="support-chat-dialog"
-          role="dialog"
-          aria-labelledby="chat-title"
-          aria-describedby="chat-description"
-          className="z-50 fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-80 max-w-[calc(100vw-40px)] max-h-[70vh] overflow-y-auto"
-          style={{ boxShadow: "0 1px 2px 0 rgb(0 0 0 / 0.05)" }}
-        >
-          <div className="flex flex-col space-y-1.5 pb-6">
-            <div className="flex justify-between items-center">
-              <h2 id="chat-title" className="font-semibold text-lg text-green-900-800">
-                Get in touch with us!
-              </h2>
-
-              <button
-                className="p-1 -m-1 text-green-900-400 transition-all duration-200 bg-white rounded-md hover:bg-white-100 hover:text-green-900 focus:outline-none focus:ring-2 focus:ring-green-600"
-                onClick={toggleChat}
-                aria-label="Close support chat"
-              >
-                <FiX size={20} />
-              </button>
-            </div>
-            <p id="chat-description" className="text-sm text-green-900 leading-5">
-              Talk directly with our members and receive a response in 24-48 hours.
-            </p>
-          </div>
-
-          {/* Form status announcement for screen readers */}
-          <div
-            role="status"
-            aria-live="polite"
-            aria-atomic="true"
-            className={
-              formStatus.includes("error") || formStatus.includes("fix")
-                ? "text-red-600 text-center mb-4 text-sm font-semibold"
-                : "text-green-700 text-center mb-4 text-sm font-semibold"
+          aria-hidden="false"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+          onMouseDown={(e) => {
+            // click outside closes
+            if (e.target === e.currentTarget) {
+              setOpen(false);
+              fabRef.current?.focus();
             }
+          }}
+        >
+          <div
+            ref={dialogRef}
+            id="support-chat-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="chat-title"
+            aria-describedby="chat-description chat-status"
+            className="w-full max-w-md rounded-xl bg-white p-4 shadow-lg focus:outline-none focus:ring"
           >
-            {formStatus && <p>{formStatus}</p>}
-          </div>
-
-          {/* Contact Form */}
-          <form
-            action={emailSetUp.formSubmitEmail}
-            method="POST"
-            className="space-y-4"
-            encType="multipart/form-data"
-            onSubmit={handleSubmit}
-            noValidate
-            aria-label="Support chat contact form"
-          >
-            {/* Name Field */}
-            <div>
-              <label htmlFor="chat-name" className="block text-sm font-medium text-green-900">
-                Name{" "}
-                <span className="text-red-600" aria-label="required">
-                  *
-                </span>
-              </label>
-              <input
-                type="text"
-                id="chat-name"
-                name="Name"
-                autoComplete="name"
-                required
-                aria-required="true"
-                aria-invalid={errors.name ? "true" : "false"}
-                aria-describedby={errors.name ? "chat-name-error" : undefined}
-                className={errors.name ? inputErrorStyles : inputStyles}
-                placeholder="Your Name"
-              />
-              {errors.name && (
-                <p id="chat-name-error" className="mt-1 text-xs text-red-600" role="alert">
-                  {errors.name}
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h2 id="chat-title" className="text-lg font-semibold">
+                  Contact Support
+                </h2>
+                <p id="chat-description" className="text-sm text-gray-600">
+                  Send us a note and we’ll reply by email.
                 </p>
-              )}
-            </div>
-
-            {/* Email Field */}
-            <div>
-              <label htmlFor="chat-email" className="block text-sm font-medium text-green-900">
-                Email{" "}
-                <span className="text-red-600" aria-label="required">
-                  *
-                </span>
-              </label>
-              <input
-                type="email"
-                id="chat-email"
-                name="Email"
-                autoComplete="email"
-                required
-                aria-required="true"
-                aria-invalid={errors.email ? "true" : "false"}
-                aria-describedby={errors.email ? "chat-email-error" : undefined}
-                className={errors.email ? inputErrorStyles : inputStyles}
-                placeholder="your.email@example.com"
-              />
-              {errors.email && (
-                <p id="chat-email-error" className="mt-1 text-xs text-red-600" role="alert">
-                  {errors.email}
-                </p>
-              )}
-            </div>
-
-            {/* Phone Field */}
-            <div>
-              <label htmlFor="chat-phone" className="block text-sm font-medium text-green-900">
-                Phone Number{" "}
-                <span className="text-red-600" aria-label="required">
-                  *
-                </span>
-              </label>
-              <input
-                type="tel"
-                id="chat-phone"
-                name="Phone"
-                autoComplete="tel"
-                required
-                aria-required="true"
-                aria-invalid={errors.phone ? "true" : "false"}
-                aria-describedby={
-                  errors.phone ? "chat-phone-error chat-phone-help" : "chat-phone-help"
-                }
-                className={errors.phone ? inputErrorStyles : inputStyles}
-                placeholder="(555) 123-4567"
-              />
-              <p id="chat-phone-help" className="mt-1 text-xs text-green-900">
-                Format: (555) 123-4567
-              </p>
-              {errors.phone && (
-                <p id="chat-phone-error" className="mt-1 text-xs text-red-600" role="alert">
-                  {errors.phone}
-                </p>
-              )}
-            </div>
-
-            {/* Topic/Subject of Inquiry */}
-            <div>
-              <label htmlFor="chat-topic" className="block text-sm font-medium text-green-900">
-                Topic/Subject{" "}
-                <span className="text-red-600" aria-label="required">
-                  *
-                </span>
-              </label>
-              <select
-                id="chat-topic"
-                name="Topic"
-                required
-                aria-required="true"
-                aria-invalid={errors.topic ? "true" : "false"}
-                aria-describedby={errors.topic ? "chat-topic-error" : undefined}
-                className={errors.topic ? inputErrorStyles : inputStyles}
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select a topic
-                </option>
-                <option value="General question or inquiry">General question or inquiry</option>
-                <option value="I am interested in services for my child(ren)">
-                  I am interested in services for my child(ren)
-                </option>
-                <option value="Recruiting and hiring">Recruiting and hiring</option>
-              </select>
-              {errors.topic && (
-                <p id="chat-topic-error" className="mt-1 text-xs text-red-600" role="alert">
-                  {errors.topic}
-                </p>
-              )}
-            </div>
-
-            {/* Message Field */}
-            <div>
-              <label htmlFor="chat-message" className="block text-sm font-medium text-green-900">
-                Message{" "}
-                <span className="text-red-600" aria-label="required">
-                  *
-                </span>
-              </label>
-              <textarea
-                id="chat-message"
-                name="Message"
-                required
-                rows={4}
-                aria-required="true"
-                aria-invalid={errors.message ? "true" : "false"}
-                aria-describedby={errors.message ? "chat-message-error" : undefined}
-                className={errors.message ? inputErrorStyles : inputStyles}
-                placeholder="How can we help you?"
-              ></textarea>
-              {errors.message && (
-                <p id="chat-message-error" className="mt-1 text-xs text-red-600" role="alert">
-                  {errors.message}
-                </p>
-              )}
-            </div>
-
-            {/* Hidden fields */}
-            <input type="hidden" name="_next" value={emailSetUp.redirectLink} />
-            <input type="hidden" name="_subject" value="ChatBox Form Inquiry!" />
-            <input type="hidden" name="_cc" value={emailSetUp.ccLinks} />
-            <input type="hidden" name="_template" value="table" />
-
-            {/* Submit Button */}
-            <div className="text-center">
+              </div>
               <button
-                type="submit"
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium text-white bg-green-800 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 px-4 py-2 transition-colors"
-                aria-label="Submit support chat message"
+                type="button"
+                className="rounded-md border px-2 py-1 hover:bg-gray-50 focus:outline-none focus:ring"
+                onClick={() => {
+                  setOpen(false);
+                  fabRef.current?.focus();
+                }}
               >
-                Send Message
+                Close
               </button>
             </div>
-          </form>
+
+            {/* Live status region linked via aria-describedby */}
+            <div
+              id="chat-status"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+              className="mt-2 min-h-[1.25rem] text-sm"
+            >
+              {status && <p>{status}</p>}
+            </div>
+
+            <form className="mt-3 space-y-3" onSubmit={handleSubmit} noValidate>
+              <div>
+                <label htmlFor="chat-name" className="block text-sm font-medium">
+                  Name
+                </label>
+                <input
+                  id="chat-name"
+                  name="name"
+                  type="text"
+                  className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  aria-invalid={!!errors.name}
+                  aria-describedby={errors.name ? "chat-name-error" : undefined}
+                />
+                {errors.name && (
+                  <p
+                    id="chat-name-error"
+                    role="alert"
+                    className="mt-1 text-sm text-red-600"
+                  >
+                    {errors.name}
+                  </p>
+                )}
+              </div>
+
+              <div>
+                <label htmlFor="chat-email" className="block text-sm font-medium">
+                  Email
+                </label>
+                <input
+                  id="chat-email"
+                  name="email"
+                  type="email"
+                  className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  aria-invalid={!!errors.email}
+                  aria-describedby={errors.email ? "chat-email-error" : undefined}
+                />
+                {errors.email && (
+                  <p
+                    id="chat-email-error"
+                    role="alert"
+                    className="mt-1 text-sm text-red-600"
+                  >
+                    {errors.email}
+                  </p>
+                )}
+              </div>
+
+              <div>
+                <label htmlFor="chat-msg" className="block text-sm font-medium">
+                  Message
+                </label>
+                <textarea
+                  id="chat-msg"
+                  name="message"
+                  rows={4}
+                  className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring"
+                  value={msg}
+                  onChange={(e) => setMsg(e.target.value)}
+                  aria-invalid={!!errors.msg}
+                  aria-describedby={errors.msg ? "chat-msg-error" : undefined}
+                />
+                {errors.msg && (
+                  <p id="chat-msg-error" role="alert" className="mt-1 text-sm text-red-600">
+                    {errors.msg}
+                  </p>
+                )}
+              </div>
+
+              <div className="flex items-center justify-end gap-2 pt-1">
+                <button
+                  type="button"
+                  className="rounded-md border px-3 py-2 hover:bg-gray-50 focus:outline-none focus:ring"
+                  onClick={() => {
+                    setOpen(false);
+                    fabRef.current?.focus();
+                  }}
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="rounded-md bg-blue-600 px-3 py-2 text-white disabled:opacity-60 focus:outline-none focus:ring"
+                >
+                  {submitting ? "Sending…" : "Send"}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
-};
+}
