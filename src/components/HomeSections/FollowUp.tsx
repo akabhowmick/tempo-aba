@@ -2,59 +2,51 @@ import { Link } from "react-router-dom";
 import { content } from "../../data/content";
 
 export const FollowUp = () => {
+  const resourceCards = [
+    {
+      image: content.resources.image1,
+      text: content.resources.text1,
+    },
+    {
+      image: content.resources.image2,
+      text: content.resources.text2,
+    },
+  ];
+
   return (
-    <div className="font-roboto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-        {/* Image 1 */}
-        <div className="relative">
-          <img
-            alt={content.resources.image1.alt}
-            className="w-full h-full object-cover"
-            height="400"
-            src={content.resources.image1.src}
-            width="600"
-          />
-        </div>
-
-        {/* Text 1 */}
-        <div className="bg-green-700 p-8 flex flex-col justify-center text-white">
-          <h2 className="text-3xl font-bold mb-4">{content.resources.text1.title}</h2>
-          <p className="text-lg mb-4">{content.resources.text1.description}</p>
-          <Link
-            to={content.resources.text1.link}
-            onClick={() => {
-              window.scrollTo(0, 0); // Scroll to top
-            }}
-          >
-            <button className="bg-green-800 px-4 py-2 rounded w-full">
-              {content.resources.text1.buttonText}
-            </button>
-          </Link>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-        {/* Image 2 (this comes after Text 2 on mobile) */}
-        <div className="relative md:order-none">
-          <img
-            alt={content.resources.image2.alt}
-            className="w-full h-full object-cover"
-            height="400"
-            src={content.resources.image2.src}
-            width="600"
-          />
-        </div>
-
-        {/* Text 2 (comes last on desktop) */}
-        <div className="bg-green-700 p-8 flex flex-col justify-center md:order-last text-white">
-          <h2 className="text-3xl font-bold mb-4">{content.resources.text2.title}</h2>
-          <p className="text-lg mb-4">{content.resources.text2.description}</p>
-          <Link to={content.resources.text2.link} onClick={() => {
-                window.scrollTo(0, 0); // Scroll to top
-              }}>
-            <button className="bg-green-800 px-4 py-2 rounded w-full">
-              {content.resources.text2.buttonText}
-            </button>
-          </Link>
+    <div className="font-roboto flex items-center justify-center my-10 p-4">
+      <div className="bg-white rounded-lg shadow-lg p-8 max-w-6xl w-full">
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {resourceCards.map((card, index) => (
+            <div key={index} className="flex flex-col h-full">
+              <div className="relative mb-6">
+                <img
+                  alt={card.image.alt}
+                  className="w-full h-64 md:h-80 object-cover rounded-lg"
+                  src={card.image.src}
+                />
+              </div>
+              <div className="text-center md:text-left flex flex-col flex-grow">
+                <h2 className="text-3xl font-bold mb-4 text-green-800">
+                  {card.text.title}
+                </h2>
+                <p className="text-lg mb-6 text-gray-700 flex-grow">
+                  {card.text.description}
+                </p>
+                <Link
+                  to={card.text.link}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  <button className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded w-full transition-colors">
+                    {card.text.buttonText}
+                  </button>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
