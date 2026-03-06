@@ -8,7 +8,7 @@ import serviceImage3 from "../assets/siteImages/animated/5767946.jpg";
 import serviceImage5 from "../assets/siteImages/animated/Wavy_Ppl-04_Single-11.jpg";
 import serviceImage6 from "../assets/siteImages/animated/mission.png";
 import serviceImage7 from "../assets/siteImages/animated/Cartoon married couple communicating with doctor.jpg";
-import inaeImage from "../assets/siteImages/members/inae.png";
+import inaeImage from "../assets/siteImages/members/inae.jpeg";
 import cynthiaImage from "../assets/siteImages/members/cynthia.png";
 
 import resourceImage1 from "../assets/siteImages/home/resource1.jpeg";
