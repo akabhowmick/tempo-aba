@@ -4,7 +4,7 @@ import { teamBios } from "../../../data/content";
 export const ProfilePage = () => {
   const { member } = useParams<{ member: string }>(); // Extract the name from the URL
   const profile = teamBios.find(
-    (bio) => bio.name.split(" ")[0].toLowerCase() === member?.toLowerCase()
+    (bio) => bio.name.split(" ")[0].toLowerCase() === member?.toLowerCase(),
   );
 
   if (!profile) {
@@ -34,7 +34,7 @@ export const ProfilePage = () => {
             {/* Image */}
             <img
               alt={`Portrait of ${profile.name}`}
-              className="rounded-full w-48 h-48 object-cover mx-auto md:mx-0"
+              className="rounded-full w-60 h-60 object-cover mx-auto md:mx-0"
               src={profile.imageUrl}
             />
 
