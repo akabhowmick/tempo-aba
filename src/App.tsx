@@ -3,7 +3,7 @@ import { router } from "./components/Router";
 import { RouterProvider } from "react-router-dom";
 import { Footer } from "./components/Shared/Footer";
 import { content } from "./data/content";
-import { SupportChat } from "./components/Shared/SupportChat";
+import SupportChat from "./components/Shared/SupportChat";
 import { SkipLink } from "./components/Shared/SkipLink";
 
 const App: React.FC = () => {
