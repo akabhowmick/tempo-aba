@@ -28,7 +28,7 @@ const TeamBioCard = ({
     <div className="w-40 h-40 mx-auto mb-4">
       <img
         alt={`Portrait of ${name}`}
-        className="rounded-full w-48 h-48 object-cover mx-auto md:mx-0"
+        className="rounded-full w-48 h-48 object-cover object-top mx-auto md:mx-0"
         src={imageUrl}
       />
     </div>
