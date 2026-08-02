@@ -1,7 +1,17 @@
 import { useState } from "react";
 import { AppBar, Toolbar, Button, IconButton } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
-import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaChevronDown,
+  FaChevronUp,
+  FaInstagram,
+  FaTiktok,
+} from "react-icons/fa";
+
+const INSTAGRAM_URL = "https://www.instagram.com/tempoaba?utm_source=qr";
+const TIKTOK_URL = "https://www.tiktok.com/@tempo.community.a?_r=1&_t=ZT-98HlcEgTKur";
 import { content } from "../../data/content";
 import { commonStyles } from "./CommonStyles";
 import { useMediaQuery } from "react-responsive";
@@ -110,16 +120,38 @@ export const Header = () => {
             </nav>
 
             {!isMobile && (
-              <Link
-                to="/contact"
-                onClick={() => {
-                  window.scrollTo(0, 0); // Scroll to top
-                }}
-              >
-                <Button color="inherit" className={commonStyles.ctaButton}>
-                  Contact Us
-                </Button>
-              </Link>
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit TEMPO ABA on Instagram"
+                    className="text-white hover:text-opacity-80"
+                  >
+                    <FaInstagram size={20} />
+                  </a>
+                  <a
+                    href={TIKTOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit TEMPO ABA on TikTok"
+                    className="text-white hover:text-opacity-80"
+                  >
+                    <FaTiktok size={20} />
+                  </a>
+                </div>
+                <Link
+                  to="/contact"
+                  onClick={() => {
+                    window.scrollTo(0, 0); // Scroll to top
+                  }}
+                >
+                  <Button color="inherit" className={commonStyles.ctaButton}>
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
             )}
 
             {/* Mobile Menu Icon - Only for smaller screens */}
@@ -194,10 +226,30 @@ export const Header = () => {
           >
             Contact Us
           </Link>
+          <div className="flex items-center gap-4 py-2">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit TEMPO ABA on Instagram"
+              className="text-white hover:text-opacity-80"
+            >
+              <FaInstagram size={22} />
+            </a>
+            <a
+              href={TIKTOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit TEMPO ABA on TikTok"
+              className="text-white hover:text-opacity-80"
+            >
+              <FaTiktok size={22} />
+            </a>
+          </div>
         </div>
       </header>
 
-      <main>
+      <main id="main-content">
         <Outlet />
       </main>
     </>

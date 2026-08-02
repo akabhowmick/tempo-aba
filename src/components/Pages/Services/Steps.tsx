@@ -29,13 +29,13 @@ const steps: Step[] = [
   {
     number: 2,
     icon: <FaPhone className="text-orange-500" />,
-    description: "Parent/caregiver contacts Tempo ABA to discuss their child’s needs.",
+    description: "Parent/caregiver contacts TEMPO ABA to discuss their child’s needs.",
   },
   {
     number: 3,
     icon: <FaCreditCard className="text-orange-500" />,
     description:
-      "The Tempo ABA intake coordinator will verify benefits with health insurance providers or explore alternative payment options.",
+      "The TEMPO ABA intake coordinator will verify benefits with health insurance providers or explore alternative payment options.",
   },
   {
     number: 4,
@@ -51,7 +51,7 @@ const steps: Step[] = [
   {
     number: 6,
     icon: <FaShieldAlt className="text-orange-500" />,
-    description: "Tempo ABA submits initial authorization to the insurance company.",
+    description: "TEMPO ABA submits initial authorization to the insurance company.",
   },
   {
     number: 7,
@@ -61,7 +61,7 @@ const steps: Step[] = [
   {
     number: 8,
     icon: <FaCalendarCheck className="text-orange-500" />,
-    description: "Schedule ABA treatment with your Tempo ABA team.",
+    description: "Schedule ABA treatment with your TEMPO ABA team.",
   },
   {
     number: 9,

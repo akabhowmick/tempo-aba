@@ -25,28 +25,28 @@ export const Hero = () => {
       <div
         className="absolute inset-0 z-10 bg-black bg-opacity-50 flex flex-col text-white p-4"
         role="banner"
-        aria-label="Welcome to Tempo ABA"
+        aria-label="Welcome to TEMPO ABA"
       >
         <div className="text-center flex flex-col justify-end items-center h-full">
           <div className="mb-12 md:mb-4">
-            <div className="hidden md:flex gap-4 flex-row md:justify-center md:gap-4">
+            <div className="hidden md:flex gap-4 flex-row items-center md:justify-center md:gap-4">
               <img
-                src={content.header.siteLogo2}
-                className="w-14 md:w-24 rounded-md"
-                alt="Tempo ABA logo"
+                src={content.header.siteLogo}
+                className="w-14 md:w-60 rounded-md"
+                alt="TEMPO ABA logo"
               />
               <h1 className={`${commonStyles.heading} text-4xl md:text-6xl text-center`}>
-                Discover your Tempo
+                Discover your TEMPO
               </h1>
             </div>
             <p className={`${commonStyles.paragraph} mt-4 text-center`}>
-              Connect with us, at Tempo ABA, where we celebrate everyone's unique rhythm.
+              Connect with us, at TEMPO ABA, where we celebrate everyone's unique rhythm.
             </p>
           </div>
           <div>
             <a
               href="/about/methods"
-              aria-label="Learn more about Tempo ABA's methods and approach"
+              aria-label="Learn more about TEMPO ABA's methods and approach"
               className={`${commonStyles.button} mt-6 focus:outline-none focus:ring-4 focus:ring-white focus:ring-offset-2`}
             >
               Learn More About Us!

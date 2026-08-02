@@ -24,7 +24,7 @@ const TeamBioCard = ({
   profileLink: string;
   credentials: string;
 }) => (
-  <div className="text-center mt-5 px-4">
+  <div className="text-center mt-5 px-4 w-full sm:w-1/2">
     <div className="w-40 h-40 mx-auto mb-4">
       <img
         alt={`Portrait of ${name}`}
@@ -64,7 +64,7 @@ export const OurMembersPage = () => (
 
     <h2 className="text-4xl font-bold mt-8 mb-4 text-center">Our Team</h2>
 
-    <div className="flex flex-wrap md:flex-nowrap justify-center">
+    <div className="flex flex-wrap justify-center">
       {teamBios.map((member) => (
         <TeamBioCard
           key={member.name}

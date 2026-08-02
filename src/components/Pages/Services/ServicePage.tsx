@@ -17,7 +17,7 @@ export const ServicePage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <SubPageTitle pageBannerInfo={pageBanners.services} />
-      <h1 className="text-4xl font-bold mb-4 text-center py-4">{service.title}</h1>
+      <h2 className="text-4xl font-bold mb-4 text-center py-4">{service.title}</h2>
       <ContentSection paragraph={service.description} index={1} image={image}/>
     </div>
   );

@@ -27,22 +27,22 @@ export const CareerForm = (): JSX.Element => {
     const newErrors: FormErrors = {};
 
     const name: FormDataEntryValue | null = formData.get("Name");
-    if (!name || typeof name === 'string' && !name.trim()) {
+    if (!name || (typeof name === "string" && !name.trim())) {
       newErrors.name = "Name is required";
     }
 
     const email: FormDataEntryValue | null = formData.get("Email");
-    if (!email || typeof email === 'string' && !email.trim()) {
+    if (!email || (typeof email === "string" && !email.trim())) {
       newErrors.email = "Email is required";
-    } else if (typeof email === 'string' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    } else if (typeof email === "string" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = "Please enter a valid email address";
     }
 
     const phone: FormDataEntryValue | null = formData.get("Phone");
-    if (!phone || typeof phone === 'string' && !phone.trim()) {
+    if (!phone || (typeof phone === "string" && !phone.trim())) {
       newErrors.phone = "Phone number is required";
-    // eslint-disable-next-line no-useless-escape
-    } else if (typeof phone === 'string' && !/^\+?[\d\s\-\(\)]+$/.test(phone)) {
+      // eslint-disable-next-line no-useless-escape
+    } else if (typeof phone === "string" && !/^\+?[\d\s\-\(\)]+$/.test(phone)) {
       newErrors.phone = "Please enter a valid phone number";
     }
 
@@ -106,7 +106,10 @@ export const CareerForm = (): JSX.Element => {
             {/* Name field */}
             <div>
               <label htmlFor="name" className="text-base font-medium text-green-900">
-                Your Name <span className="text-red-600" aria-label="required">*</span>
+                Your Name{" "}
+                <span className="text-red-600" aria-label="required">
+                  *
+                </span>
               </label>
               <div className="mt-2.5 relative">
                 <input
@@ -132,7 +135,10 @@ export const CareerForm = (): JSX.Element => {
             {/* Email field */}
             <div>
               <label htmlFor="email" className="text-base font-medium text-green-900">
-                Email Address <span className="text-red-600" aria-label="required">*</span>
+                Email Address{" "}
+                <span className="text-red-600" aria-label="required">
+                  *
+                </span>
               </label>
               <div className="mt-2.5 relative">
                 <input
@@ -158,7 +164,10 @@ export const CareerForm = (): JSX.Element => {
             {/* Phone field */}
             <div>
               <label htmlFor="phone" className="text-base font-medium text-green-900">
-                Phone Number <span className="text-red-600" aria-label="required">*</span>
+                Phone Number{" "}
+                <span className="text-red-600" aria-label="required">
+                  *
+                </span>
               </label>
               <div className="mt-2.5 relative">
                 <input
@@ -233,7 +242,8 @@ export const CareerForm = (): JSX.Element => {
             {/* Cover Letter Upload */}
             <div className="sm:col-span-2">
               <label htmlFor="coverLetter" className="text-base font-medium text-green-900">
-                Upload Your Cover Letter <span className="text-green-900">(Optional, PDF only)</span>
+                Upload Your Cover Letter{" "}
+                <span className="text-green-900">(Optional, PDF only)</span>
               </label>
               <div className="mt-2.5 relative">
                 <input
@@ -242,7 +252,9 @@ export const CareerForm = (): JSX.Element => {
                   name="Cover-Letter-Attachment"
                   accept=".pdf,application/pdf"
                   aria-describedby={
-                    errors.coverLetter ? "cover-letter-help cover-letter-error" : "cover-letter-help"
+                    errors.coverLetter
+                      ? "cover-letter-help cover-letter-error"
+                      : "cover-letter-help"
                   }
                   aria-invalid={errors.coverLetter ? "true" : "false"}
                   className={errors.coverLetter ? inputErrorStyles : inputStyles}
@@ -266,7 +278,11 @@ export const CareerForm = (): JSX.Element => {
 
             {/* Submit Button */}
             <div className="sm:col-span-2">
-              <button type="submit" className={buttonStyles} aria-label="Submit career application form">
+              <button
+                type="submit"
+                className={buttonStyles}
+                aria-label="Submit career application form"
+              >
                 Submit Application
               </button>
             </div>

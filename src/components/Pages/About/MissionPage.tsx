@@ -31,7 +31,7 @@ export const MissionPage: React.FC = () => {
             className="space-y-8 lg:pr-16 xl:pr-24 lg:col-span-2 lg:space-y-12 p-4 bg-cover rounded-lg"
             style={{ backgroundImage: `url(${savedBgLightestGreen})` }}
           >
-            <h1 className="text-4xl font-bold mb-4">{missionContent.guidingPrinciple.title}</h1>
+            <h2 className="text-4xl font-bold mb-4">{missionContent.guidingPrinciple.title}</h2>
             {missionContent.guidingPrinciple.principles.map((principle, index) => (
               <div key={index} className="flex items-start">
                 {principle.icon}

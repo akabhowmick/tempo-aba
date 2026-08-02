@@ -122,7 +122,7 @@ export default function SupportChat() {
         aria-haspopup="dialog"
         aria-controls="support-chat-dialog"
         aria-expanded={open}
-        className="fixed bottom-6 right-6 rounded-full px-4 py-3 text-white bg-blue-600 shadow focus:outline-none focus:ring"
+        className="fixed bottom-6 right-6 z-50 rounded-full px-4 py-3 text-white bg-green-800 shadow hover:bg-green-700 focus:outline-none focus:ring"
         onClick={() => setOpen(true)}
       >
         Chat
@@ -268,7 +268,7 @@ export default function SupportChat() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="rounded-md bg-blue-600 px-3 py-2 text-white disabled:opacity-60 focus:outline-none focus:ring"
+                  className="rounded-md bg-green-800 px-3 py-2 text-white hover:bg-green-700 disabled:opacity-60 focus:outline-none focus:ring"
                 >
                   {submitting ? "Sending…" : "Send"}
                 </button>

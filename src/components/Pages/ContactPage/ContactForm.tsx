@@ -6,6 +6,7 @@ interface FormErrors {
   name?: string;
   email?: string;
   phone?: string;
+  location?: string;
   message?: string;
 }
 
@@ -43,6 +44,11 @@ export const ContactForm = (): JSX.Element => {
     // eslint-disable-next-line no-useless-escape
     } else if (typeof phone === "string" && !/^\+?[\d\s\-\(\)]+$/.test(phone)) {
       newErrors.phone = "Please enter a valid phone number";
+    }
+
+    const location: FormDataEntryValue | null = formData.get("Location");
+    if (!location || (typeof location === "string" && !location.trim())) {
+      newErrors.location = "Location is required";
     }
 
     const message: FormDataEntryValue | null = formData.get("Message");
@@ -93,7 +99,7 @@ export const ContactForm = (): JSX.Element => {
           className="mt-14"
           onSubmit={handleSubmit}
           noValidate
-          aria-label="Contact form"
+          aria-label="Services inquiry form"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-6">
             {/* Name field */}
@@ -177,6 +183,47 @@ export const ContactForm = (): JSX.Element => {
               )}
             </div>
 
+            {/* Insurance Provider field */}
+            <div>
+              <label htmlFor="insurance" className="text-base font-medium text-green-900">
+                Insurance Provider <span className="text-green-900">(Optional)</span>
+              </label>
+              <div className="mt-2.5 relative">
+                <input
+                  type="text"
+                  id="insurance"
+                  name="Insurance-Provider"
+                  placeholder="e.g. Blue Cross Blue Shield, Medicaid"
+                  className={inputStyles}
+                />
+              </div>
+            </div>
+
+            {/* Location field */}
+            <div className="sm:col-span-2">
+              <label htmlFor="location" className="text-base font-medium text-green-900">
+                Location <span className="text-red-600" aria-label="required">*</span>
+              </label>
+              <div className="mt-2.5 relative">
+                <input
+                  type="text"
+                  id="location"
+                  name="Location"
+                  required
+                  aria-required="true"
+                  aria-invalid={errors.location ? "true" : "false"}
+                  aria-describedby={errors.location ? "location-error" : undefined}
+                  placeholder="City, State"
+                  className={errors.location ? inputErrorStyles : inputStyles}
+                />
+              </div>
+              {errors.location && (
+                <p id="location-error" className="mt-2 text-sm text-red-600" role="alert">
+                  {errors.location}
+                </p>
+              )}
+            </div>
+
             {/* Message field */}
             <div className="sm:col-span-2">
               <label htmlFor="message" className="text-base font-medium text-green-900">
@@ -207,13 +254,13 @@ export const ContactForm = (): JSX.Element => {
 
             {/* Hidden input for redirect after submission */}
             <input type="hidden" name="_next" value={emailSetUp.redirectLink} />
-            <input type="hidden" name="_subject" value="Contact Form Inquiry!" />
+            <input type="hidden" name="_subject" value="Parent Inquiry - Services for Child" />
             <input type="hidden" name="_cc" value={emailSetUp.ccLinks} />
             <input type="hidden" name="_template" value="table" />
 
             {/* Submit button */}
             <div className="sm:col-span-2">
-              <button type="submit" className={buttonStyles} aria-label="Submit contact form">
+              <button type="submit" className={buttonStyles} aria-label="Submit services inquiry form">
                 Send Message
               </button>
             </div>

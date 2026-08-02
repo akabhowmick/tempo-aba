@@ -14,7 +14,7 @@ export const InsurancePage: React.FC = () => {
             <i className="fas fa-crown" />
           </div>
           <p className="text-lg">
-            Tempo ABA proudly accepts most major commercial health plans, offering both in-network
+            TEMPO ABA proudly accepts most major commercial health plans, offering both in-network
             and out-of-network benefits, as well as Medicaid. Please note that insurance plans can
             differ in their coverage and benefits for our{" "}
             <span className="text-orange-500 font-bold">Applied Behavior Analysis (ABA)</span>{" "}

@@ -10,6 +10,7 @@ import serviceImage6 from "../assets/siteImages/animated/mission.png";
 import serviceImage7 from "../assets/siteImages/animated/Cartoon married couple communicating with doctor.jpg";
 import inaeImage from "../assets/siteImages/members/inae.jpeg";
 import cynthiaImage from "../assets/siteImages/members/cynthia.png";
+import cesiaImage from "../assets/siteImages/members/cesia.png";
 
 import resourceImage1 from "../assets/siteImages/home/resource1.jpeg";
 import resourceImage2 from "../assets/siteImages/home/resource2.jpeg";
@@ -26,6 +27,10 @@ import servicePageImage7 from "../assets/siteImages/home/aba1.png";
 import banner1 from "../assets/siteImages/banners/banner1.jpg";
 // import banner2 from "../assets/siteImages/banner2.jpg";
 
+type NavLinkItem = { name: string; path: string; submenu?: undefined };
+type NavMenuItem = { name: string; path?: undefined; submenu: { name: string; path: string }[] };
+type NavItem = NavLinkItem | NavMenuItem;
+
 export const content = {
   siteBG: backgroundImage,
   header: {
@@ -41,10 +46,6 @@ export const content = {
           { name: "Approach and Process ", path: "/about/methods" },
           { name: "ABA & autism ", path: "/about/abaandautism" },
         ],
-      },
-      {
-        name: "Join Us",
-        path: "/careers",
       },
       {
         name: "Services",
@@ -66,17 +67,17 @@ export const content = {
           { name: "FAQ", path: "/resources/faq" },
         ],
       },
-    ],
+    ] as NavItem[],
   },
   hero: {
     title: "ABA - Our Approach",
     description: "At Behavior Frontiers, we take a client-centered approach to ABA.",
     subheader1:
-      "At Tempo ABA, we are committed to delivering a high-quality ABA Therapy experience for children and their families. Our dedicated team of experienced therapists and BCBAs conduct thorough assessments and create personalized treatment plans tailored to achieve each child's specific goals.",
+      "At TEMPO ABA, we are committed to delivering a high-quality ABA Therapy experience for children and their families. Our dedicated team of experienced therapists and BCBAs conduct thorough assessments and create personalized treatment plans tailored to achieve each child's specific goals.",
     subheader2:
       "We eagerly anticipate the opportunity to meet with you and explore how we can serve to meet the unique needs of your family.",
     subheader3:
-      "At Tempo ABA, our mission is to deliver outstanding therapy grounded in the principles of Applied Behavior Analysis (ABA). We are dedicated to empowering individuals to discover their unique strengths and potential, embracing the challenges of their learning journey toward independence.",
+      "At TEMPO ABA, our mission is to deliver outstanding therapy grounded in the principles of Applied Behavior Analysis (ABA). We are dedicated to empowering individuals to discover their unique strengths and potential, embracing the challenges of their learning journey toward independence.",
     subheader4:
       "We are committed to fostering a positive, inclusive, and diverse environment for our employees, the families we support, and our broader community. Our personalized approach to therapy ensures that collaboration among team members and families creates a safe and nurturing environment throughout your journey with us. We understand that navigating the path to effective care can be overwhelming for families and clients. So, where do you begin? Let us guide you through the process!",
     heroImage: heroImage,
@@ -180,7 +181,7 @@ export const teamBios = [
     title: "Co-Founder & Director",
     bio: [
       "Cynthia Martinez is a Board Certified Behavior Analyst (BCBA) and Licensed Behavior Analyst (LBA) in New York State with more than two decades of dedicated service to children and families affected by autism and developmental disabilities. She is also certified as a New York State Special Education Teacher and School Administrator. Cynthia holds graduate degrees in Special Education, School Building Leadership, and Applied Behavior Analysis—demonstrating her lifelong dedication to learning and professional excellence.",
-      "As Director of Tempo ABA, Cynthia leads with vision, empathy, and unwavering dedication, championing clients and families while fostering a culture of excellence across her team. She is recognized for blending hands-on clinical expertise with strong leadership, ensuring that every program is delivered with skill, compassion, and measurable impact.",
+      "As Director of TEMPO ABA, Cynthia leads with vision, empathy, and unwavering dedication, championing clients and families while fostering a culture of excellence across her team. She is recognized for blending hands-on clinical expertise with strong leadership, ensuring that every program is delivered with skill, compassion, and measurable impact.",
       "Cynthia’s career began as a Medicaid Service Coordinator, where her passion for advocacy and individualized care first took root. Over the years, she has held every key role in the field, Special Education Teacher, Clinical Supervisor, Program Coordinator, Supervising BCBA, and Program Director, developing a comprehensive, ground-up understanding of both clinical and administrative operations. This breadth of experience allows her to navigate complex challenges with insight, inspire her team, and make a lasting difference in the lives of the children and families she serves",
     ],
     imageUrl: cynthiaImage,
@@ -192,11 +193,24 @@ export const teamBios = [
     title: "Co-Founder & Program Coordinator",
     bio: [
       "Inae holds a Master of Arts in Health and Behavior Studies, specializing in Intellectual Disability and Autism, from Teachers College, Columbia University. She is currently pursuing an Advanced Certificate in Applied Behavior Analysis and is working toward becoming a Board Certified Behavior Analyst (BCBA), further enhancing her expertise in supporting children with autism and developmental disabilities.",
-      "As Program Coordinator at Tempo ABA, Inae oversees daily operations, ensuring that every family receives clear guidance and consistent support throughout their ABA therapy journey. With over 20 years of experience in non-profit and public education, she excels at identifying solutions that improve client outcomes while empowering her team to provide services at the highest standard. Her expertise includes working with students with autism spectrum disorder, intellectual disabilities, emotional disturbances, speech impairments, and other health-related challenges, enabling her to address complex needs with skill and compassion.",
+      "As Program Coordinator at TEMPO ABA, Inae oversees daily operations, ensuring that every family receives clear guidance and consistent support throughout their ABA therapy journey. With over 20 years of experience in non-profit and public education, she excels at identifying solutions that improve client outcomes while empowering her team to provide services at the highest standard. Her expertise includes working with students with autism spectrum disorder, intellectual disabilities, emotional disturbances, speech impairments, and other health-related challenges, enabling her to address complex needs with skill and compassion.",
       "Inae’s career spans a variety of roles, including Special Education Inclusion Program Coordinator, classroom teacher, SEIT provider, and SETSS provider. She has facilitated meaningful communication between families and schools and designed intellectually engaging instruction that helps students meet and often exceed their IEP and learning goals. Her early experience as a research assistant in Dr. Hsu-Min Chiang’s Parent Education Program for Parents of Chinese American Children with Autism Spectrum Disorders at Teachers College, Columbia University, laid the foundation for her enduring passion for developing programs that support both students and families.",
     ],
     imageUrl: inaeImage,
     profileLink: "/about/members/inae",
+  },
+  {
+    name: "Cesia Maldonado",
+    credentials: "",
+    title: "Office Manager",
+    bio: [
+      "Hi, I'm Cesia, and I am the Office Manager at TEMPO ABA. I truly enjoy being one of the first people families connect with and strive to make every interaction warm, welcoming, and supportive. I understand that starting ABA services can be a big step, and my goal is to help each family feel comfortable, informed, and cared for from the very beginning.",
+      "Before becoming an Office Manager, I worked as a Behavior Technician for nearly two years. That experience gave me the opportunity to work closely with children and their families, and it deepened my appreciation for the positive impact that compassionate, individualized care can have on a child's growth and development.",
+      "I am currently pursuing my Bachelor's degree in Psychology with a minor in Communication Studies, which allows me to continue growing both personally and professionally while expanding my knowledge of human behavior and effective communication.",
+      "I feel incredibly grateful to be part of a team that is dedicated to making a difference in the lives of children and their families. I look forward to supporting you, answering your questions, and helping make your experience with us as smooth and positive as possible.",
+    ],
+    imageUrl: cesiaImage,
+    profileLink: "/about/members/Cesia",
   },
 ];
 
@@ -208,7 +222,7 @@ export const servicesData = {
   },
   community: {
     title: "Community Based ABA",
-    description: `If you could use some help making trips to the grocery store, playground, or park more successful, we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences are both enjoyable and effective. Our dedicated Tempo ABA team will work closely with your family to create a supportive environment, making outing easier and more rewarding for everyone involved.`,
+    description: `If you could use some help making trips to the grocery store, playground, or park more successful, we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences are both enjoyable and effective. Our dedicated TEMPO ABA team will work closely with your family to create a supportive environment, making outing easier and more rewarding for everyone involved.`,
     image: servicePageImage2,
   },
   school: {
@@ -256,7 +270,7 @@ export const pageBanners = {
     alt: "membersImage",
     src: banner1,
     title: "Who we are",
-    subtitle: "Welcome to Tempo ABA Services, where compassion meets expertise.",
+    subtitle: "Welcome to TEMPO ABA Services, where compassion meets expertise.",
   },
   methods: {
     alt: "methodsImage",
@@ -269,15 +283,9 @@ export const pageBanners = {
     alt: "contactImage",
     src: banner1,
     title: "Contact Us",
-    subtitle: "Get in touch with us for any inquiries or support. ",
+    subtitle: "Get in touch about services for your child, or explore career opportunities with us.",
   },
   aba: { alt: "abaImage", src: banner1, title: "ABA and autism ", subtitle: "" },
-  joinUs: {
-    alt: "joinImage",
-    src: banner1,
-    title: "Join our team!",
-    subtitle: "Complete the form below and we will shortly be in touch with you",
-  },
   faq: { alt: "faqImage", src: banner1, title: "Frequently Asked Questions", subtitle: "" },
   insurance: { alt: "insuranceImage", src: banner1, title: "Insurance", subtitle: "" },
   abaResources: {

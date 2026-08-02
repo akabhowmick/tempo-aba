@@ -1,10 +1,9 @@
-import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Route, Navigate } from "react-router-dom";
 import { Header } from "./Shared/Header";
 import { HomePage } from "./HomeSections/HomePage";
 import MethodPage from "./Pages/Services/MethodPage";
 import FaqPage from "./Pages/Resources/FAQPage";
 import { ContactPage } from "./Pages/ContactPage/ContactPage";
-import { CareerPage } from "./Pages/CareersPage/CareerPage";
 import { OurMembersPage } from "./Pages/About/OurMembersPage";
 import { ProfilePage } from "./Pages/About/ProfilePage";
 import { MissionPage } from "./Pages/About/MissionPage";
@@ -25,7 +24,7 @@ export const router = createBrowserRouter(
       <Route path="/about/members" element={<OurMembersPage />} />
       <Route path="/about/members/:member" element={<ProfilePage />} />
 
-      <Route path="/careers" element={<CareerPage />} />
+      <Route path="/careers" element={<Navigate to="/contact" replace />} />
 
       {/* Services */}
       <Route path="/services/:learnerType" element={<ServicePage />} />

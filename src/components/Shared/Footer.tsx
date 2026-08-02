@@ -1,5 +1,8 @@
-// import { FiTwitter, FiFacebook, FiInstagram } from "react-icons/fi";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { content } from "../../data/content";
+
+const INSTAGRAM_URL = "https://www.instagram.com/tempoaba?utm_source=qr";
+const TIKTOK_URL = "https://www.tiktok.com/@tempo.community.a?_r=1&_t=ZT-98HlcEgTKur";
 
 export const Footer = () => {
 
@@ -37,7 +40,6 @@ export const Footer = () => {
                 { href: "/services/home", text: "Home Based ABA" },
                 { href: "/services/school", text: "In-School Consultation" },
                 { href: "/services/community", text: "Community Based ABA" },
-                { href: "/careers", text: "Careers" },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href} aria-label={`Navigate to ${item.text} page`}>
@@ -89,17 +91,38 @@ export const Footer = () => {
           <img
             className="w-12 rounded md:order-1"
             src={content.header.siteLogo2}
-            alt="Tempo"
+            alt="TEMPO"
             height={200}
             width={200}
           />
 
           <p className="w-full mt-8 text-sm text-center text-white md:mt-0 md:w-auto md:order-2">
-            © Copyright 2025, Tempo ABA. Site made by{" "}
+            © Copyright 2025, TEMPO ABA. Site made by{" "}
             <a href="http://akashbhowmick.com" aria-label={`Navigate to Website Designer's page`}>
               AKA Code
             </a>
           </p>
+
+          <div className="flex items-center gap-4 w-full mt-4 justify-center md:w-auto md:mt-0 md:order-3 md:ml-auto">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit TEMPO ABA on Instagram"
+              className="text-white hover:text-opacity-80"
+            >
+              <FaInstagram size={22} />
+            </a>
+            <a
+              href={TIKTOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit TEMPO ABA on TikTok"
+              className="text-white hover:text-opacity-80"
+            >
+              <FaTiktok size={22} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
