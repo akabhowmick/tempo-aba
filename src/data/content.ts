@@ -296,6 +296,15 @@ export const pageBanners = {
   },
 };
 
+export const contactNextSteps = {
+  heading: "What happens after you contact us?",
+  body:
+    "After you submit your inquiry, a member of our team will contact you within one " +
+    "business day to learn more about your family's needs, answer your questions, and " +
+    "guide you through the next steps, including insurance verification and scheduling " +
+    "an initial assessment.",
+};
+
 export const emailSetUp = {
   formSubmitEmail: "https://formsubmit.co/cmartinez@tempoaba.com",
   redirectLink: "https://tempoaba.com/",

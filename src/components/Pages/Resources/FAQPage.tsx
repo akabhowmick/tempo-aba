@@ -13,7 +13,7 @@ const FaqPage: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <section className="flex-1 py-12" aria-label="Frequently Asked Questions">
+      <section className="flex-1 py-12" role="region" aria-label="Frequently Asked Questions">
         <div className="container mx-auto px-8">
           <SubPageTitle pageBannerInfo={pageBanners.faq} />
           <div className="space-y-4 py-8">

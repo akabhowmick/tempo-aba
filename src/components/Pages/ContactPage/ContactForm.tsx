@@ -243,7 +243,7 @@ export const ContactForm = (): JSX.Element => {
                 ></textarea>
               </div>
               <p id="message-help" className="mt-1 text-sm text-green-900">
-                Please provide details about your inquiry
+                Please avoid sharing medical details here. We will go over specifics with you by phone.
               </p>
               {errors.message && (
                 <p id="message-error" className="mt-2 text-sm text-red-600" role="alert">

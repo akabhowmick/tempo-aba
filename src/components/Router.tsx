@@ -11,6 +11,8 @@ import { InsurancePage } from "./Pages/Resources/InsuranceInfo";
 import { ABAResourcesPage } from "./Pages/Resources/ABAResourcesPage";
 import { ServicePage } from "./Pages/Services/ServicePage";
 import { ABAautism  } from "./Pages/About/ABAAustism";
+import { LegalCenter } from "./Pages/Legal/LegalCenter";
+import { LegalPage } from "./Pages/Legal/LegalPage";
 
 
 export const router = createBrowserRouter(
@@ -35,6 +37,10 @@ export const router = createBrowserRouter(
       <Route path="/resources/aba" element={<ABAResourcesPage />} />
 
       <Route path="/contact" element={<ContactPage />} />
+
+      {/* Legal */}
+      <Route path="/legal" element={<LegalCenter />} />
+      <Route path="/legal/:policy" element={<LegalPage />} />
 
       <Route path="/*" element={<HomePage />} />
     </Route>

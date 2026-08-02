@@ -57,6 +57,8 @@ export const Footer = () => {
               {[
                 { href: "/resources/insurance", text: "Insurance" },
                 { href: "/resources/faq", text: "FAQ" },
+                { href: "/contact", text: "Contact" },
+                { href: "/resources/aba", text: "ABA Resources" },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href} aria-label={`Navigate to ${item.text} page`}>
@@ -67,13 +69,15 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Extra as */}
+          {/* Legal */}
           <div>
-            <p className="text-xl text-white">Extra assistance</p>
+            <p className="text-xl text-white">Legal</p>
             <ul className="mt-8 space-y-4">
               {[
-                { href: "/contact", text: "Contact" },
-                { href: "/resources/aba", text: "ABA Resources" },
+                { href: "/legal", text: "Legal and Privacy Center" },
+                { href: "/legal/privacy-policy", text: "Privacy Policy" },
+                { href: "/legal/notice-of-privacy-practices", text: "Notice of Privacy Practices" },
+                { href: "/legal/accessibility", text: "Accessibility" },
               ].map((item, index) => (
                 <li key={index}>
                   <a href={item.href} aria-label={`Navigate to ${item.text} page`}>
