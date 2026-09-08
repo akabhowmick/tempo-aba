@@ -1,17 +1,10 @@
 import { useState } from "react";
 import { AppBar, Toolbar, Button, IconButton } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
-import {
-  FaBars,
-  FaTimes,
-  FaChevronDown,
-  FaChevronUp,
-  FaInstagram,
-  FaTiktok,
-} from "react-icons/fa";
+import { FaBars, FaTimes, FaChevronDown, FaChevronUp, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const INSTAGRAM_URL = "https://www.instagram.com/tempoaba?utm_source=qr";
-const TIKTOK_URL = "https://www.tiktok.com/@tempo.community.a?_r=1&_t=ZT-98HlcEgTKur";
+const TIKTOK_URL = "https://www.tiktok.com/@tempo.aba";
 import { content } from "../../data/content";
 import { commonStyles } from "./CommonStyles";
 import { useMediaQuery } from "react-responsive";
@@ -20,7 +13,7 @@ export const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
-  
+
   const handleKeyDown = (e: React.KeyboardEvent, itemName: string) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -56,8 +49,8 @@ export const Header = () => {
             <nav className="hidden md:flex space-x-4" aria-label="Main navigation">
               {content.header.navItems.map((item) =>
                 item.submenu ? (
-                  <div 
-                    key={item.name} 
+                  <div
+                    key={item.name}
                     className="relative group"
                     onMouseEnter={() => setDropdownOpen(item.name)}
                     onMouseLeave={() => setDropdownOpen(null)}
@@ -115,7 +108,7 @@ export const Header = () => {
                   >
                     <Button color="inherit">{item.name}</Button>
                   </Link>
-                )
+                ),
               )}
             </nav>
 
@@ -214,7 +207,7 @@ export const Header = () => {
               >
                 {item.name}
               </Link>
-            )
+            ),
           )}
           <Link
             to="/contact"

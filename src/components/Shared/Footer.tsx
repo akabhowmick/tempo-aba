@@ -2,10 +2,9 @@ import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { content } from "../../data/content";
 
 const INSTAGRAM_URL = "https://www.instagram.com/tempoaba?utm_source=qr";
-const TIKTOK_URL = "https://www.tiktok.com/@tempo.community.a?_r=1&_t=ZT-98HlcEgTKur";
+const TIKTOK_URL = "https://www.tiktok.com/@tempo.aba";
 
 export const Footer = () => {
-
   const aClasses =
     "text-md text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80 cursor-pointer";
 
