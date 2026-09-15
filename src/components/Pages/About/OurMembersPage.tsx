@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
-import { content, pageBanners, teamBios } from "../../../data/content";
+import { pageBanners, teamBios } from "../../../data/content";
 import { SubPageTitle } from "../../Shared/CommonSections";
 import { membersContent } from "../../../data/memberContent";
 import { ContentSection } from "./ContentSection";
+import whoWeAreImage from "../../../assets/siteImages/new/IMG_9027.jpg";
+import whoWeAreImage2 from "../../../assets/siteImages/new/image1.jpg";
 
 // Helper function to truncate bio text
 const truncateText = (text: string, charLimit: number) => {
@@ -53,13 +55,15 @@ export const OurMembersPage = () => (
   <div className="container mx-auto px-4 py-8">
     <SubPageTitle pageBannerInfo={pageBanners.members} />
 
-    {/* <ContentSection paragraph={membersContent.paragraph1} image={membersContent.image1} index={1} />
-    <ContentSection paragraph={membersContent.paragraph2} image={membersContent.image2} index={2} />
-    <ContentSection paragraph={membersContent.paragraph3} image={membersContent.image5} index={3} /> */}
     <ContentSection
-      paragraph={membersContent.paragraph4}
-      image={content.header.siteLogo}
+      paragraph={`${membersContent.paragraph1} ${membersContent.paragraph2}`}
+      image={whoWeAreImage}
       index={2}
+    />
+    <ContentSection
+      paragraph={membersContent.paragraph3}
+      image={whoWeAreImage2}
+      index={1}
     />
 
     <h2 className="text-4xl font-bold mt-8 mb-4 text-center">Our Team</h2>

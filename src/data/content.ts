@@ -12,8 +12,7 @@ import inaeImage from "../assets/siteImages/members/inae.jpeg";
 import cynthiaImage from "../assets/siteImages/members/cynthia.png";
 import cesiaImage from "../assets/siteImages/members/cesia.png";
 
-import resourceImage1 from "../assets/siteImages/home/resource1.jpeg";
-import resourceImage2 from "../assets/siteImages/home/resource2.jpeg";
+import resourceImage1 from "../assets/siteImages/new/tempo_free_parent_resources.png";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
 import servicePageImage1 from "../assets/siteImages/home/IMG_5459.jpeg";
@@ -25,6 +24,8 @@ import servicePageImage6 from "../assets/siteImages/home/service6.jpeg";
 import servicePageImage7 from "../assets/siteImages/home/aba1.png";
 
 import banner1 from "../assets/siteImages/banners/banner1.jpg";
+
+import ourProcessImage from "../assets/siteImages/new/IMG_9025.jpg";
 // import banner2 from "../assets/siteImages/banner2.jpg";
 
 type NavLinkItem = { name: string; path: string; submenu?: undefined };
@@ -157,8 +158,8 @@ export const content = {
     },
     image2: {
       type: "image",
-      alt: "Children conducting a science experiment with beakers and test tubes",
-      src: resourceImage2,
+      alt: "Our process at TEMPO ABA",
+      src: ourProcessImage,
     },
     text2: {
       type: "text",
@@ -283,7 +284,8 @@ export const pageBanners = {
     alt: "contactImage",
     src: banner1,
     title: "Contact Us",
-    subtitle: "Get in touch about services for your child, or explore career opportunities with us.",
+    subtitle:
+      "Get in touch about services for your child, or explore career opportunities with us.",
   },
   aba: { alt: "abaImage", src: banner1, title: "ABA and autism ", subtitle: "" },
   faq: { alt: "faqImage", src: banner1, title: "Frequently Asked Questions", subtitle: "" },
