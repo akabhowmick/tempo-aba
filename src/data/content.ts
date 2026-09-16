@@ -16,12 +16,12 @@ import resourceImage1 from "../assets/siteImages/new/tempo_free_parent_resources
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
 
 import servicePageImage1 from "../assets/siteImages/home/IMG_5459.jpeg";
+import homeAbaImage from "../assets/siteImages/new/image1.jpg";
 import servicePageImage2 from "../assets/siteImages/home/method3.png";
 import servicePageImage3 from "../assets/siteImages/home/aba3.png";
 import servicePageImage4 from "../assets/siteImages/members/members-2.png";
 import servicePageImage5 from "../assets/siteImages/home/service5.jpeg";
 import servicePageImage6 from "../assets/siteImages/home/service6.jpeg";
-import servicePageImage7 from "../assets/siteImages/home/aba1.png";
 
 import banner1 from "../assets/siteImages/banners/banner1.jpg";
 
@@ -219,7 +219,7 @@ export const servicesData = {
   home: {
     title: "Home Based ABA",
     description: `Learning in a home setting can be the most comfortable option for your child. In familiar surroundings, your child can engage in daily routines while receiving tailored support. Family members can easily  receive parent training and participate in the process, fostering a collaborative environment. Home-based ABA is ideal for helping your child acquire skills in their own space and apply those skills in various settings, promoting effective generalization.`,
-    image: servicePageImage1,
+    image: homeAbaImage,
   },
   community: {
     title: "Community Based ABA",
@@ -261,7 +261,7 @@ export const servicesData = {
   behavior: {
     title: "Behavioral Consultation",
     description: `By cultivating collaborative and professional relationships, we aim to empower educators with the tools and knowledge necessary to create inclusive and supportive learning environments.`,
-    image: servicePageImage7,
+    image: servicePageImage1,
   },
 };
 

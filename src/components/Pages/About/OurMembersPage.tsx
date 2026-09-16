@@ -4,7 +4,6 @@ import { SubPageTitle } from "../../Shared/CommonSections";
 import { membersContent } from "../../../data/memberContent";
 import { ContentSection } from "./ContentSection";
 import whoWeAreImage from "../../../assets/siteImages/new/IMG_9027.jpg";
-import whoWeAreImage2 from "../../../assets/siteImages/new/image1.jpg";
 
 // Helper function to truncate bio text
 const truncateText = (text: string, charLimit: number) => {
@@ -56,14 +55,9 @@ export const OurMembersPage = () => (
     <SubPageTitle pageBannerInfo={pageBanners.members} />
 
     <ContentSection
-      paragraph={`${membersContent.paragraph1} ${membersContent.paragraph2}`}
+      paragraph={membersContent.paragraph4}
       image={whoWeAreImage}
       index={2}
-    />
-    <ContentSection
-      paragraph={membersContent.paragraph3}
-      image={whoWeAreImage2}
-      index={1}
     />
 
     <h2 className="text-4xl font-bold mt-8 mb-4 text-center">Our Team</h2>
