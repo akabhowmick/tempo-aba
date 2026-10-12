@@ -11,6 +11,7 @@ import serviceImage7 from "../assets/siteImages/animated/Cartoon married couple 
 import inaeImage from "../assets/siteImages/members/inae.jpeg";
 import cynthiaImage from "../assets/siteImages/members/cynthia.png";
 import cesiaImage from "../assets/siteImages/members/cesia.png";
+import jordanImage from "../assets/siteImages/members/jordan.jpg";
 
 import resourceImage1 from "../assets/siteImages/new/tempo_free_parent_resources.png";
 import backgroundImage from "../assets/siteImages/sitebg.jpg";
@@ -193,7 +194,8 @@ export const teamBios = [
     credentials: "M.A.Ed ",
     title: "Co-Founder & Program Coordinator",
     bio: [
-      "Inae holds a Master of Arts in Health and Behavior Studies, specializing in Intellectual Disability and Autism, from Teachers College, Columbia University. She is currently pursuing an Advanced Certificate in Applied Behavior Analysis and is working toward becoming a Board Certified Behavior Analyst (BCBA), further enhancing her expertise in supporting children with autism and developmental disabilities.",
+      "Inae holds a Master of Arts in Health and Behavior Studies, specializing in Intellectual Disability and Autism, from Teachers College, Columbia University.",
+      "She has completed an Advanced Certificate in Applied Behavior Analysis and currently holds a NYS Licensed Behavior Analyst (NYS LBA) & Board Certified Behavior Analyst (BCBA) Graduate Permit. She is working toward becoming a BCBA, further enhancing her expertise in supporting children with autism and developmental disabilities.",
       "As Program Coordinator at TEMPO ABA, Inae oversees daily operations, ensuring that every family receives clear guidance and consistent support throughout their ABA therapy journey. With over 20 years of experience in non-profit and public education, she excels at identifying solutions that improve client outcomes while empowering her team to provide services at the highest standard. Her expertise includes working with students with autism spectrum disorder, intellectual disabilities, emotional disturbances, speech impairments, and other health-related challenges, enabling her to address complex needs with skill and compassion.",
       "Inae’s career spans a variety of roles, including Special Education Inclusion Program Coordinator, classroom teacher, SEIT provider, and SETSS provider. She has facilitated meaningful communication between families and schools and designed intellectually engaging instruction that helps students meet and often exceed their IEP and learning goals. Her early experience as a research assistant in Dr. Hsu-Min Chiang’s Parent Education Program for Parents of Chinese American Children with Autism Spectrum Disorders at Teachers College, Columbia University, laid the foundation for her enduring passion for developing programs that support both students and families.",
     ],
@@ -212,6 +214,17 @@ export const teamBios = [
     ],
     imageUrl: cesiaImage,
     profileLink: "/about/members/Cesia",
+  },
+  {
+    name: "Jordan Freeman",
+    credentials: "M.S.Ed., BCBA, LBA",
+    title: "Staff & Parent Trainer",
+    bio: [
+      "Jordan Freeman, M.S.Ed., BCBA, LBA, has been working in the field of Applied Behavior Analysis for more than 20 years. His journey in ABA began as an undergraduate at SUNY Binghamton, where he worked as a teaching assistant while earning his B.A. in Psychology with a concentration in Applied Behavior Analysis. He later earned his M.S.Ed. in General, and Childhood Special Education from LIU Post and an Advanced Graduate Certificate in Applied Behavior Analysis from the University of North Texas. Jordan became a Board Certified Behavior Analyst in 2010 after receiving his supervision while working as a teacher at a school for children with autism, and a Licensed Behavior Analyst in the state of New York in 2014.",
+      "Since becoming a BCBA, Jordan has worked across school-based and clinical settings in a variety of roles, including clinical supervision, staff development, and leadership. He is particularly passionate about supervision and mentorship and enjoys helping developing behavior analysts connect the concepts they learn in the classroom to the realities of everyday practice. Jordan is excited to welcome the new cohort and looks forward to supporting students as they develop their skills, confidence, and professional identities as future behavior analysts.",
+    ],
+    imageUrl: jordanImage,
+    profileLink: "/about/members/jordan",
   },
 ];
 
