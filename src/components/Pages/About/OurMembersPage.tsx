@@ -26,14 +26,14 @@ const TeamBioCard = ({
   credentials: string;
 }) => (
   <div className="text-center mt-5 px-4 w-full sm:w-1/2">
-    <div className="w-40 h-40 mx-auto mb-4">
+    <div className="w-48 h-48 mx-auto mb-4">
       <img
         alt={`Portrait of ${name}`}
-        className="rounded-full w-48 h-48 object-cover object-top mx-auto md:mx-0"
+        className="rounded-xl w-48 h-48 object-cover object-top mx-auto md:mx-0"
         src={imageUrl}
       />
     </div>
-    <h2 className="text-xl font-bold text-black mt-10">
+    <h2 className="text-xl font-bold text-black mt-2">
       {name} - <span className="text-black">{credentials}</span>
     </h2>
     <p className="text-md font-semibold text-black">{title}</p>

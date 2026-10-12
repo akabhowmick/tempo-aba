@@ -9,7 +9,7 @@ import serviceImage5 from "../assets/siteImages/animated/Wavy_Ppl-04_Single-11.j
 import serviceImage6 from "../assets/siteImages/animated/mission.png";
 import serviceImage7 from "../assets/siteImages/animated/Cartoon married couple communicating with doctor.jpg";
 import inaeImage from "../assets/siteImages/members/inae.jpeg";
-import cynthiaImage from "../assets/siteImages/members/cynthia.png";
+import cynthiaImage from "../assets/siteImages/members/cynthia.jpg";
 import cesiaImage from "../assets/siteImages/members/cesia.png";
 import jordanImage from "../assets/siteImages/members/jordan.jpg";
 
