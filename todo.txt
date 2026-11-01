@@ -1,2 +1,7 @@
 2. fix the second section
  
+OPEN ITEMS (SEO / structured data)
+- Business address (street, city, ZIP) and opening hours are not on the site yet. Left out of
+  structured data and not invented. Add them to the LocalBusiness/MedicalBusiness JSON-LD (phase 3)
+  once Tempo provides them.
+- Designed 1200x630 share image to replace public/og-image.jpg (currently a crop of the hero photo).

@@ -4,6 +4,7 @@ import { Footer } from "./components/Shared/Footer";
 import { content } from "./data/content";
 import SupportChat from "./components/Shared/SupportChat";
 import { SkipLink } from "./components/Shared/SkipLink";
+import { RouteSEO } from "./components/Shared/SEO";
 
 // Root layout. Header renders the routed page through its <Outlet />.
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           opacity: 0.5,
         }}
       ></div>
+      <RouteSEO />
       <SkipLink />
       {/* Content on top of the background */}
       <div className="relative z-10">

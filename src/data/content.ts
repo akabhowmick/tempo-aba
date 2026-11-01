@@ -120,7 +120,7 @@ export const content = {
       //   cardGradient: "from-yellow-500 to-transparent", // Custom gradient
       // },
       {
-        cardTitle: "Parent Training and Workshopss",
+        cardTitle: "Parent Training and Workshops",
         cardDescription:
           "We integrate community outings into your child’s program to support real-world skill development.",
         cardImage: serviceImage5,
@@ -253,7 +253,7 @@ export const servicesData = {
     image: servicePageImage3,
   },
   parentTraining: {
-    title: "Parent Training and Workshopss",
+    title: "Parent Training and Workshops",
     description: `ABA parent training is a vital component of any ABA program. It equips parents with essential skills to promote generalization, enhance functioning in natural settings, and reduce stress, ultimately creating a more enjoyable and fulfilling life for the entire family`,
     image: servicePageImage4,
   },
