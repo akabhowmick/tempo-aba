@@ -1,5 +1,7 @@
 import { Head } from "vite-react-ssg";
 import { useLocation } from "react-router-dom";
+import { JsonLd } from "./JsonLd";
+import { businessGraph } from "../../seo/structuredData";
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, normalizePath, resolveRoute } from "../../seo/routes";
 
 interface SEOProps {
@@ -68,12 +70,15 @@ export const RouteSEO = () => {
   }
   const { path, meta } = resolved;
   return (
-    <SEO
-      title={meta.title}
-      description={meta.description}
-      path={path}
-      type={path.startsWith("/about/members/") ? "profile" : "website"}
-      noindex={meta.noindex}
-    />
+    <>
+      {path === "/" && <JsonLd data={businessGraph()} />}
+      <SEO
+        title={meta.title}
+        description={meta.description}
+        path={path}
+        type={path.startsWith("/about/members/") ? "profile" : "website"}
+        noindex={meta.noindex}
+      />
+    </>
   );
 };
