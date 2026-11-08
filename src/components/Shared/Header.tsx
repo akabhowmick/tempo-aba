@@ -40,6 +40,8 @@ export const Header = () => {
                 src={content.header.siteLogo2}
                 className="rounded-md w-12"
                 alt={content.header.logoAlt}
+                width={48}
+                height={64}
               />
             </Link>
 

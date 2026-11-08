@@ -34,6 +34,8 @@ export const Hero = () => {
                 src={content.header.siteLogo}
                 className="w-14 md:w-60 rounded-md"
                 alt="TEMPO ABA logo"
+                width={1536}
+                height={1024}
               />
               <h1 className={`${commonStyles.heading} text-4xl md:text-6xl text-center`}>
                 Discover your TEMPO

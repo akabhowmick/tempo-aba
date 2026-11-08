@@ -38,7 +38,7 @@ export const content = {
   header: {
     siteLogo: logov1,
     siteLogo2: logov2,
-    logoAlt: "Logo",
+    logoAlt: "TEMPO ABA home",
     navItems: [
       {
         name: "About Us",
@@ -149,6 +149,8 @@ export const content = {
       type: "image",
       alt: "A woman working on a laptop with a child sitting beside her",
       src: resourceImage1,
+      width: 1080,
+      height: 1080,
     },
     text1: {
       type: "text",
@@ -159,8 +161,10 @@ export const content = {
     },
     image2: {
       type: "image",
-      alt: "Our process at TEMPO ABA",
+      alt: "Two TEMPO ABA team members talking at a conference table",
       src: ourProcessImage,
+      width: 1050,
+      height: 1400,
     },
     text2: {
       type: "text",
@@ -233,11 +237,13 @@ export const servicesData = {
     title: "Home Based ABA",
     description: `Learning in a home setting can be the most comfortable option for your child. In familiar surroundings, your child can engage in daily routines while receiving tailored support. Family members can easily  receive parent training and participate in the process, fostering a collaborative environment. Home-based ABA is ideal for helping your child acquire skills in their own space and apply those skills in various settings, promoting effective generalization.`,
     image: homeAbaImage,
+    imageAlt: "A therapist and child high-five at a table with a laptop",
   },
   community: {
     title: "Community Based ABA",
     description: `If you could use some help making trips to the grocery store, playground, or park more successful, we seamlessly integrate community outings into your child’s program, ensuring that these everyday experiences are both enjoyable and effective. Our dedicated TEMPO ABA team will work closely with your family to create a supportive environment, making outing easier and more rewarding for everyone involved.`,
     image: servicePageImage2,
+    imageAlt: "A smiling instructor reaching out to give a child a high five",
   },
   school: {
     title: "In-School Consultation",
@@ -251,11 +257,13 @@ export const servicesData = {
       "Family training sessions",
     ],
     image: servicePageImage3,
+    imageAlt: "Two smiling children doing schoolwork with their teacher at a classroom table",
   },
   parentTraining: {
     title: "Parent Training and Workshops",
     description: `ABA parent training is a vital component of any ABA program. It equips parents with essential skills to promote generalization, enhance functioning in natural settings, and reduce stress, ultimately creating a more enjoyable and fulfilling life for the entire family`,
     image: servicePageImage4,
+    imageAlt: "Illustration of parents and children in a school hallway",
   },
   transition: {
     title: "Transition to Adulthood",
@@ -265,16 +273,19 @@ export const servicesData = {
     We also emphasize communication skills, self-advocacy, and decision-making to ensure they are well-prepared for the 
     challenges of adult life.`,
     image: servicePageImage5,
+    imageAlt: "Two children building with colorful blocks on the grass outdoors",
   },
   center: {
     title: "Center Based ABA",
     description: `Coming Soon!`,
     image: servicePageImage6,
+    imageAlt: "",
   },
   behavior: {
     title: "Behavioral Consultation",
     description: `By cultivating collaborative and professional relationships, we aim to empower educators with the tools and knowledge necessary to create inclusive and supportive learning environments.`,
     image: servicePageImage1,
+    imageAlt: "An adult and two children working together at a table in a living room",
   },
 };
 

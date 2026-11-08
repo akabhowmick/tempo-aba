@@ -94,9 +94,9 @@ export const Footer = () => {
           <img
             className="w-12 rounded md:order-1"
             src={content.header.siteLogo2}
-            alt="TEMPO"
-            height={200}
-            width={200}
+            alt="TEMPO ABA logo"
+            height={64}
+            width={48}
           />
 
           <p className="w-full mt-8 text-sm text-center text-white md:mt-0 md:w-auto md:order-2">

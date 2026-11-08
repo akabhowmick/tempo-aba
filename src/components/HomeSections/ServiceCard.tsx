@@ -32,7 +32,9 @@ export const ServiceCard = ({ service }: { service: ServiceCardProps }) => {
         >
           <img 
             src={cardImage} 
-            alt="" 
+            alt=""
+            width={320}
+            height={240}
             role="presentation"
             className="w-full h-full object-cover" 
           />

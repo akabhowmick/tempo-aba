@@ -15,7 +15,7 @@ export const MissionPage: React.FC = () => {
         <div className="md:w-1/2 mt-8 md:mt-0 md:ml-8 relative">
           <div className="absolute inset-0 bg-green-700 rounded-lg transform rotate-6"></div>
           <img
-            alt="Group of professionals smiling"
+            alt="A teacher at a whiteboard with children seated in a classroom"
             className="relative rounded-lg"
             height={400}
             src={savedMissionImage}

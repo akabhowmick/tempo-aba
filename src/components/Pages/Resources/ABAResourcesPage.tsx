@@ -73,6 +73,8 @@ export const ABAResourcesPage = () => {
               <img
                 src={resource.logo}
                 alt={`${resource.name} logo`}
+                width={96}
+                height={96}
                 className="w-24 h-24 object-contain mb-4" // Add margin for spacing
               />
 

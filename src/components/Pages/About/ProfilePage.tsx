@@ -34,6 +34,8 @@ export const ProfilePage = () => {
             {/* Image */}
             <img
               alt={`Portrait of ${profile.name}`}
+              width={240}
+              height={240}
               className="rounded-xl w-60 h-60 object-cover object-top mx-auto md:mx-0"
               src={profile.imageUrl}
             />

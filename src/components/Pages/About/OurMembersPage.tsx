@@ -29,6 +29,8 @@ const TeamBioCard = ({
     <div className="w-48 h-48 mx-auto mb-4">
       <img
         alt={`Portrait of ${name}`}
+        width={192}
+        height={192}
         className="rounded-xl w-48 h-48 object-cover object-top mx-auto md:mx-0"
         src={imageUrl}
       />
@@ -57,6 +59,7 @@ export const OurMembersPage = () => (
     <ContentSection
       paragraph={membersContent.paragraph4}
       image={whoWeAreImage}
+      alt="Two TEMPO ABA team members working at a table in the office"
       index={2}
     />
 
