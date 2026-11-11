@@ -31,7 +31,15 @@ const clean = (value: Json): Json | undefined => {
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const US_LOCATION_ID = `${SITE_URL}/#us-location`;
 
-const sameAs = ["https://www.instagram.com/tempoaba", "https://www.tiktok.com/@tempo.aba"];
+// Instagram and TikTok are live. The TODO entries are dropped from output until filled in.
+const sameAs = [
+  "https://www.instagram.com/tempoaba",
+  "https://www.tiktok.com/@tempo.aba",
+  TODO("Google Business Profile URL"),
+  TODO("LinkedIn company page URL"),
+  TODO("ABA provider directory profile URL (1)"),
+  TODO("ABA provider directory profile URL (2)"),
+];
 
 const organization = {
   "@type": "Organization",
@@ -39,7 +47,7 @@ const organization = {
   name: SITE_NAME,
   legalName: "TEMPO Applied Behavior Analysis, PLLC",
   url: SITE_URL,
-  logo: `${SITE_URL}/android-chrome-512x512.png`,
+  logo: `${SITE_URL}/logo.png`,
   telephone: "+1-929-810-8648",
   sameAs,
   founder: [
@@ -73,8 +81,14 @@ export const usLocation = {
 
 export const businessGraph = () => {
   const graph = [organization, usLocation]
-    .map((node) => clean(node as unknown as Json) as { name?: string } | undefined)
-    .filter(Boolean);
+    .map((node) => clean(node as unknown as Json) as { address?: { streetAddress?: string } } | undefined)
+    .filter(Boolean)
+    .map((node) => {
+      // A partial address (just region and country) is worse than none: drop it until a
+      // real street address is filled in. The TODO fields stay in source above.
+      if (node && node.address && !node.address.streetAddress) delete node.address;
+      return node;
+    });
   return { "@context": "https://schema.org", "@graph": graph };
 };
 

@@ -28,10 +28,10 @@ export const InsurancePage: React.FC = () => {
           <div className="w-full md:w-1/2">
             <img
               alt="Family sitting together and smiling"
-              className="rounded-full mx-auto"
+              className="rounded-full mx-auto object-cover max-w-full"
               src={insuranceImage}
               width="300"
-              height="200"
+              height="300"
             />
           </div>
 

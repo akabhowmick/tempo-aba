@@ -46,7 +46,7 @@ export const Header = () => {
             </Link>
 
             {/* Desktop Menu */}
-            <nav className="hidden md:flex space-x-4" aria-label="Main navigation">
+            <nav className="hidden min-[801px]:flex space-x-4" aria-label="Main navigation">
               {content.header.navItems.map((item) =>
                 item.submenu ? (
                   <div
@@ -161,7 +161,7 @@ export const Header = () => {
         </AppBar>
 
         {/* Mobile Menu */}
-        <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-700 p-4 md:hidden`}>
+        <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-700 p-4 min-[801px]:hidden`}>
           {content.header.navItems.map((item) =>
             item.submenu ? (
               <div key={item.name}>
