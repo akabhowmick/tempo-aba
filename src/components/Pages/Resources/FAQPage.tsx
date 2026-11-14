@@ -4,6 +4,8 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { SubPageTitle } from "../../Shared/CommonSections";
 import { pageBanners } from "../../../data/content";
 import { faqItems } from "../../../data/faqItems";
+import { ReviewedBy } from "../../Shared/ReviewedBy";
+import { RelatedPages } from "../../Shared/RelatedPages";
 import { JsonLd } from "../../Shared/JsonLd";
 import { faqPageSchema } from "../../../seo/structuredData";
 
@@ -24,6 +26,7 @@ const FaqPage: React.FC = () => {
             {faqItems.map((item, index) => (
               <Accordion
                 key={index}
+                slotProps={{ heading: { component: "h2" } }}
                 expanded={expanded === `panel${index}`}
                 onChange={handleChange(`panel${index}`)}
               >
@@ -43,8 +46,10 @@ const FaqPage: React.FC = () => {
               </Accordion>
             ))}
           </div>
+          <ReviewedBy name="TODO(reviewer name)" date="TODO(review date)" />
         </div>
       </section>
+      <RelatedPages paths={["/resources/insurance", "/about/methods", "/contact"]} />
     </div>
   );
 };

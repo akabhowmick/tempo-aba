@@ -7,6 +7,7 @@ import iesLogo from "../../../assets/siteImages/resources/ies.png";
 import bacbLogo from "../../../assets/siteImages/resources/bacb.png";
 import naspLogo from "../../../assets/siteImages/resources/nasp.png";
 import usdepLogo from "../../../assets/siteImages/resources/usdep.png";
+import { ReviewedBy } from "../../Shared/ReviewedBy";
 import { SubPageTitle } from "../../Shared/CommonSections";
 import { pageBanners } from "../../../data/content";
 
@@ -73,6 +74,8 @@ export const ABAResourcesPage = () => {
               <img
                 src={resource.logo}
                 alt={`${resource.name} logo`}
+                loading="lazy"
+                decoding="async"
                 width={96}
                 height={96}
                 className="w-24 h-24 object-contain mb-4" // Add margin for spacing
@@ -89,6 +92,7 @@ export const ABAResourcesPage = () => {
           </motion.li>
         ))}
       </ul>
+      <ReviewedBy name="TODO(reviewer name)" date="TODO(review date)" />
     </div>
   );
 };

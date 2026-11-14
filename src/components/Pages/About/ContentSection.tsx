@@ -22,6 +22,8 @@ export const ContentSection = ({
       <div className="relative rounded-lg overflow-hidden aspect-[3/2]">
         <img
           alt={alt}
+          loading="lazy"
+          decoding="async"
           width={1200}
           height={800}
           className="absolute inset-0 w-full h-full object-cover"

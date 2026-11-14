@@ -2,6 +2,7 @@ import { pageBanners } from "../../../data/content";
 import { membersContent } from "../../../data/memberContent";
 import { abaText } from "../../../data/randomText";
 import { SubPageTitle } from "../../Shared/CommonSections";
+import { ReviewedBy } from "../../Shared/ReviewedBy";
 import { ContentSection } from "./ContentSection";
 
 export const ABAautism  = () => {
@@ -41,6 +42,7 @@ export const ABAautism  = () => {
         alt="A boy laughing while a therapist sits across from him at a table"
         index={1}
       />
+      <ReviewedBy name="TODO(reviewer name)" date="TODO(review date)" />
     </div>
   );
 };

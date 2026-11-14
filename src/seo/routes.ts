@@ -11,6 +11,10 @@ export interface RouteMeta {
   description: string;
   /** Excluded from sitemap.xml when true (also rendered with noindex). */
   noindex?: boolean;
+  /** Short label for breadcrumbs when the title is too long. Defaults to the title. */
+  breadcrumb?: string;
+  /** ISO date (YYYY-MM-DD) of the last real content change. Emitted in sitemap.xml only when set. */
+  lastmod?: string;
 }
 
 // Services (keys match servicesData in src/data/content.ts)
@@ -151,11 +155,54 @@ for (const doc of legalDocuments) {
   };
 }
 
-/** All indexable paths, used for sitemap.xml. */
-export const sitemapPaths = (): string[] =>
+// Short breadcrumb labels for pages whose titles are long
+const breadcrumbLabels: Record<string, string> = {
+  "/about/abaandautism": "ABA and Autism",
+  "/about/methods": "Approach and Process",
+  "/about/mission": "Our Mission",
+  "/about/members": "Who We Are",
+  "/resources/faq": "FAQ",
+  "/resources/insurance": "Insurance",
+  "/resources/aba": "ABA Resources",
+  "/services/home": "Home Based ABA",
+  "/services/community": "Community Based ABA",
+  "/services/school": "In-School Consultation",
+  "/services/parentTraining": "Parent Training and Workshops",
+  "/services/transition": "Transition to Adulthood",
+  "/services/behavior": "Behavioral Consultation",
+  "/legal": "Legal and Privacy",
+};
+for (const [path, label] of Object.entries(breadcrumbLabels)) {
+  if (staticRoutes[path]) staticRoutes[path].breadcrumb = label;
+}
+for (const slug of memberSlugs) {
+  const name = memberMeta[slug].title.split(",")[0]; // "Cynthia Martinez"
+  staticRoutes[`/about/members/${slug}`].breadcrumb = name;
+}
+
+/** Breadcrumb trail for a canonical path, starting at Home. Empty for the homepage. */
+export const breadcrumbTrail = (path: string): { name: string; path: string }[] => {
+  if (path === "/") return [];
+  const trail = [{ name: "Home", path: "/" }];
+  // Members and legal documents sit under a real parent page; other sections have no index page
+  const parent = path.startsWith("/about/members/")
+    ? "/about/members"
+    : path.startsWith("/legal/")
+      ? "/legal"
+      : undefined;
+  if (parent && staticRoutes[parent]) {
+    trail.push({ name: staticRoutes[parent].breadcrumb ?? staticRoutes[parent].title, path: parent });
+  }
+  const meta = staticRoutes[path];
+  trail.push({ name: meta?.breadcrumb ?? meta?.title ?? path, path });
+  return trail;
+};
+
+/** All indexable routes, used for sitemap.xml. */
+export const sitemapEntries = (): { path: string; lastmod?: string }[] =>
   Object.entries(staticRoutes)
     .filter(([, meta]) => !meta.noindex)
-    .map(([path]) => path);
+    .map(([path, meta]) => ({ path, lastmod: meta.lastmod }));
 
 export const normalizePath = (pathname: string): string =>
   pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;

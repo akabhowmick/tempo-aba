@@ -29,6 +29,8 @@ const TeamBioCard = ({
     <div className="w-48 h-48 mx-auto mb-4">
       <img
         alt={`Portrait of ${name}`}
+        loading="lazy"
+        decoding="async"
         width={192}
         height={192}
         className="rounded-xl w-48 h-48 object-cover object-top mx-auto md:mx-0"

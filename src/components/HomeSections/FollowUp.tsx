@@ -23,6 +23,8 @@ export const FollowUp = () => {
               <div className="relative mb-6">
                 <img
                   alt={card.image.alt}
+                  loading="lazy"
+                  decoding="async"
                   width={card.image.width}
                   height={card.image.height}
                   className="w-full h-64 md:h-80 object-cover rounded-lg"

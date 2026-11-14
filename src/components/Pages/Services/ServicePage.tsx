@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { pageBanners, servicesData } from "../../../data/content";
 import { SubPageTitle } from "../../Shared/CommonSections";
+import { RelatedPages } from "../../Shared/RelatedPages";
 import { ContentSection } from "../About/ContentSection";
 
 // Service Component (Dynamic based on learner type)
@@ -19,6 +20,7 @@ export const ServicePage = () => {
       <SubPageTitle pageBannerInfo={pageBanners.services} />
       <h2 className="text-4xl font-bold mb-4 text-center py-4">{service.title}</h2>
       <ContentSection paragraph={service.description} index={1} image={image} alt={service.imageAlt} />
+      <RelatedPages paths={["/about/methods", "/resources/faq", "/contact"]} />
     </div>
   );
 };

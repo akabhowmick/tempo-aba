@@ -1,7 +1,9 @@
 import { pageBanners } from "../../../data/content";
 import { SubPageTitle } from "../../Shared/CommonSections";
+import { ReviewedBy } from "../../Shared/ReviewedBy";
+import { RelatedPages } from "../../Shared/RelatedPages";
 import { commonStyles } from "../../Shared/CommonStyles";
-import insuranceImage from "../../../assets/siteImages/home/insurance.png";
+import insuranceImage from "../../../assets/siteImages/home/insurance.webp";
 
 export const InsurancePage: React.FC = () => {
   return (
@@ -28,6 +30,8 @@ export const InsurancePage: React.FC = () => {
           <div className="w-full md:w-1/2">
             <img
               alt="Family sitting together and smiling"
+              loading="lazy"
+              decoding="async"
               className="rounded-full mx-auto object-cover max-w-full"
               src={insuranceImage}
               width="300"
@@ -49,7 +53,9 @@ export const InsurancePage: React.FC = () => {
             </p>
           </div>
         </div>
+        <ReviewedBy name="TODO(reviewer name)" date="TODO(review date)" />
       </div>
+      <RelatedPages paths={["/resources/faq", "/about/methods", "/contact"]} />
     </div>
   );
 };

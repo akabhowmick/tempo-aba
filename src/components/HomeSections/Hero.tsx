@@ -1,27 +1,27 @@
-import { useEffect, useState } from "react";
+import { Head } from "vite-react-ssg";
 import { content } from "../../data/content";
 import { commonStyles } from "../Shared/CommonStyles";
 
 export const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust breakpoint as needed
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
-    <section
-      className={`overflow-hidden relative ${isMobile ? "h-[calc(70vh)]" : "h-[calc(100vh-80px)]"}`}
-    >
+    <section className="overflow-hidden relative h-[70vh] md:h-[calc(100vh-80px)]">
+      {/* The hero photo is the Largest Contentful Paint element: fetch it early, once per breakpoint */}
+      <Head>
+        <link
+          rel="preload"
+          as="image"
+          href={content.hero.heroMobileImage}
+          media="(max-width: 767px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href={content.hero.heroImage}
+          media="(min-width: 768px)"
+          fetchPriority="high"
+        />
+      </Head>
       <div
         className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col text-white p-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.55)]"
         role="banner"
@@ -57,16 +57,21 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div
-        id="hero-image"
-        className="absolute inset-0 z-0 bg-cover bg-center brightness-110 saturate-110"
-        role="presentation"
-        style={{
-          backgroundImage: `url(${
-            isMobile ? content.hero.heroMobileImage : content.hero.heroImage
-          })`,
-        }}
-      />
+      {/* Real <img> (not a CSS background) so it can be prioritized; never lazy-loaded */}
+      <picture id="hero-image" className="absolute inset-0 z-0 block">
+        <source media="(max-width: 767px)" srcSet={content.hero.heroMobileImage} />
+        <img
+          src={content.hero.heroImage}
+          alt=""
+          role="presentation"
+          width={2000}
+          height={1333}
+          loading="eager"
+          decoding="async"
+          {...{ fetchpriority: "high" }}
+          className="w-full h-full object-cover object-center brightness-110 saturate-110"
+        />
+      </picture>
     </section>
   );
 };

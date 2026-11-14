@@ -46,7 +46,7 @@ export const Header = () => {
             </Link>
 
             {/* Desktop Menu */}
-            <nav className="hidden min-[801px]:flex space-x-4" aria-label="Main navigation">
+            <nav className="hidden md:flex space-x-4" aria-label="Main navigation">
               {content.header.navItems.map((item) =>
                 item.submenu ? (
                   <div
@@ -113,7 +113,7 @@ export const Header = () => {
             </nav>
 
             {/* CSS breakpoint (not JS) so server-rendered HTML matches on every screen size */}
-            <div className="hidden min-[801px]:flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-4">
                 <div className="flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
@@ -147,11 +147,13 @@ export const Header = () => {
               </div>
 
             {/* Mobile Menu Icon - Only for smaller screens */}
-            <div className="min-[801px]:hidden">
+            <div className="md:hidden">
               <IconButton
                 edge="end"
                 color="inherit"
                 id="menu"
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMobileMenuOpen}
                 onClick={toggleMobileMenu}
               >
                 {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -161,7 +163,7 @@ export const Header = () => {
         </AppBar>
 
         {/* Mobile Menu */}
-        <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-700 p-4 min-[801px]:hidden`}>
+        <div className={`${isMobileMenuOpen ? "block" : "hidden"} bg-green-700 p-4 md:hidden`}>
           {content.header.navItems.map((item) =>
             item.submenu ? (
               <div key={item.name}>

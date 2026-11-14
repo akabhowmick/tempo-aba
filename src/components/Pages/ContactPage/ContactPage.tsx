@@ -1,6 +1,7 @@
 import { pageBanners, contactNextSteps } from "../../../data/content";
 import { SectionTitle, SubPageTitle } from "../../Shared/CommonSections";
 import { commonStyles } from "../../Shared/CommonStyles";
+import { RelatedPages } from "../../Shared/RelatedPages";
 import { ContactInfoBox } from "../../Shared/ContactInfoBox";
 
 export const ContactPage = () => {
@@ -12,6 +13,7 @@ export const ContactPage = () => {
         <p className="text-gray-800 leading-relaxed">{contactNextSteps.body}</p>
       </div>
       <ContactInfoBox />
+      <RelatedPages paths={["/resources/faq", "/resources/insurance", "/about/methods"]} />
     </div>
   );
 };

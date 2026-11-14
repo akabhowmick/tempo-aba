@@ -95,6 +95,8 @@ export const Footer = () => {
             className="w-12 rounded md:order-1"
             src={content.header.siteLogo2}
             alt="TEMPO ABA logo"
+            loading="lazy"
+            decoding="async"
             height={64}
             width={48}
           />

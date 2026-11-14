@@ -1,32 +1,32 @@
 import logov1 from "../assets/siteImages/logov4.jpg";
 import logov2 from "../assets/siteImages/logowithname.jpeg";
-import heroImage from "../assets/siteImages/home/IMG_5457.jpeg";
-import mobileHeroImage from "../assets/siteImages/home/mobilehero1.png";
-import serviceImage1 from "../assets/siteImages/animated/19198612.jpg";
-import serviceImage2 from "../assets/siteImages/animated/4824.jpg";
-import serviceImage3 from "../assets/siteImages/animated/5767946.jpg";
-import serviceImage5 from "../assets/siteImages/animated/Wavy_Ppl-04_Single-11.jpg";
-import serviceImage6 from "../assets/siteImages/animated/mission.png";
-import serviceImage7 from "../assets/siteImages/animated/Cartoon married couple communicating with doctor.jpg";
-import inaeImage from "../assets/siteImages/members/inae.jpeg";
-import cynthiaImage from "../assets/siteImages/members/cynthia.jpg";
-import cesiaImage from "../assets/siteImages/members/cesia.png";
+import heroImage from "../assets/siteImages/home/IMG_5457.webp";
+import mobileHeroImage from "../assets/siteImages/home/mobilehero1.webp";
+import serviceImage1 from "../assets/siteImages/animated/19198612.webp";
+import serviceImage2 from "../assets/siteImages/animated/4824.webp";
+import serviceImage3 from "../assets/siteImages/animated/5767946.webp";
+import serviceImage5 from "../assets/siteImages/animated/Wavy_Ppl-04_Single-11.webp";
+import serviceImage6 from "../assets/siteImages/animated/mission.webp";
+import serviceImage7 from "../assets/siteImages/animated/Cartoon married couple communicating with doctor.webp";
+import inaeImage from "../assets/siteImages/members/inae.webp";
+import cynthiaImage from "../assets/siteImages/members/cynthia.webp";
+import cesiaImage from "../assets/siteImages/members/cesia.webp";
 import jordanImage from "../assets/siteImages/members/jordan.jpg";
 
 import resourceImage1 from "../assets/siteImages/new/tempo_free_parent_resources.png";
-import backgroundImage from "../assets/siteImages/sitebg.jpg";
+import backgroundImage from "../assets/siteImages/sitebg.webp";
 
-import servicePageImage1 from "../assets/siteImages/home/IMG_5459.jpeg";
+import servicePageImage1 from "../assets/siteImages/home/IMG_5459.webp";
 import homeAbaImage from "../assets/siteImages/new/image1.jpg";
-import servicePageImage2 from "../assets/siteImages/home/method3.png";
-import servicePageImage3 from "../assets/siteImages/home/aba3.png";
-import servicePageImage4 from "../assets/siteImages/members/members-2.png";
+import servicePageImage2 from "../assets/siteImages/home/method3.webp";
+import servicePageImage3 from "../assets/siteImages/home/aba3.webp";
+import servicePageImage4 from "../assets/siteImages/members/members-2.webp";
 import servicePageImage5 from "../assets/siteImages/home/service5.jpeg";
 import servicePageImage6 from "../assets/siteImages/home/service6.jpeg";
 
-import banner1 from "../assets/siteImages/banners/banner1.jpg";
+import banner1 from "../assets/siteImages/banners/banner1.webp";
 
-import ourProcessImage from "../assets/siteImages/new/IMG_9025.jpg";
+import ourProcessImage from "../assets/siteImages/new/IMG_9025.webp";
 // import banner2 from "../assets/siteImages/banner2.jpg";
 
 type NavLinkItem = { name: string; path: string; submenu?: undefined };

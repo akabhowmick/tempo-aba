@@ -3,19 +3,19 @@ import { FaHandsHelping, FaUserGraduate, FaClipboardCheck, FaChartLine } from "r
 import missionImage from "../assets/siteImages/home/pikaso_edit_Candid-image-photography-natural-textures-highly-r.jpeg";
 export const savedMissionImage = missionImage;
 
-import backgroundPrinciples from "../assets/siteImages/backgrounds/greenBG.png";
+import backgroundPrinciples from "../assets/siteImages/backgrounds/greenBG.webp";
 export const savedBgLightestGreen = backgroundPrinciples;
 
-import banner2 from "../assets/siteImages/banners/banner2.jpg";
-import banner3 from "../assets/siteImages/members/members-2.png";
-import banner4 from "../assets/siteImages/banners/banner4.png";
+import banner2 from "../assets/siteImages/banners/banner2.webp";
+import banner3 from "../assets/siteImages/members/members-2.webp";
+import banner4 from "../assets/siteImages/banners/banner4.webp";
 
-import banner5 from "../assets/siteImages/members/members-3.png";
-import banner6 from "../assets/siteImages/home/method2.png";
-import banner7 from "../assets/siteImages/home/method3.png";
-import aba1 from "../assets/siteImages/home/aba1.png";
-import aba2 from "../assets/siteImages/members/members-2.png";
-import aba3 from "../assets/siteImages/home/aba3.png";
+import banner5 from "../assets/siteImages/members/members-3.webp";
+import banner6 from "../assets/siteImages/home/method2.webp";
+import banner7 from "../assets/siteImages/home/method3.webp";
+import aba1 from "../assets/siteImages/home/aba1.webp";
+import aba2 from "../assets/siteImages/members/members-2.webp";
+import aba3 from "../assets/siteImages/home/aba3.webp";
 
 export const missionContent = {
   mission: {

@@ -5,3 +5,31 @@ OPEN ITEMS (SEO / structured data)
   structured data and not invented. Add them to the LocalBusiness/MedicalBusiness JSON-LD (phase 3)
   once Tempo provides them.
 - Designed 1200x630 share image to replace public/og-image.jpg (currently a crop of the hero photo).
+
+OFF-SITE AND CONTENT TASKS (SEO / GEO / AEO)
+- Claim and complete the Google Business Profile (then add its URL to sameAs in src/seo/structuredData.ts).
+- Verify the site in Google Search Console and Bing Webmaster Tools; submit https://tempoaba.com/sitemap.xml.
+- Create Bing Places and Apple Business Connect listings.
+- Provider directory listings (e.g. ABA/autism provider directories); then fill the sameAs TODOs
+  (LinkedIn, directory profiles).
+- Collect real Google reviews, with consent. Do not add review markup until HIPAA sign-off.
+- Tempo to answer the 8 pending FAQ questions in src/data/faqItems.ts (pendingFaqItems). Each appears on
+  the FAQ page and in FAQPage JSON-LD automatically once its answer replaces the TODO:
+    * Does Medicaid cover ABA in New York?
+    * What happens at the first assessment?
+    * How many hours per week is typical?
+    * What ages do you serve?
+    * How long until services can start?
+    * Which areas do you serve?
+    * Do you offer telehealth?
+    * What happens on the first intake call?
+- Street address and opening hours for the structured data (src/seo/structuredData.ts, usLocation).
+- "Reviewed by" names and dates for /about/abaandautism, /resources/faq, /resources/insurance,
+  /resources/aba (ReviewedBy components are in place and render nothing until filled).
+- A designed 1200x630 share image to replace public/og-image.jpg.
+- Optional: guide pages answering common New York insurance and intake questions.
+- FIX: the "Chat" widget (SupportChat.tsx) does not send messages anywhere; it only shows a thank-you.
+  Wire it to a real endpoint, or remove it, before relying on it.
+- Review the unused original images listed in the SEO polish report and approve removal.
+
+DONE (browser-verified with scripts/browser-check.mjs): header switches at 768px; hero fetchpriority warning fixed; chat widget now emails via FormSubmit (same inbox + cc as contact form); 47 unused original images deleted (recoverable from git history); hero/banners resized to 2000px, other oversized images capped at 1600px.

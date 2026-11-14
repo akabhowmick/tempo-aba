@@ -16,6 +16,8 @@ export const MissionPage: React.FC = () => {
           <div className="absolute inset-0 bg-green-700 rounded-lg transform rotate-6"></div>
           <img
             alt="A teacher at a whiteboard with children seated in a classroom"
+            loading="lazy"
+            decoding="async"
             className="relative rounded-lg"
             height={400}
             src={savedMissionImage}

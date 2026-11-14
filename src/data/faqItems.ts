@@ -3,7 +3,7 @@ export interface FaqItem {
   answer: string;
 }
 
-export const faqItems: FaqItem[] = [
+const liveFaqItems: FaqItem[] = [
   {
     question: "What is Applied Behavior Analysis (ABA)?",
     answer:
@@ -55,3 +55,22 @@ export const faqItems: FaqItem[] = [
       "Yes, we provide various resources, including informational materials, workshops, and parent training for families to better understand ABA and how to support their child’s development.",
   },
 ];
+
+// Questions Tempo still needs to answer. An item whose answer starts with "TODO" is never
+// shown on the FAQ page or emitted in the FAQPage JSON-LD (see faqItems below).
+const needsAnswer = "TODO(answer needed from Tempo)";
+export const pendingFaqItems: FaqItem[] = [
+  "Does Medicaid cover ABA in New York?",
+  "What happens at the first assessment?",
+  "How many hours per week is typical?",
+  "What ages do you serve?",
+  "How long until services can start?",
+  "Which areas do you serve?",
+  "Do you offer telehealth?",
+  "What happens on the first intake call?",
+].map((question) => ({ question, answer: needsAnswer }));
+
+/** Published FAQ: used by both the visible page and the FAQPage JSON-LD, so they stay in sync. */
+export const faqItems: FaqItem[] = [...liveFaqItems, ...pendingFaqItems].filter(
+  (item) => !item.answer.trim().startsWith("TODO"),
+);

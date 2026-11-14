@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { emailSetUp } from "../../data/content";
 
 export default function SupportChat() {
   const [open, setOpen] = useState(false);
@@ -100,8 +101,20 @@ export default function SupportChat() {
     }
     try {
       setSubmitting(true);
-      // Simulate request
-      await new Promise((r) => setTimeout(r, 500));
+      // Same FormSubmit inbox as the contact form, via its AJAX endpoint
+      const res = await fetch(emailSetUp.formSubmitEmail.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          message: msg,
+          _subject: "Website chat message",
+          _cc: emailSetUp.ccLinks,
+          _template: "table",
+        }),
+      });
+      if (!res.ok) throw new Error("send failed");
       setStatus("Thanks! We’ll get back to you shortly.");
       setName("");
       setEmail("");
@@ -156,7 +169,7 @@ export default function SupportChat() {
                   Contact Support
                 </h2>
                 <p id="chat-description" className="text-sm text-gray-600">
-                  Send us a note and we’ll reply by email.
+                  Send us a note and we’ll reply by email. Please don’t include medical details.
                 </p>
               </div>
               <button
