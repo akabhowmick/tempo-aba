@@ -7,12 +7,10 @@ const INSTAGRAM_URL = "https://www.instagram.com/tempoaba?utm_source=qr";
 const TIKTOK_URL = "https://www.tiktok.com/@tempo.aba";
 import { content } from "../../data/content";
 import { commonStyles } from "./CommonStyles";
-import { useMediaQuery } from "react-responsive";
 
 export const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState<string | null>(null);
-  const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
 
   const handleKeyDown = (e: React.KeyboardEvent, itemName: string) => {
     if (e.key === "Enter" || e.key === " ") {
@@ -112,8 +110,8 @@ export const Header = () => {
               )}
             </nav>
 
-            {!isMobile && (
-              <div className="flex items-center gap-4">
+            {/* CSS breakpoint (not JS) so server-rendered HTML matches on every screen size */}
+            <div className="hidden min-[801px]:flex items-center gap-4">
                 <div className="flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
@@ -145,20 +143,18 @@ export const Header = () => {
                   </Button>
                 </Link>
               </div>
-            )}
 
             {/* Mobile Menu Icon - Only for smaller screens */}
-            {isMobile && (
+            <div className="min-[801px]:hidden">
               <IconButton
                 edge="end"
                 color="inherit"
-                className="md:hidden"
                 id="menu"
                 onClick={toggleMobileMenu}
               >
                 {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
               </IconButton>
-            )}
+            </div>
           </Toolbar>
         </AppBar>
 

@@ -23,7 +23,7 @@ export const Hero = () => {
       className={`overflow-hidden relative ${isMobile ? "h-[calc(70vh)]" : "h-[calc(100vh-80px)]"}`}
     >
       <div
-        className="absolute inset-0 z-10 bg-black bg-opacity-50 flex flex-col text-white p-4"
+        className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col text-white p-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.55)]"
         role="banner"
         aria-label="Welcome to TEMPO ABA"
       >
@@ -57,7 +57,7 @@ export const Hero = () => {
 
       <div
         id="hero-image"
-        className="absolute inset-0 z-0 bg-cover bg-center"
+        className="absolute inset-0 z-0 bg-cover bg-center brightness-110 saturate-110"
         role="presentation"
         style={{
           backgroundImage: `url(${

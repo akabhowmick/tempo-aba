@@ -1,11 +1,11 @@
 import React from "react";
-import { router } from "./components/Router";
-import { RouterProvider } from "react-router-dom";
+import { Header } from "./components/Shared/Header";
 import { Footer } from "./components/Shared/Footer";
 import { content } from "./data/content";
 import SupportChat from "./components/Shared/SupportChat";
 import { SkipLink } from "./components/Shared/SkipLink";
 
+// Root layout. Header renders the routed page through its <Outlet />.
 const App: React.FC = () => {
   return (
     <div className="relative">
@@ -19,7 +19,7 @@ const App: React.FC = () => {
       <SkipLink />
       {/* Content on top of the background */}
       <div className="relative z-10">
-        <RouterProvider router={router} />
+        <Header />
         <SupportChat />
         <Footer />
       </div>
