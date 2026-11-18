@@ -187,7 +187,7 @@ export const teamBios = [
       "Cynthia’s career began as a Medicaid Service Coordinator, where her passion for advocacy and individualized care first took root. Over the years, she has held every key role in the field, Special Education Teacher, Clinical Supervisor, Program Coordinator, Supervising BCBA, and Program Director, developing a comprehensive, ground-up understanding of both clinical and administrative operations. This breadth of experience allows her to navigate complex challenges with insight, inspire her team, and make a lasting difference in the lives of the children and families she serves",
     ],
     imageUrl: cynthiaImage,
-    profileLink: "/about/members/Cynthia",
+    profileLink: "/about/members/cynthia",
   },
   {
     name: "Inae Kim",
@@ -213,7 +213,7 @@ export const teamBios = [
       "I feel incredibly grateful to be part of a team that is dedicated to making a difference in the lives of children and their families. I look forward to supporting you, answering your questions, and helping make your experience with us as smooth and positive as possible.",
     ],
     imageUrl: cesiaImage,
-    profileLink: "/about/members/Cesia",
+    profileLink: "/about/members/cesia",
   },
   {
     name: "Jordan Freeman",

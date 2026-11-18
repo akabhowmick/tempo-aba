@@ -1,1 +1,6 @@
-/* /index.html 200
+# Prerendered pages (dist/**/*.html) are served directly via Netlify's pretty URLs.
+# Unknown paths fall through to dist/404.html, which Netlify returns with a 404 status.
+# (The old "/* /index.html 200" catch-all is intentionally gone.)
+
+# /careers has no page of its own; redirect server-side. "!" forces it over the prerendered stub.
+/careers   /contact   301!
