@@ -1,6 +1,43 @@
 import React, { useEffect, useRef, useState } from "react";
 import { emailSetUp } from "../../data/content";
 
+function postToFormSubmit(fields: Record<string, string>): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const frame = document.createElement("iframe");
+    frame.name = "chat-submit-frame";
+    frame.hidden = true;
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = emailSetUp.formSubmitEmail;
+    form.target = frame.name;
+    for (const [k, v] of Object.entries(fields)) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = k;
+      input.value = v;
+      form.appendChild(input);
+    }
+    const cleanup = () => {
+      clearTimeout(timer);
+      frame.remove();
+      form.remove();
+    };
+    const timer = setTimeout(() => {
+      cleanup();
+      reject(new Error("timeout"));
+    }, 20000);
+    document.body.append(frame, form);
+    // Attach after the iframe's initial blank load, so only the response to the POST counts.
+    setTimeout(() => {
+      frame.addEventListener("load", () => {
+        cleanup();
+        resolve();
+      });
+      form.submit();
+    }, 0);
+  });
+}
+
 export default function SupportChat() {
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState<string>("");
@@ -101,20 +138,17 @@ export default function SupportChat() {
     }
     try {
       setSubmitting(true);
-      // Same FormSubmit inbox as the contact form, via its AJAX endpoint
-      const res = await fetch(emailSetUp.formSubmitEmail.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          message: msg,
-          _subject: "Website chat message",
-          _cc: emailSetUp.ccLinks,
-          _template: "table",
-        }),
+      // Same FormSubmit endpoint and fields as the contact form, posted as a normal form
+      // into a hidden iframe so the page doesn't navigate away.
+      await postToFormSubmit({
+        name,
+        email,
+        message: msg,
+        _subject: "Website chat message",
+        _cc: emailSetUp.ccLinks,
+        _template: "table",
+        _next: emailSetUp.redirectLink,
       });
-      if (!res.ok) throw new Error("send failed");
       setStatus("Thanks! We’ll get back to you shortly.");
       setName("");
       setEmail("");

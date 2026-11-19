@@ -50,7 +50,7 @@ for (const w of [700, 767, 768, 780, 801, 1280]) {
 {
   const page = await browser.newPage();
   let req = null;
-  await page.route("**/formsubmit.co/**", (r) => { req = { url: r.request().url(), body: r.request().postData() }; r.fulfill({ status: 200, contentType: "application/json", body: '{"success":"true"}' }); });
+  await page.route("**/formsubmit.co/**", (r) => { req = { url: r.request().url(), body: r.request().postData() }; r.fulfill({ status: 200, contentType: "text/html", body: "<p>ok</p>" }); });
   await page.goto(BASE + "/", { waitUntil: "networkidle" });
   await page.getByRole("button", { name: "Chat" }).click();
   await page.fill("#chat-name", "Test");
@@ -58,7 +58,7 @@ for (const w of [700, 767, 768, 780, 801, 1280]) {
   await page.fill("#chat-msg", "Hello");
   await page.getByRole("button", { name: "Send", exact: true }).click();
   await page.getByText("Thanks!").waitFor({ timeout: 5000 }).catch(() => {});
-  const ok = req && req.url.includes("/ajax/") && req.body.includes("Hello");
+  const ok = req && req.url.includes("formsubmit.co/cmartinez@tempoaba.com") && req.body.includes("Hello");
   console.log(ok ? "ok  " : "FAIL", "chat posts to", req?.url);
   if (!ok) failed++;
   await page.screenshot({ path: `${OUT}/chat.png` });
